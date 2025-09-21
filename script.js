@@ -47,7 +47,8 @@ function subMenuToggle()
     subListElement.classList.remove("showSubMenu");
     subListElement.classList.add("hideSubMenu");
     subListElement.addEventListener("animationend", () => { 
-       
+
+        // subListElement.classList.remove("showSubMenu");
         subListElement.classList.add("hidden"); 
         subListElement.classList.remove("hideSubMenu"); 
         console.log('Animation slutt!');  });
