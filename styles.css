@@ -1179,6 +1179,14 @@ li {
   padding-bottom:40px;
 }
 
+.moreInfoButton {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #EE7700;
+  background-color: #7088C6;
+  color:#dcdcdc;
+  box-shadow: 4px 4px 20px rgba(240, 240, 240, 0.5);
+}
+
 @media (max-width:426px) {
 
   .navListRomferdene {
