@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- head = informasjon til nettleser -->
+
+<head>
+    <title>Hjem</title>
+    <link href="Images/code.png" rel="icon" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- External files -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+</head>
+<!-- body = informasjon til nettsiden -->
+
+<body class="flex">
+    <header class="flex">
+        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images//dark_light.png" alt="fant ikke icon" />
+        <nav class="flex headerNav">
+            <ul id="headerMenu" class="flex navListHeader hidden">
+                <li>
+                    <a class="headerMenuColor" href="/index.html">Hjem</a>
+                </li>
+                <li>
+                    <a class="headerMenuColor" href="/om.html">Om</a>
+                </li>
+                <li>
+                    <a class="headerMenuColor" href="/ringene.html">Ringene</a>
+                </li>
+                <li>
+                    <a class="headerMenuColor" href="/maanene.html">Månene</a>
+                </li>
+                <li>
+                    <a class="headerMenuColor" href="#pioneer11">Romferdene</a>
+                </li>
+                <hr class="hamburgerLine">
+                <li class="darkLightListItem"> </li>
+                <li onclick="darkLightModeToggle()" class="darkLightListItem">D/L Lysmodus</li>
+
+            </ul>
+            <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon" />
+            <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
+
+        </nav>
+
+    </header>
+
+    <main class="mainClass">
+        <div class="flex subMenuDiv slideInMenuTop">
+            <div class="flex logoTextDivRomferd">
+                <img class="logoRomferdImg slideInLogo" src="/Images/romferdlogo.png" alt="fant ikke logo" />
+                <div class="flex subMenuTextAndBurgerDiv">
+                    <p class="subMenuText slideInMenuHeading">Saturn - Romferdene</p>
+                    <p onclick="subMenuToggle()" class="subMenuBurger slideInMenuBurger">Meny</p>
+                </div>
+            </div>
+            <nav class="flex romferdeneNav">
+                <ul id="subMenu" class="flex navListRomferdene hidden slideInMenuItems">
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#pioneer11">Pioneer 11</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#voyager1">Voyager 1</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#voyager2">Voyager 2</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#cassini">Cassini/Hyguens</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <section id="pioneer11" class="flex romferdSection">
+            <h3>Pioneer 11 (1979)</h3>
+            <div class="flex pioneerImgTextDiv">
+                <img class="pioneerImg lightModeImg" src="/Images/pioneer.png" alt="fant ikke bilde" />
+                <p class="textImage">
+                    Pioneer 11 på vei mot Saturn - Maleri av Hurley Wilson
+                </p>
+            </div>
+            <p> Pioneer 11 ble skutt opp 6. april 1973 </p>
+            <p>
+                NASA Pioneer 11 var den først sonden som tok Saturn i nærmere øyesyn. Vi fikk den første detaljerte syn
+                på ringene og månene. Pioneer 11 kunne også bekrefte at forskernes antagelser angående Titans størrelse
+                og masse, var riktige. Den oppdaget two nye måner, Janus og Epimetheus.
+            </p>
+
+        </section>
+        <section id="voyager1" class="flex romferdSection">
+            <h3>Voyager 1 (1980)</h3>
+            <div class="flex voyager1ImgTextDiv">
+                <img class="voyager1Img lightModeImg" src="/Images/voyager1.png" alt="fant ikke bilde" />
+                <p class="textImage"> Voyager I på vei ut av solsystemet og inn i interstellart rom (artist rendering)
+                </p>
+            </div>
+            <p>
+                Voyager I ble skutt opp 5. september 1977. </p>
+            <p>
+                Hovedmålet til Voyager 1 var å utforske de ytre planetene Jupiter og Saturn. Den passerte Saturn i
+                november 1980. Den oppdaget to nye måner, Thebe og Metis, samt en av ringene, G-ringen. Den oppdaget
+                også komplekse strukturer i ringene, hvor bla. den oppdaget "shepherd moons", måner som holdt strukturen
+                i noen av ringene under "kontroll". Den fant også ut at Titans atmosfære bestod mest av nitrogen.
+            </p>
+            <p>
+                Voyager 1 passerte Pioneer 10 (skutt opp 2. mars, 1972) 17. februar 1998. Den 12. august 2012 gikk
+                sonden ut av solsystemet vårt og ble det første menneskeskapte fartøyet i interstellart rom.
+            </p>
+        </section>
+        <section id="voyager2" class="flex romferdSection">
+            <h3>Voyager 2 (1981)</h3>
+            <div class="flex voyager2ImgTextDiv">
+                <img class="voyager2Img lightModeImg" src="/Images/voyager2.png" alt="fant ikke bilde" />
+                <p class="textImage">Testing av Voyager 2 </p>
+            </div>
+            <p>
+                Den ble skutt opp 20. august 1977 og passerte Saturn i august 1981. Den fløy 23 000 km nærmere Saturn
+                enn Voyager 1 og sendte tilbake mer detaljerte data om ringene. Den ble under forbiflyvningen truffet av
+                mikro-støv, noe som medførte at stabiliseringmotorene måtte avfyres flere ganger. Den tok flere bilder
+                av månene, blant annet Enceladus og Tethys. Den tok også målinger av temperaturen på Saturn. Flere av
+                Saturns måner ble oppdaget av Voyager 2.
+            </p>
+            <p>
+                Voyager 2 gikk over i interstellart rom 5. november 2018.
+            </p>
+        </section>
+        <section id="cassini" class="flex romferdSection">
+            <h3 class="desktopSetting">Cassini/Hyguens (2004-2017)</h3>
+            <h3 class="mobileSetting"> Cassini/Hyguens<br>(2004-2017)</h3>
+           
+            <div class="flex cassiniLaunchImgTextDiv">
+
+                <p class="cassiniLaunchText">
+                    Cassini-Huygens sonden, oppkalt etter Giovanni Cassini og Christiaan Huygens, ble skutt opp fra
+                    Cape Canaveral i Florida, 15. oktober 1997. Den var et samarbeid mellom NASA og ESA (European Space
+                    Agency), samt ASI (Agenzia Spaziale Italiana - Italienernes romfartsorganisasjon). Hovedmålet var
+                    Saturn, dens måner og nærområdene.
+
+                </p>
+                <img class="cassiniLaunchImg lightModeImg" src="/Images/launchcassini.jpg" alt="fant ikke bilde" />
+            </div>
+            <p>
+                Ett av målene var månen Titan. Cassini skulle separeres fra Huygens, en 335 kg tung sonde, gitt av ESA,
+                hvor en del skulle gå inn i Titans atmosfære og lande der. Den lå i dvale i løpet av den 6,7 år lange
+                reisen til Saturn. Den ble sluppet løs i desember 2004, og den 14. januar 2005 landet sonden på
+                overflaten av Titan. I løpet av 2 timer og 27 minutter sendte Huygens data på sin ferd mot Titans
+                overflate. Dette var den første landingen på en måne i den ytre delen av vårt solsystem.
+            </p>
+            <div class="flex cassiniTitanImgTextDiv">
+                <img class="cassiniTitanImg lightModeImg" src="/Images/cassinititan.png" alt="fant ikke bilde" />
+                <p class="textImage"> Cassini og soloppgang ved Titan (artist rendering)</p>
+            </div>
+            <p>I løpet av sin ferd frem til 2017, gjorde Cassini store oppdagelser om Saturn og dens måner. Den oppdaget
+                Enceladus påvirkning på E-ringen. Man oppdaget at Titan hadde regn, sjøer og elver av metan. Og den
+                oppdaget gigantiske virvelstormer rundt polområdene til Saturn for å nevne noe.
+            </p>
+            <video class="videoCassini" preload="none" poster="Images/preloadimgCassini.png" video width="1280" height="720" controls>
+                <source src="/Movies/Cassini.mp4" type="video/mp4"> Nettleseren støtter ikke video avspilling
+            </video>
+            <p class="grandFinaleHeadingText">“The Grand Finale”</p>
+            <p>
+                Den 15. september 2017, gikk Cassini inn i atmosfæren på Saturn, hvor den sendte data så lenge den kunne
+                før den brente opp. En av grunnene for at Cassini skulle ende sine dager på denne måten, var faren for
+                påvirkning av mulig liv på Enceladus. Hvis den hadde blitt drivende rundt Saturn, var det en mulighet
+                for at den kunne ende med å styrte på denne månen. Det ville da muligens påvirke utviklingen av det
+                eneste andre stedet i vårt solsystem som kanskje har utviklet, eller kan utvikle, biologisk liv.
+            </p>
+            <div class="flex grandFinaleImgTextDiv">
+                <img class="grandFinaleImg lightModeImg" src="/Images/cassinigrandfinale.png" alt="fant ikke bilde" />
+                <p class="textImage"> “The Grand Finale” - Cassini’s tur inn i Saturns atmosfære (artist rendering)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex">
+        <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo" />
+        <div class="divNASA">
+            <p class="textNASA">All pictures taken from NASA </p>
+            <p class="textNASA">if not specified otherwise</p>
+        </div>
+        <div class="flex infoAndIconsDiv">
+            <div class="flex myInfoDiv">
+                <p class="textWSCreated">Web side laget av</p>
+                <p class="textMyName">Harald N.</p>
+
+            </div>
+            <a href="mailto:haraldn.kodeloftet@gmail.com" target="_blank"> <img src="Images/email42px.png"
+                    alt="fant ikke icon" /> </a>
+            <a href="https://github.com/Lazy-CSharp-Coder" target="_blank"> <img src="Images/github32px.png"
+                    alt="fant ikke icon" /></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

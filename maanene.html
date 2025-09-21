@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- head = informasjon til nettleser -->
+
+<head>
+    <title>Hjem</title>
+    <link href="Images/code.png" rel="icon" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- External files -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+</head>
+<!-- body = informasjon til nettsiden -->
+
+<body class="flex">
+    <header class="flex">
+        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images/dark_light.png" alt="fant ikke icon" />
+        <nav class="flex headerNav">
+          <ul id="headerMenu" class="flex navListHeader hidden">
+            <li>
+              <a class="headerMenuColor" href="/index.html">Hjem</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/om.html">Om</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/ringene.html">Ringene</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="#generelt">Månene</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/romferdene.html">Romferdene</a>
+            </li>
+            <hr class="hamburgerLine">
+            <li class="darkLightListItem"> </li>
+            <li onclick="darkLightModeToggle()" class="darkLightListItem">D/L Lysmodus</li>
+    
+          </ul>
+          <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon"/>
+          <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
+        
+        </nav>
+    
+      </header>
+    <main class="flex mainClass">
+        <div class="flex subMenuDiv slideInMenuTop">
+            <div class="flex logoTextDiv">
+                <img class="logoRingsImg slideInLogo" src="/Images/logomaane.png" alt="fant ikke logo" />
+                <div class="flex subMenuTextAndBurgerDiv">
+                <p class="subMenuText slideInMenuHeading">Saturns Måner</p>
+                <p onclick="subMenuToggle()" class="subMenuBurger slideInMenuBurger">Meny</p>
+            </div>
+            </div>
+            <nav class="flex ringeneNav">
+                <ul id="subMenu" class="flex navListMaanene hidden slideInMenuItems">
+                    <li class="genereltListItem">
+                        <a class="subMenuAnchor subMenuColor" href="#generelt">Generelt</a>
+                    </li>
+                    <hr class="hamburgerLine">
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#mimas">Mimas</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#rhea">Rhea</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#tethys">Tethys</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#dione">Dione</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#iapetus">Iapetus</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#enceladus">Enceladus</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#titan">Titan</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <section id="generelt" class="flex genereltSection">
+            <!-- Hero / Main / Home -->
+
+            <h3>Generelt om månene</h3>
+            <p>
+                Saturn har 274 måner, flere enn noen andre i solsystemet. Men kun syv av disse er kuleformet. De andre
+                månene har for liten tyngdekraft til å opprettholde en slik form. Jeg vil her ta for meg disse syv
+                største.
+
+            </p>
+        </section>
+        <section id="mimas" class="flex moonSection">
+            <img class="moonImg lightModeImg desktopSetting" src="Images/Mimas_Cassini.jpg" alt="fant ikke bilde" />
+            <div class="flex moonDiv">
+                <h3>Mimas</h3>
+                <img class="moonImg lightModeImg mobileSetting" src="Images/Mimas_Cassini.jpg" alt="fant ikke bilde" />
+                <p>
+                    Mimas er av de syv største månene til Saturn, men også den minste. Den ble oppdaget av <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/William_Herschel"> William
+                    Herschel</a>, en tysk-britisk astronom og komponist, i 1789. Man antar at Mimas hovedsakelig består av is, men med
+                    små forekomster av stein. Overflaten er full av kratere, hvor den største er Herchel krateret. Det har
+                    en diameter på 130 km, med 50 km høye vegger og går ned 10 km. Man antar at legemet som lagde Herchel
+                    krateret var nære ved å ødelegge Mimas. Avstanden til Saturn er gjennomsnittlig på 186 000 km. Den
+                    bruker 22 timer og 26 minutter på banen rundt Saturn. Mimans er månen som er nærmest Saturn av de
+                    runde
+                    månene og virker som den er konstant frossen. Dette forundrer forskerne pga. nærheten til
+                    moderplaneten.
+                    Mimas blir ofte kalt "Saturn I".
+                </p>
+                <p>Mimas var en mythologisk gigant (titan) i gresk mytologi, sønn av Gaia og Uranos. Han ble drept av
+                    Mars
+                    i krigen mellom Titanene og gudene i Olympus.</p>
+            </div>
+        </section>
+        <section id="rhea" class="flex moonSection">
+
+            <div class="flex moonDiv">
+                <h3>Rhea</h3>
+                <img class="moonImg lightModeImg mobileSetting" src="Images/rhea_adj.png" alt="fant ikke bilde" />
+                <p>
+                    Rhea er den nest største månen til Saturn. Den ble oppdaget av 
+                    <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/Giovanni_Cassini"> Giovannie Domenicon Cassini </a>, en
+                    italiensk astronom og ingeniør, i 1672. Den består av omtrent 75 % vannis og 25 % stein. Rhea er i
+                    bundet rotasjon med Saturn, som betyr at kun en side er vendt mot planeten hele tiden. Overflaten er
+                    delt mellom en region med store kratere på over 40 km og en med mindre. Dette tyder på geologisk
+                    aktivitet, men forskerne mener dette må har skjedd for lenge siden. Noen av de mer flate områdene
+                    antas å være 4 milliarder år gammel. Rhea blir også kalt "Saturn II".
+                </p>
+                <p> Sonden Cassini oppdaget at Rhea har en tynn atmosfære bestående av oksygen og karbondioksid. Den
+                    oppdaget også at månen hadde ringer, noe som aldri har vært observert rundt en mane tidligere
+                    (2008).
+                </p>
+                <p> Rhea var en mytologisk gigant (eller gudinne) i gresk mytologi, datter av Uranos og Gaia.</p>
+            </div>
+            <img class="moonImg lightModeImg desktopSetting" src="Images/rhea_adj.png" alt="fant ikke bilde" />
+        </section>
+        <section id="tethys" class="flex moonSection">
+            <img class="moonImg lightModeImg desktopSetting" src="Images/Tethys.jpg" alt="fant ikke bilde" />
+            <div class="flex moonDiv">
+                <h3>Tethys</h3>
+                <img class="moonImg lightModeImg mobileSetting" src="Images/Tethys.jpg" alt="fant ikke bilde" />
+                <p>
+                    Tethys er navnet på den femte største månen til Saturn. Den ble oppdaget av Giovanni Cassini i 1684.
+                    Tethys består hovedsakelig også av is, med små forekomster av stein. Den bruker 45 timer og 18
+                    minutter rundt Saturn og er, i likhet med Rhea, i bundet rotasjon med Saturn. Tethys har to
+                    karakteristikker, nemlig et stort krater kalt Odysseus Krater og en gigantisk dal kalt Ithaca
+                    Chasme. Krateret er 400 km i diameter og utgjør 2/5 av Tethys. Sonden Cassini oppdaget at Tethys er
+                    mer aktiv enn hva man først trodde da den registrerte at månen kastet partikler ut i verdensrommet.
+                    Dette tyder på geologisk aktivitet, muligens vulkanisme. Tethys blir også kalt "Saturn III"
+                </p>
+                <p> Tethys var en mytologisk gigant i gresk mytologi, datter av Uranos og Gaia.</p>
+            </div>
+        </section>
+        <section id="dione" class="flex moonSection">
+
+            <div class="moonDiv">
+                <h3>Dione</h3>
+                <img class="moonImg lightModeImg mobileSetting" src="Images/dioneadj.png" alt="fant ikke bilde" />
+                <p>
+                    Dione er ca. 1123,2 km i diameter, den fjerde største månen til Saturn . Den ble oppdaget også av
+                    Giovanni Cassini i 1684. Overflaten er variert og inneholder områder med store kratrer, medium
+                    kratere og mindre kratere. Det er også en del sprukne områder. Dione bruker 66 timer i bundet
+                    rotasjon rundt Saturn. Dione er i hva man kaller "renosans" med Mimas og Enceladus. De påvirker
+                    hverandres fart og bane når de kommer i nærheten av hverandre. Dione blir også kalt "Saturn IV".
+                </p>
+                <p>
+                    I liket med Tethys, oppdaget sonden Cassini at Dione også kaster partikler ut i verdensrommet. Det
+                    tyder på at begge disse månene har geologisk og muligens vulkansk aktivitet.</p>
+                <p>
+                    Dione var en mytologisk gigant (eller gudinne), som ifølge noen nedtegnelser var datteren av Tethys.
+                </p>
+            </div>
+            <img class="moonImg lightModeImg desktopSetting" src="Images/dioneadj.png" alt="fant ikke bilde" />
+        </section>
+        <section id="iapetus" class="flex moonSection">
+            <img class="moonImg lightModeImg desktopSetting" src="Images/iapetus.png" alt="fant ikke bilde" />
+            <div class="moonDiv">
+                <h3>Iapetus</h3>
+                <img class="moonImg lightModeImg mobileSetting" src="Images/iapetus.png" alt="fant ikke bilde" />
+                <p>
+                    Iapetus er den tredje største månen rundt Saturn. Den ble oppdaget av Giovanni Cassini i 1671. Den
+                    er kjent for å ha en lys og en mørk halvkule. Den antas at Iapetus består av ca. 75 % is og 25 %
+                    stein. Den bruker 29,42 år på en runde rundt Saturn, noe som tilsier at den ligger langt ute, nemlig
+                    3 561 300 km fra planeten. Den befinner seg også i bundet rotasjon. Den har en stor rygg langs
+                    ekvator, som ligger ca. 10 km høyere enn resten av overflaten. Hvordan denne ryggen oppstod, er
+                    fremdeles et mysterium, men det foreligger flere teorier. Lapetus går ikke i bane på same plan som
+                    de andre månene til Saturn, men er skråstilt. Det er ulikt alle andre måner i solsystemet. Iapetus
+                    er i renosans med Titan.
+                </p>
+                <p> Iapetus var også en mytologisk gigant, sønn av Uranos og Gaia, far til Atlas og Promethevs,
+                    Epimethevs og Menoitios.
+                </p>
+            </div>
+        </section>
+        <section id="enceladus" class="flex enceladusSection">
+
+            <div class="flex enceladusDiv">
+                <div class="moonDiv">
+                    <h3>Enceladus</h3>
+                    <img class="enceladusImg1 lightModeImg mobileSetting" src="Images/enceladus1.png" alt="fant ikke bilde" />
+                    <p>
+                        Enceladus er Saturns sjette største månen til Saturn. Den ble oppdaget av William Herschel i
+                        1789.
+                    </p>
+                    <p>
+                        Overflaten til Enceladus er den hviteste i solsystemet og består for det meste av vannis. Som
+                        nevnt
+                        tidligere, fant Cassini ut at Enceladus er hovedsakelig årsaken til E-ringen rundt Saturn, da
+                        den
+                        sender partikler av is ut fra overflaten, hovedsakelig fra geysirene på sør-polen.
+                        Overflatetemperaturen er på ca -201 °C. Men la ikke det lure deg av den kalde
+                        overflatetemperaturen.
+                        Her er det store muligheter for biologisk liv.
+                    </p>
+                    <p> Da Cassini passerte kun 50 km fra Enceldaus i 2009, greide den å plukke opp noen av disse
+                        partiklene
+                        fra geysirene. Analysen av disse viste at de inneholdt ikke bare vann, men også karbondioksid,
+                        metan
+                        og organiske forbindelse av kompleks karakter, som propan. Dette betyr at Enceladus må ha en
+                        form
+                        for energikilde.</p>
+                </div>
+                <img class="enceladusImg1 lightModeImg desktopSetting" src="Images/enceladus1.png" alt="fant ikke bilde" />
+            </div>
+            <div class="flex enceladusDiv">
+                <img class="enceladusImg2 lightModeImg" src="Images/enceladus2.png" alt="fant ikke bilde" />
+                <div class="moonDiv">
+                    <p>
+                        Forskerne antar at denne kilden befinner seg under overflaten. Man er fremdeles usikker på hva
+                        som
+                        forårsaker denne, men radioaktivitet og tidevannskrefter er de mest sannsynlige teoriene. </p>
+                    <p>
+                        På Jorden regner man med at livet oppstod dypt i havene, med energi fra hydrotermiske
+                        skorsteiner
+                        eller varme kilder. Det er mulig at Enceladus har lignende forhold under overflaten, samt
+                        organiske
+                        forbindelser som muliggjør liv. Dette gjør Enceladus til en av de mest interessante månene i
+                        solsystemet vårt og har høy prioritet for fremtidig rom-utforskning. </p>
+                    </p>
+                    <p> Enceladus var også en gigant (titan) i gresk mytologi, sønn av Gaia og Tartaros. Han ble begravd
+                        under vulkanen Etna. Dette skal, ifølge legenden, være grunnen til jordskjelv og utbrudd fra
+                        denne
+                        vulkanen.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="titan" class="flex titanSection">
+
+            <h3>Titan</h3>
+            <div class="flex titanImgText">
+                <img class="titanImg lightModeImg" src="Images/titan3views.png" alt="fant ikke bilde" />
+                <p class="textImage"> Cassinis bilder av Titan i 3 versjoner </p>
+            </div>
+            <p>
+                Titan er Saturns største måne. Den ble oppdaget av Christiaan Huygens i 1655. Den er den nest største
+                månen i vårt solsystem og den har tykk atmosfære. Månen er større enn planeten Merkur, selv om den har
+                kun halvparten av massen til vår innerste planet.
+            </p>
+            <p>
+                Overflaten består for det meste av is og bergarter. Det er få kratere synlig på Titan, noe som tyder på
+                at den er ung og at nedslagskraterene har blitt visket ut på grunn av sammensatte endringer i
+                overflaten. Vært å merke seg er Titan har sjøer og elver som vår egen planet. Siden temperaturen er
+                gjennomsnittlig på rundt -179 °C, består regnet, elvene og sjøene av metan. Metan blir flytende på
+                temperaturer under -161,4 °C. Hvor alt metanet kommer fra vet man ikke.</p>
+            <p>
+                Atmosfæren består for det meste av nitrogen og metan, men inneholder også små mengder av
+                karbon-elementer. Det er den eneste månen i vårt solsystem som har en tykk atmosfære.
+            </p>
+
+            <p> Det antas at Titan har består i hovedsak av fem lag. En kjerne av stein på ca. 4000 km, omringet av
+                vannis. Man antar så at det neste laget består av saltvann, under overflaten av is og stein. 
+            </p>
+
+            <img class="titanCoreImg lightModeImg" src="Images/titankjerne.png" alt="fant ikke bilde" />
+
+            <p> Titan bruker 15 dager og 22 timer rundt Saturn. Den er også i bundet rotasjon rundt Saturn. Den har, som
+                Jorden vår, årstider. Men en årstid varer 7 av våre jordår.</p>
+            <p> 
+                Det mest interessante med Titan er muligheten for liv. Den ligger i laget av saltvann mellom laget av
+                vannis og overflaten. Her kan det potensielt oppstå forhold som kan opprettholde vår form for liv. Og
+                kanskje på overflaten, med flytende elver og sjøer av metan, en form for liv som foreløpig ukjent for
+                oss ?
+            </p>
+            <p>  Titan er en fellesbetegnelse på gruppen av titaner, guder og gudinner i gresk mytologi.</p>
+        </section>
+    </main>
+
+    <footer class="flex">
+        <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo"/>
+        <div class="divNASA">
+          <p class="textNASA">All pictures taken from NASA </p>
+          <p class="textNASA">if not specified otherwise</p>
+        </div>
+        <div class="flex infoAndIconsDiv">
+          <div class="flex myInfoDiv">
+            <p class="textWSCreated">Web side laget av</p>
+            <p class="textMyName">Harald N.</p>
+           
+          </div>
+          <a href="mailto:haraldn.kodeloftet@gmail.com" target="_blank"> <img src="Images/email42px.png" alt="fant ikke icon"/> </a>
+          <a href="https://github.com/Lazy-CSharp-Coder" target="_blank"> <img src="Images/github32px.png" alt="fant ikke icon"/></a>
+        </div>
+      </footer>
+  
+</body>
+
+</html>

@@ -1,37 +1,118 @@
 /* GENERAL */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Italianno&family=Story+Script&display=swap');
+
+:root{
+  --primaryBackgroundColor:black;
+  --primaryTextColor:white;
+  --secondaryTextColor:#dcdcdc;
+  --primaryMenuColor:#dcdcdc;
+  --secondaryMenuColor:#fca75c;
+  --primaryTextFontFamily:"Inknut Antiqua";
+  --primaryFontFamily:"Story Script";
+  --linkColor:lightblue;
+  --borderColorMenu:white;
+   
+}
+
+* {
+  box-sizing: border-box;
+}
+.flex{
+
+  display: flex;
+}
 
 /* BODY */
 body {
-  margin: 0;
-  font-family: "Roboto";
+
+  height:100%;
+  margin:0;
+  flex-direction: column;
+  min-height: 100vh; 
+  background-color: var(--primaryBackgroundColor);
 }
 
 /* HEADER */
 header {
-  display: flex;
+  
+  background-color: black;   /* svart her, ikke variabel, skal alltid være svart */
+  width:100%;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 0 16px;
+  border: 1px solid var(--borderColorMenu);
+  z-index: 10;
+
+
 }
 
 .headerNav {
-  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap:30px;  
+  padding-right:23px;
+   
 }
 
-.navList {
+
+.darkLightIcon {
+  padding-left:23px;
+}
+
+.darkLightListItem {
+  display: none;
+}
+.hamburgerLine {
+  display: none;
+}
+
+.lightMode {
+  --primaryBackgroundColor:rgb(220, 220, 220);
+  --primaryTextColor:black;
+  --secondaryTextColor:black;
+  .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;   
+  }
+  .linkWikiPage { color:darkred; }
+}
+
+ 
+
+a {
+  color:var(--primaryMenuColor);
+  text-decoration: none;
+}
+
+.navListHeader {
+
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  flex-direction: row;
+  font-family: var(--primaryFontFamily);
+  color:white;
+  font-size: 32px;
+  padding-left:0;
+  gap:41px;
   list-style-type: none;
+
+   
+  
 }
 
 .hamburgerIcon {
-  height: 32px;
-  width: 32px;
+  height:64px;
+  
   display: none;
+}
+
+.logoSaturnImg 
+{
+  width:73px;
+  height:69px;
+  
 }
 
 .hidden {
@@ -41,225 +122,1188 @@ header {
 .show {
   display: flex;
   flex-direction: column;
+  justify-content: right;
+  position: absolute;
+  top:4rem;
+  left:2rem;
+  font-size: 18px;
+  z-index: 1000;
+  gap:3px;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+
+  animation-name: slideInMenu;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+
 }
 
-/* HEADER styling mobile L or less */
-@media (max-width: 426px) {
-  .headerNav {
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
 
-  .navList {
-    display: none;
-  }
-
-  .hamburgerIcon {
-    display: flex;
-  }
-}
-
-/* MAIN */
-.section {
-  height: 100vh;
-}
-
-#transition {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-#animation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroText {
-  width: 50%;
-}
-
-.heroImg {
-  width: 50%;
-}
-
-/* OVERGANGER */
-.buttonContainer {
-  display: flex;
-  gap: 10px;
-}
-
-.button {
-  padding: 10px 12px;
-  width: 100px;
-  border-radius: 40px;
-  border: 2px solid lightgray;
-}
-
-.buttonColor {
-  background-color: plum;
-  /* Long hand */
-  transition-property: background-color; /* Egenskap som skal endres */
-  transition-timing-function: ease-in-out; /* Hvordan den skal bevege seg */
-  transition-delay: 0.5s; /* Hvor lenge den skal vente før start */
-  transition-duration: 1s; /* Hvor lang tid skal overgangen ta */
-
-  /* Short hand */
-  /* transition: background-color ease-in-out 0.5s 1s; */
-}
-
-.buttonColor:hover {
-  background-color: springgreen;
-}
-
-.buttonSize {
-  width: inherit;
-
-  /* Long hand */
-  transition-property: scale;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0.5s;
-  transition-duration: 1s;
-
-  /* Short hand */
-  /* transition: scale ease-in-out 0.5s 1s; */
-}
-
-.buttonSize:hover {
-  scale: 0.5;
-}
-
-.buttonOpacity {
-  opacity: 0.5;
-
-  /* Long hand */
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0.5s;
-  transition-duration: 1s;
-
-  /* Short hand */
-  /* transition: opacity ease-in-out 0.5s 1s; */
-}
-
-.buttonOpacity:hover {
-  opacity: 1;
-}
-
-/* ANIMASJONER */
-.card {
-  max-width: 500px;
-  border: 2px solid lightgray;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.slideInLeftCard {
-  background-color: beige;
-
-  /* Long hand */
-  animation-name: slideInLeft; /* Navnet @keyframe bruker for å bruke animation-egenskapene*/
-  animation-duration: 3s; /* Hvor lang tid tar animasjonen */
-  animation-timing-function: ease-in; /* Hvordan skal animasjonen bevege seg */
-  animation-delay: 0.5s; /* Hvor lenge animasjonen skal vente før start */
-  animation-iteration-count: 2; /* Hvor mange ganger animasjonen skal skje */
-  animation-fill-mode: forwards; /* Hva som skjer når animasjonen er ferdig */
-
-  /* Short hand */
-  /* animation: slideInLeft 3s ease-in 0.5s 2 forwards; */
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-1000px);
-    background-color: yellow;
-  }
-
-  to {
-    transform: translateX(0);
-    background-color: darkslateblue;
-  }
-}
-
-.slideInRightCard {
-  background-color: beige;
-
-  /* Long hand */
-  animation-name: slideInRight;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-delay: 0.5s;
-  animation-iteration-count: 2;
-  animation-fill-mode: forwards;
-
-  /* Short hand */
-  /* animation: slideInRight 3s ease-in 0.5s 2 forwards; */
-}
-
-@keyframes slideInRight {
+@keyframes slideInMenu {
   0% {
-    transform: translateX(1000px);
-  }
-  50% {
     transform: translateX(-100px);
+  }
+  60% { transform: translateX(25px); 
   }
   100% {
     transform: translateX(0);
   }
 }
 
-.rotateCard {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  background-color: lightskyblue;
 
-  /* Long hand */
-  animation-name: rotate;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-delay: 0.5s;
-  animation-iteration-count: 2;
-  animation-fill-mode: forwards;
+/* HEADER styling mobile L or less */
+@media (max-width: 426px) {
 
-  /* Short hand */
-  /* animation: rotate 3s ease-in 0.5s 2 forwards; */
+  header { height: 94px;}
+
+    .headerNav {
+  
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  
+  }
+
+  
+  .hamburgerIcon {
+    display: flex;
+   
+  }
+
+  .hamburgerLine {
+    display: flex;
+    color:white;
+    width:100px;
+    /* border: 1px solid white; */
+  }
+
+  .darkLightIcon {
+    display: none;
+  }
+
+  .darkLightListItem {
+    display: flex;
+    color:rgb(234, 212, 190);
+    
+  }
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+@media (min-width: 427px)  {
+  body {
+  
+    }
+
+  .hamburgerIcon {
+    display:none;
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene {
+    display: flex;
   }
+
+ 
+ 
 }
+
+
+/* MAIN */
+
+main {
+  flex-grow: 1;
+
+  color:var(--primaryTextColor);
+  font-family: var(--primaryTextFontFamily);
+  padding-bottom:52px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primaryBackgroundColor);
+
+}
+
+h1 {
+
+  font-family: var(--primaryFontFamily);
+  font-size: 96px;
+  font-weight: normal;
+  opacity: 0;
+}
+
+h2 {
+   font-family: var(--primaryFontFamily);
+   font-size:68px;
+
+}
+
+h3 {
+  font-family: var(--primaryFontFamily);
+  font-size:64px;
+  color:var(--secondaryTextColor);
+}
+
+p {
+  /* font-family: var(--primaryTextFontFamily); */
+  font-size:16px;
+  width:744px;
+  color:var(--primaryTextColor);
+}
+
+li {
+  padding:0;
+}
+.section {
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Hero page klasser  */
+
+.heroText {
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  color:var(--primaryTextColor);
+  padding-top:67px;
+}
+
+.heroImg {
+  width: 765px;
+  height: 682px;
+  margin-left: 50px;
+  margin-top:108px;
+  opacity: 0;
+
+}
+.quoteJK {
+  font-family: "Italianno";
+  font-size:36px;
+  width:525px;
+  padding:0;
+  margin:0;
+  opacity: 0;
+}
+
+.quoteCrediting {
+  font-family: var(--primaryTextFontFamily);
+  font-size:12px;
+  margin:0;
+  padding-top:19px;
+  width: auto;
+  opacity: 0;
+}
+
+.mobileSetting {
+  display: none;
+}
+
+
 
 @media (max-width: 426px) {
-  .hero {
+  h1 {
+    font-size: 64px;
+    margin-bottom: 27px;
+    margin-top: 0px;
+  }
+
+  .heroText {
+    padding-top: 58px;
+  }
+  .heroImg {
+    width: 325px;
+    height: 290px;
+    margin:0;
+  }
+
+  .quoteJK {
+    font-size: 24px;
+    width: 342px;
+    padding-top: 63px
+  }
+
+  .quoteCrediting {
+    font-size: 10px;
+    padding-top: 3px;
+  }
+
+  .mobileSetting {
+    display:block;
+  }
+
+  .desktopSetting {
+    display: none;
+  }
+
+  section {
+    align-items: center;
+  }
+}
+
+
+/* animation klasser for hero page */
+
+.fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit {
+
+   animation-name: fadeInAnimation;
+   animation-timing-function: ease-in;
+   animation-fill-mode: forwards;
+}
+
+.fadeInImage {
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+}
+.fadeInHeading {
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+}
+
+.fadeInQuote {
+  animation-duration: 4s;
+  animation-delay:  2s;  
+}
+
+.fadeInCredit {
+  animation-duration: 1.5s;
+  animation-delay:6s;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+ }
+
+
+/* ----------- om.html klasser --------- */
+
+.omSection {
+  flex-direction: column;
+  align-items: center;
+}
+
+.omImg {
+  width:471px;
+  height:420px;
+}
+
+.omImgMobile
+{
+  display: none;
+}
+
+.quotePP
+{
+  font-family: "Gentium Plus";
+  font-style: italic;
+  font-size:20px;
+  width: 617px; 
+
+
+}
+
+.headingAndQuoteDiv, .imageAndStatsDiv {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.headingAndQuoteDiv {
+  gap:221px;
+  padding-bottom: 43px;
+}
+
+.imageAndStatsDiv {
+  gap:110px;
+  padding-bottom: 109px;
+}
+
+.textFactCategorysDiv, .textFactsSaturnDiv {
+  flex-direction: column;
+  font-family: var(--primaryTextFontFamily);
+  font-size: 14px;
+  width:auto;
+  
+}
+.textFactCategorysDiv {
+  font-weight: bold;
+
+}
+.textFactsSaturnDiv {
+  font-weight: normal;
+}
+
+.textFactCategorys, .textFactsSaturn, .textFactsSaturnDistance {
+  margin: 0;
+  width:auto;
+}
+
+.minMaxFact {
+  flex-direction: row;
+  gap:5px;
+}
+
+.linkWikiPage {
+
+  color:var(--linkColor);
+}
+.quoteCarolyn
+{
+  width:845px;
+  text-align: center;
+}
+
+.solarSystemImg, .saturnCoreImg {
+  margin-top:60px;
+  margin-bottom: 60px;
+}
+
+@media (max-width:426px) {
+
+  h2 {
+    font-size:48px;
+    margin-top: 17px;
+    margin-bottom: 28px;
+   }
+
+   p {
+    font-size: 10px;
+    width:341px;
+   }
+  .quotePP {
+    font-size:12px;
+    width:218px;
+  }
+  .headingAndQuoteDiv {
+    gap:0;
     flex-direction: column;
   }
 
-  .heroText,
-  .heroImg {
-    width: 100%;
+  .imageAndQuoteDiv 
+  {
+    gap:20px;
+  }
+
+  .omImg { 
+    display:none; 
+  }
+  .omImgMobile { 
+    display:flex;
+    width:136px;
+    height:121px;
+  }
+  .imageAndStatsDiv {
+    gap:18px;
+    padding-bottom: 19px;
+  }
+  .textFactCategorys, .textFactsSaturn {
+    flex-direction: column;
+    font-family: var(--primaryTextFontFamily);
+    font-size: 10px;
+    width:auto;
+    
+  }
+
+  .minMaxFactDiv {
+    flex-direction: column;
+    gap:0px;
+
+  }
+
+  .textFactsSaturnDistance {
+    margin:0;
+    padding:0;
+  }
+
+  .solarSystemImg, .saturnCoreImg {
+    width:409px;
+  }
+
+  .quoteCarolyn {
+    width:341px;
+  }
+
+  .solarSystemImg, .saturnCoreImg {
+    margin-top:37px;
+    margin-bottom: 37px;
+  }
+  
+}
+
+/* -------   ringene.html klasser  ------------- */
+
+.subMenuDiv {
+ 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--primaryFontFamily);
+  width:100%;
+  height: 98px;
+  border: 1px solid var(--borderColorMenu);
+
+  position:sticky;
+  top:106px;
+  background-color: black;
+  z-index: 8;
+
+  /* border-top: 0;
+  border-left: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: white; */
+
+}
+
+.logoTextDiv {
+  align-items: center;
+  gap:47px;
+  padding-left:28px;
+}
+
+.logoRingeneImg{
+  width:88px;
+  height: 63px;
+ 
+}
+
+.subMenuAnchor {
+  color:var(--secondaryMenuColor);
+    
+}
+
+.subMenuText {
+  font-size:60px;
+  margin:0;
+  padding:0;
+  width:auto;
+  color:white;
+}
+.navListRingene
+{
+  list-style-type: none;
+  gap:37px;
+  font-size: 32px;
+  padding-left:0;
+  padding-right:178px;
+}
+
+.subMenuBurger {
+  display: none;
+}
+.textImage
+{
+  font-size: 10px;
+  text-align: center;
+}
+
+.beskrivelseSection {
+  scroll-margin-top:200px;
+  flex-direction: column;
+  align-items: center;
+}
+.komposisjonSection, .dannelseSection {
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top:220px;
+}
+
+.textQuestionDiv
+{
+  position: relative;
+  width:595px;
+  height: 186px; 
+  justify-content: center;
+  align-items:center;
+  padding-top:40px;
+  
+   
+}
+
+.questionText, .questionImage {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  position:absolute;
+}
+
+.questionText {
+    
+  width:auto;
+  font-family: var(--primaryFontFamily);
+  font-size:64px;
+}
+
+.questionImage {
+  opacity:0.5;      
+}
+
+.cassiniShadowImgText, .ringsImgText, .moleculeImgText {
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 60px;
+  padding-top: 60px;
+   
+}
+
+.videoText {
+  padding-bottom: 20px;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items:center;
+}
+
+.showSubMenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:absolute;
+  top:4.8rem;
+  left:13.4rem;
+  
+   background-color: black;
+
+  border: 1px solid #dcdcdc;
+
+
+
+    animation-name: slideInMenuTop;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:backwards;
+    animation-duration: 0.6s;
+    animation-delay: 0;
+  
+ 
+  /* få menyen til å slide down */
+
+  /* animation-name: slideInSubMenu;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:backwards;
+  animation-duration: 0.6s;
+  animation-delay: 0; */
+
+ 
+}
+
+.hideSubMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:absolute;
+  top:4.8rem;
+  left:13.4rem;
+  
+   background-color: black;
+
+  border: 1px solid #dcdcdc;
+
+    animation-name: slideOutMenuTop;
+    animation-timing-function:ease-out;
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-delay: 0;
+}
+
+.hideHeaderMenu {
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: right;
+  position: absolute;
+  top:4rem;
+  left:2rem;
+  font-size: 18px;
+  z-index: 1000;
+  gap:3px;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+  
+  animation-name: slideOutMenuLeft;
+  animation-timing-function:ease-out;
+  animation-fill-mode:forwards;
+  animation-duration: 1s;
+  animation-delay: 0;
+
+}
+
+@media (max-width:426px) {
+
+  /* p og h2 satt i forrige media query */
+  
+  h3 {
+    font-size: 36px;
+    
+  }
+
+  .navListRingene
+  {
+      list-style-type: none;
+      gap:3px;
+      font-size: 19px;
+      padding-left:12px;
+      padding-right:12px;
+      padding-top:12px;
+      padding-bottom:12px;
+ 
+      z-index: 6;
+
+     
+
+  }
+  .subMenuDiv {
+ 
+    top:94px;
+   
+  
+  }
+  .subMenuText {
+    font-size: 40px;
+    padding:0;
+    margin:0;
+  }
+  .subMenuBurger {
+    display:flex;
+    color:var(--secondaryMenuColor);
+    font-family: var(--primaryFontFamily);
+    font-size:32px;
+    width:auto;
+    margin:0px;
+    padding: 0px;
+  }
+
+  .slideInMenuBurger {
+    animation-name: slideInTop;
+    animation-duration: 1.5s;
+    animation-delay:1s;
+  }
+  
+  .logoRingeneImg {
+    width:85px;
+    height:61px;
+  }
+
+  .subMenuTextAndBurgerDiv {
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+  }
+
+  .komposisjonSection {
+    scroll-margin-top: 200px;
+  }
+
+  .dannelseSection {
+    scroll-margin-top: 145px;
+  }
+
+  .cassiniShadowImgText, .ringsImgText {
+    flex-direction: column;
+    align-items: center;
+  
+    padding-bottom: 22px;
+    padding-top: 22px; 
+     
+  }
+
+  .cassiniShadowImg {
+    padding-top:0;
+  }
+
+  .moleculeImgText {
+    padding:0;
+  }
+
+  .textQuestionDiv {
+    padding-top:20px;
+
+    width:420px;
+    height: 94px; 
+  }
+
+  .cassiniShadowImg {
+    width:408px;
+    
+  }
+  .ringSystemImg {
+    width: 396px;
+  }
+
+  .textImage {
+    font-size: 6px;
+  }
+
+  .moleculeImg {
+    width:194px;
+    height:129px;
+
+  }
+  .questionText {
+    font-size: 36px;
+
+  }
+  
+  .questionImage {
+    width:59px;
+ 
+  }
+
+  .videoText {
+   padding-top: 20px;
+   padding-bottom: 20px;
+  }
+
+  .video, .videoCassini {
+    width:384px;
+    height:216px;
+      
   }
 }
 
-/* FOOTER */
-footer {
-  /* display: flex;
-  justify-content: center; */
+@media (min-width:427px)
+{
+  .slideInMenuItems {
+    animation-name: slideInRight;
+    animation-duration: 1.5s;
+    animation-delay:1s;
+  }
+}
+/* transition klasser */
+
+ /* prøver å endre bakgroundcolor når  */
+ .subMenuColor, .headerMenuColor {
+    
+  transition-property:color;
+    transition-timing-function: ease-in-out;
+    transition-delay:0;
+    transition-duration:0; 
+ }
+
+.headerMenuColor:hover {
+  color:#7088C6;
+  
+}
+.subMenuColor:hover {
+  color: rgb(192, 0, 0);
+}
+
+/*  animasjonsklasser  */
+
+.slideInLogo, .slideInMenuHeading, .slideInMenuItems, .slideInMenuBurger {
+
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:backwards;
+ 
+}
+.slideInLogo {
+  animation-name: slideInLeft;
+  animation-duration: 1.5s;
+  animation-delay: 0;
+}
+.slideInMenuHeading {
+  animation-name: slideInTop;
+  animation-duration:1.5s;
+  animation-delay: 0s;
+}
+
+.slideInMenuTop {
+  animation-name: slideInTop;
+  animation-timing-function:ease-out;
+  animation-fill-mode:forwards;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+}
+
+
+
+@keyframes slideInRight {
+  0% { transform:translateX(1000px);}
+  60% { transform: translateX(-50px);}
+  100% { transform: translateX(0); }
+}
+@keyframes slideInTop {
+  0% { transform:translateY(-100px);}
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideInMenuTop {
+  0% { transform:translateY(-250px); }
+  60% { transform:translateY(30px);}
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideOutMenuTop {
+  0% { transform:translateY(0);}
+  20% { transform:translateY(10px);}
+  100% {transform:translateY(-500px);}
+}
+@keyframes slideOutMenuLeft {
+  0% { transform: translateX(0);}
+  20% { transform: translateX(20px);}
+  100% { transform: translateX(-300px); }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-300px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* maane.html */
+
+
+.genereltListItem {
+  padding-left:0px;
+  padding-right:41px;
+}
+
+.navListMaanene {
+  list-style-type: none;
+  gap:25px;  
+  font-size: 32px;
+  padding-left:0px;
+  padding-right:26px;
+}
+
+.genereltSection {
+  scroll-margin-top:200px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom:140px;
+  
+}
+
+.moonImg, .enceladusImg1, .enceladusImg2 {
+  width:550px;
+}
+.moonImg {
+  margin-top: 170px;
+}
+
+.enceladusImg1 {
+
+  margin-top: 200px;
+
+}
+
+
+.enceladusImg2 {
+  margin:0;
+}
+
+.moonSection, .enceladusSection, .titanSection {
+  scroll-margin-top: 220px;
+}
+
+.moonSection {
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  /* width: 1350px; */
+  gap:82px;
+  align-self: center;
+  padding-bottom: 120px;
+
+}
+
+.enceladusSection {
+  flex-direction: column;
+ 
+}
+.moonDiv {
+  flex-direction: column;
+}
+
+.enceladusDiv {
+  flex-direction: row;
+  padding-bottom:110px;
+  gap:82px;
+}
+
+.titanSection, .titanImgText {
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.titanImgText {
+  padding-bottom: 40px;
+
+}
+
+.titanCoreImg {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+@media (max-width:426px) {
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .genereltListItem {
+     padding: 0;
+
+  }
+ 
+  .navListMaanene {
+    list-style-type: none;
+    gap:3px;  
+    font-size: 19px;
+    padding:12px 12px 12px 12px;
+    
+  }
+
+  .moonImg {
+    width:341px;
+    margin:0;
+    margin-bottom: 30px;
+  }
+
+  .genereltSection {
+    padding-bottom:50px;
+  }
+  .moonSection {
+
+    flex-direction: column;
+    padding-bottom: 51px;
+  }
+
+  .enceladusImg1, .enceladusImg2 {
+    width:341px;
+  
+    margin-top: 0;
+    
+  }
+
+  .enceladusImg1 {
+    margin-bottom: 30px;
+  }
+  .enceladusDiv {
+    flex-direction: column;
+    margin-top: 0;
+    padding-bottom: 30px;
+   gap:30px;
+    
+  }
+  .titanImg {
+    width:405px;
+  }
+  .titanCoreImg {
+    width:391px;
+  }
+
+}
+
+/* romferd.html */
+
+.romferdSection {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.pioneerImgTextDiv, .voyager1ImgTextDiv, .voyager2ImgTextDiv {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 47px;
+}
+
+.navListRomferdene
+{
+  list-style-type: none;
+  gap:47px;
+  font-size: 32px;
+  padding-left:0;
+  padding-right:33px;
+}
+
+.logoTextDivRomferd {
+  padding-left: 33px;
+  gap:47px;
+  align-items: center;
+}
+
+.romferdSection {
+  scroll-margin-top: 200px;
+}
+
+
+.cassiniLaunchImg {
+  width:295px;
+}
+
+.cassiniLaunchText {
+  width: 329px;
+}
+
+.cassiniLaunchImgTextDiv {
+  gap:111px;
+  padding-bottom:54px;
+}
+
+.cassiniTitanImg {
+  width:1096px;
+}
+
+.cassiniTitanImgTextDiv, .grandFinaleImgTextDiv {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 47px;
+  padding-bottom: 40px;
+}
+
+
+.grandFinaleHeadingText {
+  font-family: var(--primaryFontFamily);
+  font-size: 48px;
   text-align: center;
 }
+
+.videoCassini {
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+@media (max-width:426px) {
+
+  .navListRomferdene {
+    list-style-type: none;
+      gap:3px;
+      font-size: 19px;
+      padding-left:12px;
+      padding-right:12px;
+      padding-top:12px;
+      padding-bottom:12px;
+  }
+  .logoTextDivRomferd {
+    gap:5px;
+  }
+
+  .pioneerImg, .voyager1Img, .voyager2Img {
+    width: 344px;
+  }
+
+  .cassiniLaunchImg {
+    width:295px;
+  }
+
+  .cassiniLaunchText {
+    width:341px;
+  }
+  .cassiniLaunchImgTextDiv {
+    flex-direction: column-reverse;
+    gap:31px;
+    padding-bottom: 25px;
+  }
+
+  .cassiniTitanImg {
+    width: 420px;
+  }
+
+  
+  .grandFinaleImg {
+    width: 399px;
+  }
+
+  .grandFinaleHeadingText {
+    font-size: 24px;
+
+  }
+  
+  .grandFinaleImgTextDiv {
+    padding-bottom:0px;
+
+  }
+  
+}
+
+/* FOOTER */
+
+footer {
+  font-family: var(--primaryTextFontFamily);
+  font-size: 14px;
+  color: var(--secondaryTextColor);
+  background-color: black;
+  border: 1px solid var(--borderColorMenu);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  height:94px;
+   
+} 
+
+.logoKodeloftetImg {
+  width:120px;
+  padding-left: 28px;
+
+}
+.textNASA, .textWSCreated, .textMyName {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.textNASA {
+ 
+  text-align: center;
+  text-decoration: underline;
+}
+
+.textMyName {
+   color: #EE7700;
+
+}
+
+.myInfoDiv {
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.infoAndIconsDiv {
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+  padding-right:36px;
+}
+
+@media (max-width: 426px) {
+
+  .logoKodeloftetImg {
+    display: none;
+  }
+
+  .myInfoDiv {
+    display: none;
+  }
+  
+  .textNASA {
+    text-align: left;
+    font-size: 10px;
+    padding-left: 20px;
+    
+  }
+
+  .infoAndIconsDiv {
+    padding-right: 20px;
+  }
+
+}
+
+
+

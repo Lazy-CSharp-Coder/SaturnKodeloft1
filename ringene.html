@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- head = informasjon til nettleser -->
+
+<head>
+    <title>Hjem</title>
+    <link href="Images/code.png" rel="icon" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- External files -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+</head>
+<!-- body = informasjon til nettsiden -->
+
+<body class="flex">
+    <header class="flex">
+        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images/dark_light.png" alt="fant ikke icon" />
+        <nav class="flex headerNav">
+          <ul id="headerMenu" class="flex navListHeader hidden">
+            <li>
+              <a class="headerMenuColor" href="/index.html">Hjem</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/om.html">Om</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="#beskrivelse">Ringene</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/maanene.html">Månene</a>
+            </li>
+            <li>
+              <a class="headerMenuColor" href="/romferdene.html">Romferdene</a>
+            </li>
+            <hr class="hamburgerLine">
+            <li class="darkLightListItem"> </li>
+            <li onclick="darkLightModeToggle()" class="darkLightListItem">D/L Lysmodus</li>
+    
+          </ul>
+          <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon"/>
+          <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
+        
+        </nav>
+    
+      </header>
+
+    <main class="mainClass">
+        <div class="flex subMenuDiv slideInMenuTop">
+            <div class="flex logoTextDiv">
+                <img class="logoRingsImg slideInLogo" src="Images/logoRings.png" alt="fant ikke logo" />
+                <div class="flex subMenuTextAndBurgerDiv">
+                    <p class="subMenuText slideInMenuHeading">Saturns Ringer</p>
+                    <p onclick="subMenuToggle()" class="subMenuBurger slideInMenuBurger">Meny</p>
+                </div>
+            </div>
+            <nav class="flex ringeneNav">
+                <ul id="subMenu" class="flex navListRingene hidden slideInMenuItems">
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#beskrivelse">Beskrivelse</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#komposisjon">Komposisjon</a>
+                    </li>
+                    <li>
+                        <a class="subMenuAnchor subMenuColor" href="#dannelse">Dannelse</a>
+                    </li>
+
+                </ul>
+                
+            </nav>
+        </div>
+
+        <section id="beskrivelse" class="flex beskrivelseSection">
+            <!-- Hero / Main / Home -->
+
+            <h3>Beskrivelse av ringene</h3>
+            <div class="flex cassiniShadowImgText">
+                <img class="cassiniShadowImg lightModeImg" src="/Images/cassiniShadow.png" alt="fant ikke bilde" />
+                <p class="textImage">
+                19. juli 2013 tok Cassini et bilde i skyggen av Saturn. Bildet er bakgrunnsbelyst av solen.
+            </p>
+            </div>
+            <p>
+                De spektakulærer ringene til Saturn er de største i solsytemet. De er ca. 250 000 km brede, men har kun
+                en tykkelse på ca. 1 km. De består av minst 7 ringer, ranger fra A til G. De er navngitt etter når de
+                ble oppdaget. Rekkefølgen fra innerst til ytterst er D, C, B, A, F, G og E. Man kan kun observere ring
+                A, B og C fra Jorden. Ring A er den ytterste ringen og har en bredde på ca. 15 000 km. Ring B har en
+                bredde på ca. 26 000 km og lyser meget sterkt. Ring C er ca. 18 000 km og kalles også Flor-ringen. Den
+                er meget svak og gjennomsiktig.t
+            </p>
+            <div class="flex ringsImgText">
+                <img class="ringSystemImg lightModeImg" src="Images/ringsystem.png" alt="fant ikke bilde" />
+                <p class="textImage"> Oversikt over ringene og månene til Saturn </p>
+            </div>
+            <p>
+                I realiteten er det titusenvis av ringer med ulik bredde og klarhet. Mye av grunnen til dette er
+                påvirkningen ringene får av månene til Saturn.
+                Allikevel er det strukturer i ringene som vi fremdeles ikke har noe forklaring på.
+            </p>
+        </section>
+        <section id="komposisjon" class="flex komposisjonSection">
+            <div class="flex textQuestionDiv">
+                <p class="questionText"> Hva består ringene av</p>
+                <img class="questionImage" src="/Images/questionmark.png">
+                    
+            </div>
+
+            <div class="flex moleculeImgText">
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" alt="fant ikke web-side"> <img class="moleculeImg" src="Images/molekylvann.png" alt="fant ikke bilde" /> </a>
+                <p class="textImage"> H2O - ett vannmolekyl . (Figur: Benjah-bmm27, Wikimedia Commons) </p>
+            </div>
+            <p>
+                Saturns ringer består hovedsakelig av is, men også en del støv og stein. Partiklene varierer i størrelse
+                fra et sandkorn til over 10 meter i diameter. Når partiklene i ringene antar en annen omløpsbane, vil de
+                kollidere med hverandre og til slutt bli eliminert. Derfor er ringene rundt Saturn kun 1 km tykke. Når
+                flere og flere partikler samles i ringene, oppstår flere kollisjoner og partiklene minsker i størrelse.
+            </p>
+        </section>
+        <section id="dannelse" class="flex dannelseSection">
+            <div class="flex textQuestionDiv">
+                <p class="questionText"> Hvordan oppstod ringene</p>
+                <img class="questionImage" src="/Images/questionmark.png">
+            </div>
+
+            <div class="flex videoText">
+                <video class="video" preload="none" poster="/Images/preloadimg.png" video width="1280" height="720" controls>
+                    <source src="/Movies/rings_dissapering.mp4" type="video/mp4"> Nettleseren støtter ikke video avspilling
+                </video>
+                <p class="textImage">Denne videoen fra NASA utforsker hvordan Saturn mister ringene sine i et raskt tempo,
+                    og også hva det avslører om planetens historie.
+                </p>
+            </div>
+            <p>
+                Ingen vet med sikkerhet hvordan ringene rundt Saturn oppstod. En teorier at en av månene ble revet i
+                stykker av Saturns gravitasjonsfelt og mesteparten av ringene ble dannet av dette. En annen teori er at
+                ringene er like gamle som Saturn og kommer fra rester av tåken som Saturn ble dannet fram, men nyere
+                forskning tilsier nå at ringene er under 100 millioner år gammel (se video ovenfor).
+            </p>
+            <p>
+                Cassini fant ut under sin ferd på 2000-tallet at mesteparten av E-ringen, den ytterste diffuse ringen,
+                kommer av is og gass som frigis fra månen Enceladus.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="flex">
+        <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo"/>
+        <div class="divNASA">
+          <p class="textNASA">All pictures taken from NASA </p>
+          <p class="textNASA">if not specified otherwise</p>
+        </div>
+        <div class="flex infoAndIconsDiv">
+          <div class="flex myInfoDiv">
+            <p class="textWSCreated">Web side laget av</p>
+            <p class="textMyName">Harald N.</p>
+           
+          </div>
+          <a href="mailto:haraldn.kodeloftet@gmail.com " target="_blank"> <img src="Images/email42px.png" alt="fant ikke icon"/> </a>
+          <a href="https://github.com/Lazy-CSharp-Coder" target="_blank"> <img src="Images/github32px.png" alt="fant ikke icon"/></a>
+        </div>
+      </footer>
+
+</body>
+
+</html>
