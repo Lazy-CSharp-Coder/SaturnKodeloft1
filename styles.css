@@ -1190,15 +1190,19 @@ li {
   border: 1px solid darkblue;
   background-color: #dcdcdc;
   margin-top: 18px;
-  box-shadow: 4px 4px 20px rgba(240, 240, 240, 0.5);
+  box-shadow: 4px 4px 12px, 10px, white;
   border-radius: 5px;
   cursor: pointer;
   width: 744px;
-  transition: font-size 0.8s ease-in-out;
+  transition-property: font-size box-shadow;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-delay: 0.2s;
 }
 
 .moreInfoButton:hover {
   font-size:18px;
+  box-shadow: 8px 8px 20px white;
 }
 
 @media (max-width:426px) {
