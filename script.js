@@ -87,7 +87,7 @@ function animateSubMenu ()
   
   if(window.innerWidth < 427)
   {
-
+     return;
   //  subMenu.classList.add("slideInMenuTop");
 
   
