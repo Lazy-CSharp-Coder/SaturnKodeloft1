@@ -90,7 +90,7 @@ function animateSubMenu ()
   prevScrollPos = currentScrollPos;
 
 }
-window.addEventListener("scroll", animateSubMenu()); 
+window.addEventListener("scroll" ,animateSubMenu);
 
 
 
