@@ -2,6 +2,7 @@ let darkMode = true;
 let hamMenuShowing = false;
 let subMenuShowing = false;
 let mouseWheelMoved = false;
+let subMenuIsMissing = false;
 
 function hamburgerToggle() 
 {
@@ -87,9 +88,19 @@ function animateSubMenu ()
   
   if(window.innerWidth < 427)
   {
-     return;
-  //  subMenu.classList.add("slideInMenuTop");
+    if(subMenuIsMissing)
+    {
+      subMenu.classList.remove("slideOutSubMenu");
+      subMenu.classList.remove("hidden");
 
+      subMenu.classList.add("slideInMenuTop");
+      console.log("hi from slide in");
+      mouseWheelMoved = false;
+      subMenuIsMissing = false; 
+
+    }
+    
+  //  subMenu.classList.add("slideInMenuTop");
   
   }
   console.log("hi from eventlistenere for mousemove");
@@ -102,6 +113,7 @@ function animateSubMenu ()
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
       mouseWheelMoved = false;
+      subMenuIsMissing = false;
   }
   else if(mouseWheelMoved)
   {
@@ -110,11 +122,12 @@ function animateSubMenu ()
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
-
+    subMenuIsMissing = true;
    
     });
     mouseWheelMoved = false;
     console.log("hi from slide out");
+  
   }  
   prevScrollPos = currentScrollPos;
 
