@@ -86,7 +86,9 @@ function animateSubMenu ()
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
   {
-      //  subMenu.classList.remove("hidden");
+
+      subMenu.classList.remove("hidden");
+      subMenu.classList.add("slideInSubMenu");
       console.log("hi from slide in");
   }
   else 
