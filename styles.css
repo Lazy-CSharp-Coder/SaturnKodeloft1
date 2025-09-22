@@ -833,7 +833,7 @@ li {
   animation-duration: 0.6s;
   animation-delay:0;
   animation-timing-function: ease-out;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
 }
 
 .slideInSubMenu {
