@@ -85,7 +85,7 @@ function animateSubMenu ()
   const subMenu = document.getElementById("subMenuDiv");
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos) subMenu.classList.remove("hidden");
-  else subMenu.classList.add("hidden");
+  else subMenu.classList.add("slideOutSubMenu");
 
   prevScrollPos = currentScrollPos;
 
