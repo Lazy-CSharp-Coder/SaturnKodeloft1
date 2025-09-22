@@ -89,7 +89,7 @@ function animateSubMenu ()
   {
 
       subMenu.classList.remove("hidden");
-      // subMenu.classList.remove("slideOutSubMenu");
+      subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
   }
@@ -102,7 +102,7 @@ function animateSubMenu ()
      subMenu.addEventListener("animationend",  () => {
 
       subMenu.classList.add("hidden");
-      subMenu.classList.remove("slideOutSubMenu");
+  
   
 
     });
