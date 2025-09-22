@@ -75,6 +75,24 @@ function darkLightModeToggle()
    }
 }
 
+// event listener for mousemove
+
+let prevScrollPos = window.scrollY;
+
+window.addEventListener("scroll"), () => 
+{
+  const currentScrollPos = window.scrollY;
+  const subMenu = document.getElementById("subMenuDiv");
+
+  if(prevScrollPos > currentScrollPos) subMenu.remove("hidden");
+  else subMenu.add("hidden");
+
+  prevScrollPos = currentScrollPos;
+}
+
+
+
+
 
   // const navListElement = document.querySelector(".navList"); // Bevist brukt klasse for kun et element med det klassenavnet
   // console.log(navListElement);
