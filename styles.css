@@ -1127,7 +1127,7 @@ li {
   border-radius: 6px;
   cursor: pointer;
   width: 744px;
-  transition-property: color scale;
+  transition-property: color scale border;
   transition-timing-function: ease-in-out;
   transition-duration: 0.8s;
   transition-delay: 0.2s;
@@ -1139,6 +1139,7 @@ li {
   /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
     scale:1.05;
     color:rgb(142, 0, 0);
+    border: 4px solid #fca75c;
     /* color:var(--secondaryMenuColor); */
 }
 
