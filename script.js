@@ -79,16 +79,16 @@ function darkLightModeToggle()
 
 let prevScrollPos = window.scrollY;
 
-window.addEventListener("scroll"), () => 
+window.addEventListener("scroll", () => 
 {
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
-
-  if(prevScrollPos > currentScrollPos) subMenu.remove("hidden");
-  else subMenu.add("hidden");
+  console.log("hi from eventlistenere for mousemove");
+  if(prevScrollPos > currentScrollPos) subMenu.classList.remove("hidden");
+  else subMenu.classList.add("hidden");
 
   prevScrollPos = currentScrollPos;
-}
+});
 
 
 
