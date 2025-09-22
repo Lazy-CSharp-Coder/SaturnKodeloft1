@@ -93,13 +93,13 @@ function animateSubMenu ()
   }
   else 
   {
-    subMenu.classList.remove("slideInMenuTop");
+    // subMenu.classList.remove("slideInMenuTop");
     // subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => {
 
 
-      subMenu.classList.remove("slideOutSubMenu");
+      // subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.add("hidden");
 
     });
