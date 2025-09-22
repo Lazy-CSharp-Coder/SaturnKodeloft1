@@ -528,7 +528,7 @@ li {
 
 .subMenuDiv {
 
- 
+  
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -693,6 +693,7 @@ li {
   }
 
   .subMenuDiv {
+    display: flex;
     top:94px;
   }
 
