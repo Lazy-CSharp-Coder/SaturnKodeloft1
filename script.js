@@ -92,21 +92,19 @@ function animateSubMenu ()
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
+      mouseWheelMoved = false;
   }
-  else 
+  else if(mouseWheelMoved)
   {
     // subMenu.classList.remove("slideInMenuTop");
     // subMenu.classList.add("slideOutSubMenu");
-    subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.remove("slideInMenuTop");
-     subMenu.addEventListener("animationend",  () => {
+    subMenu.classList.add("slideOutSubMenu");
+    subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
 
-      subMenu.classList.add("hidden");
-  
-  
-
+    mouseWheelMoved = false;
     });
-   
+    
     console.log("hi from slide out");
   }  
   prevScrollPos = currentScrollPos;
