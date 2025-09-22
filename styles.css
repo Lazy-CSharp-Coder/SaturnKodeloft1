@@ -1040,6 +1040,8 @@ li {
   .titanCoreImg {
     width:391px;
   }
+
+  
 }
 
 /* ---------- romferd.html ----------- */
@@ -1191,6 +1193,9 @@ li {
 
   }
   
+  .moreInfoButton {
+    width: 344px;
+  }
 }
 
 /* FOOTER */
