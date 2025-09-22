@@ -92,7 +92,7 @@ function animateSubMenu ()
   else 
   {
     // subMenu.classList.add("slideOutSubMenu");
-    subMenu.classList.remove("slideOutSubMenu");
+    subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => {
       subMenu.classList.add("hidden");
       subMenu.classList.remove("slideOutSubMenu");
