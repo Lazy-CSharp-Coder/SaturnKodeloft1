@@ -836,26 +836,11 @@ li {
   animation-fill-mode: forwards;
 }
 
-.slideInSubMenu {
-  animation-name: animationSlideInMenu;
-  animation-duration: 0.6s;
-  animation-delay:0;
-  animation-timing-function: ease-out;
-  animation-fill-mode:forwards;
-}
 
 @keyframes animationSlideOutMenu {
   0% { transform: translateY(0);}
   100% {transform: translateY(-100px); }
 }
-
-@keyframes animationSlideInMenu {
-  0% { transform: translateY(-100px);}
-  100% {transform: translateY(0); }
-}
-
-
-
 
 
 .slideInLogo, .slideInMenuHeading, .slideInMenuItems, .slideInMenuBurger {

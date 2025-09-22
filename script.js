@@ -1,6 +1,7 @@
 let darkMode = true;
 let hamMenuShowing = false;
 let subMenuShowing = false;
+let mouseWheelMoved = false;
 
 function hamburgerToggle() 
 {
@@ -100,9 +101,9 @@ function animateSubMenu ()
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => {
 
-
-      subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.add("hidden");
+      subMenu.classList.remove("slideOutSubMenu");
+  
 
     });
    
@@ -112,6 +113,7 @@ function animateSubMenu ()
 
 }
 window.addEventListener("scroll" ,animateSubMenu);
+window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
 
 
 
