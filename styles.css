@@ -830,7 +830,7 @@ li {
 
 .slideOutSubMenu {
   animation-name: animationSlideOutMenu;
-  animation-duration: 0.6s;
+  animation-duration: 0.5s;
   animation-delay:0;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
