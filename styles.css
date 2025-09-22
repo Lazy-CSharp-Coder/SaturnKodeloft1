@@ -343,7 +343,7 @@ li {
 
 /* animation klasser for hero page */
 
-.fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit {
+.fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit, .fadeInFacts {
 
    animation-name: fadeInAnimation;
    animation-timing-function: ease-in;
@@ -546,10 +546,15 @@ li {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes scaleIn {
+@keyframes slideInRight {
   0% { transform:translateX(3000);}
   /* 60% { transform:scale(1.2);} */
   100% {transform:translateX(0);}
+}
+
+.fadeInFacts {
+  animation-duration: 1.5s;
+  animation-delay:1s;
 }
 
 /* -------   ringene.html klasser  ------------- */
