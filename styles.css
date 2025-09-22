@@ -208,10 +208,10 @@ a {
     display:none;
    }
 
-  .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene {
+  .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene, .subMenuDiv {
     display: flex;
   }
-
+  
 }
 
 /* MAIN */
@@ -527,6 +527,7 @@ li {
 /* -------   ringene.html klasser  ------------- */
 
 .subMenuDiv {
+
  
   flex-direction: row;
   justify-content: space-between;
