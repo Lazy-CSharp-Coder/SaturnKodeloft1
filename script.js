@@ -88,8 +88,9 @@ function animateSubMenu ()
   if(prevScrollPos > currentScrollPos)
   {
 
-      subMenu.classList.remove("hidden");
       subMenu.classList.remove("slideOutSubMenu");
+      subMenu.classList.remove("hidden");
+
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
       mouseWheelMoved = false;
