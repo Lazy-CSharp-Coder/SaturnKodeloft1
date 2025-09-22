@@ -92,17 +92,14 @@ function animateSubMenu ()
     {
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
-
       subMenu.classList.add("slideInMenuTop");
-      console.log("hi from slide in");
+      
       mouseWheelMoved = false;
       subMenuIsMissing = false; 
 
     }
-    
-  //  subMenu.classList.add("slideInMenuTop");
-  
   }
+
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
   {
