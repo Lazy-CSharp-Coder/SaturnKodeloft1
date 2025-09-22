@@ -119,7 +119,7 @@ a {
   display: none;
 }
 
-.show {
+.show, .hideHeaderMenu {
   display: flex;
   flex-direction: column;
   justify-content: right;
@@ -135,33 +135,42 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid white;
+}
 
+.show {
   animation-name: slideInMenu;
   animation-duration: 0.8s;
   animation-timing-function: ease-in-out;
   animation-delay: 0;
-
 }
 
+.hideHeaderMenu {
+  animation-name: slideOutMenuLeft;
+  animation-timing-function:ease-out;
+  animation-fill-mode:forwards;
+  animation-duration: 1s;
+  animation-delay: 0;
+}
 
 @keyframes slideInMenu {
-  0% {
-    transform: translateX(-100px);
-  }
-  60% { transform: translateX(25px); 
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0%   { transform: translateX(-100px); }  
+  60%  { transform: translateX(25px); }
+  100% { transform: translateX(0); }
 }
 
+@keyframes slideOutMenuLeft {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(20px); }
+  100% { transform: translateX(-300px); }
+}
 
 /* HEADER styling mobile L or less */
+
 @media (max-width: 426px) {
 
-  header { height: 94px;}
+  header { height: 94px;} 
 
-    .headerNav {
+  .headerNav {
   
     align-items: center;
     justify-content: space-between;
@@ -171,7 +180,6 @@ a {
   
   }
 
-  
   .hamburgerIcon {
     display: flex;
    
@@ -191,28 +199,20 @@ a {
   .darkLightListItem {
     display: flex;
     color:rgb(234, 212, 190);
-    
   }
 }
 
 @media (min-width: 427px)  {
-  body {
   
-    }
-
   .hamburgerIcon {
     display:none;
-    
-  }
+   }
 
   .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene {
     display: flex;
   }
 
- 
- 
 }
-
 
 /* MAIN */
 
@@ -225,11 +225,9 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: var(--primaryBackgroundColor);
-
 }
 
 h1 {
-
   font-family: var(--primaryFontFamily);
   font-size: 96px;
   font-weight: normal;
@@ -239,7 +237,6 @@ h1 {
 h2 {
    font-family: var(--primaryFontFamily);
    font-size:68px;
-
 }
 
 h3 {
@@ -302,8 +299,6 @@ li {
 .mobileSetting {
   display: none;
 }
-
-
 
 @media (max-width: 426px) {
   h1 {
@@ -403,8 +398,6 @@ li {
   font-style: italic;
   font-size:20px;
   width: 617px; 
-
-
 }
 
 .headingAndQuoteDiv, .imageAndStatsDiv {
@@ -450,11 +443,9 @@ li {
 }
 
 .linkWikiPage {
-
   color:var(--linkColor);
 }
-.quoteCarolyn
-{
+.quoteCarolyn {
   width:845px;
   text-align: center;
 }
@@ -485,8 +476,7 @@ li {
     flex-direction: column;
   }
 
-  .imageAndQuoteDiv 
-  {
+  .imageAndQuoteDiv {
     gap:20px;
   }
 
@@ -507,13 +497,11 @@ li {
     font-family: var(--primaryTextFontFamily);
     font-size: 10px;
     width:auto;
-    
   }
 
   .minMaxFactDiv {
     flex-direction: column;
     gap:0px;
-
   }
 
   .textFactsSaturnDistance {
@@ -533,7 +521,7 @@ li {
     margin-top:37px;
     margin-bottom: 37px;
   }
-  
+ 
 }
 
 /* -------   ringene.html klasser  ------------- */
@@ -552,14 +540,6 @@ li {
   top:106px;
   background-color: black;
   z-index: 8;
-
-  /* border-top: 0;
-  border-left: 1px;
-  border-right: 1px;
-  border-bottom: 1px;
-  border-style: solid;
-  border-color: white; */
-
 }
 
 .logoTextDiv {
@@ -576,7 +556,6 @@ li {
 
 .subMenuAnchor {
   color:var(--secondaryMenuColor);
-    
 }
 
 .subMenuText {
@@ -623,8 +602,6 @@ li {
   justify-content: center;
   align-items:center;
   padding-top:40px;
-  
-   
 }
 
 .questionText, .questionImage {
@@ -648,7 +625,6 @@ li {
 .cassiniShadowImgText, .ringsImgText, .moleculeImgText {
   flex-direction: column;
   align-items: center;
-
   padding-bottom: 60px;
   padding-top: 60px;
    
@@ -661,50 +637,30 @@ li {
   align-items:center;
 }
 
-.showSubMenu{
+.showSubMenu, .hideSubMenu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position:absolute;
   top:4.8rem;
   left:13.4rem;
-  
-   background-color: black;
-
+  background-color: black;
   border: 1px solid #dcdcdc;
 
+}
 
-
-    animation-name: slideInMenuTop;
-    animation-timing-function:ease-in-out;
-    animation-fill-mode:backwards;
-    animation-duration: 0.6s;
-    animation-delay: 0;
-  
+.showSubMenu{
  
-  /* få menyen til å slide down */
-
-  /* animation-name: slideInSubMenu;
+  animation-name: slideInMenuTop;
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
   animation-duration: 0.6s;
-  animation-delay: 0; */
-
- 
+  animation-delay: 0;
+  
 }
 
 .hideSubMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position:absolute;
-  top:4.8rem;
-  left:13.4rem;
-  
-   background-color: black;
-
-  border: 1px solid #dcdcdc;
-
+ 
     animation-name: slideOutMenuTop;
     animation-timing-function:ease-out;
     animation-fill-mode:forwards;
@@ -712,39 +668,12 @@ li {
     animation-delay: 0;
 }
 
-.hideHeaderMenu {
-  display: flex;
-  
-  flex-direction: column;
-  justify-content: right;
-  position: absolute;
-  top:4rem;
-  left:2rem;
-  font-size: 18px;
-  z-index: 1000;
-  gap:3px;
-  background-color: black;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid white;
-  
-  animation-name: slideOutMenuLeft;
-  animation-timing-function:ease-out;
-  animation-fill-mode:forwards;
-  animation-duration: 1s;
-  animation-delay: 0;
-
-}
-
 @media (max-width:426px) {
 
   /* p og h2 satt i forrige media query */
   
   h3 {
-    font-size: 36px;
-    
+    font-size: 36px; 
   }
 
   .navListRingene
@@ -756,23 +685,19 @@ li {
       padding-right:12px;
       padding-top:12px;
       padding-bottom:12px;
- 
       z-index: 6;
-
-     
-
   }
+
   .subMenuDiv {
- 
     top:94px;
-   
-  
   }
+
   .subMenuText {
     font-size: 40px;
     padding:0;
     margin:0;
   }
+
   .subMenuBurger {
     display:flex;
     color:var(--secondaryMenuColor);
@@ -811,10 +736,8 @@ li {
   .cassiniShadowImgText, .ringsImgText {
     flex-direction: column;
     align-items: center;
-  
     padding-bottom: 22px;
     padding-top: 22px; 
-     
   }
 
   .cassiniShadowImg {
@@ -827,7 +750,6 @@ li {
 
   .textQuestionDiv {
     padding-top:20px;
-
     width:420px;
     height: 94px; 
   }
@@ -881,10 +803,11 @@ li {
 }
 /* transition klasser */
 
- /* prøver å endre bakgroundcolor når  */
+ /* Endrer farge på meny ved hover  */
+
  .subMenuColor, .headerMenuColor {
     
-  transition-property:color;
+    transition-property:color;
     transition-timing-function: ease-in-out;
     transition-delay:0;
     transition-duration:0; 
@@ -948,11 +871,6 @@ li {
   20% { transform:translateY(10px);}
   100% {transform:translateY(-500px);}
 }
-@keyframes slideOutMenuLeft {
-  0% { transform: translateX(0);}
-  20% { transform: translateX(20px);}
-  100% { transform: translateX(-300px); }
-}
 
 @keyframes slideInLeft {
   0% { transform: translateX(-300px); }
@@ -960,7 +878,7 @@ li {
 }
 
 
-/* maane.html */
+/* --------- maane.html ------------ */
 
 
 .genereltListItem {
@@ -981,7 +899,6 @@ li {
   flex-direction: column;
   align-items: center;
   padding-bottom:140px;
-  
 }
 
 .moonImg, .enceladusImg1, .enceladusImg2 {
@@ -992,11 +909,8 @@ li {
 }
 
 .enceladusImg1 {
-
   margin-top: 200px;
-
 }
-
 
 .enceladusImg2 {
   margin:0;
@@ -1007,21 +921,19 @@ li {
 }
 
 .moonSection {
-
   flex-direction: row;
   justify-content: space-around;
   align-items:center;
-  /* width: 1350px; */
+ /* width: 1350px; */
   gap:82px;
   align-self: center;
   padding-bottom: 120px;
-
 }
 
 .enceladusSection {
   flex-direction: column;
- 
 }
+
 .moonDiv {
   flex-direction: column;
 }
@@ -1057,7 +969,6 @@ li {
   
   .genereltListItem {
      padding: 0;
-
   }
  
   .navListMaanene {
@@ -1065,7 +976,6 @@ li {
     gap:3px;  
     font-size: 19px;
     padding:12px 12px 12px 12px;
-    
   }
 
   .moonImg {
@@ -1077,6 +987,7 @@ li {
   .genereltSection {
     padding-bottom:50px;
   }
+
   .moonSection {
 
     flex-direction: column;
@@ -1085,7 +996,6 @@ li {
 
   .enceladusImg1, .enceladusImg2 {
     width:341px;
-  
     margin-top: 0;
     
   }
@@ -1094,22 +1004,24 @@ li {
     margin-bottom: 30px;
   }
   .enceladusDiv {
+    
     flex-direction: column;
     margin-top: 0;
     padding-bottom: 30px;
-   gap:30px;
+    gap:30px;
     
   }
+  
   .titanImg {
     width:405px;
   }
+  
   .titanCoreImg {
     width:391px;
   }
-
 }
 
-/* romferd.html */
+/* ---------- romferd.html ----------- */
 
 .romferdSection {
   flex-direction: column;
@@ -1123,8 +1035,7 @@ li {
   padding-bottom: 47px;
 }
 
-.navListRomferdene
-{
+.navListRomferdene {
   list-style-type: none;
   gap:47px;
   font-size: 32px;
@@ -1141,7 +1052,6 @@ li {
 .romferdSection {
   scroll-margin-top: 200px;
 }
-
 
 .cassiniLaunchImg {
   width:295px;
@@ -1189,12 +1099,12 @@ li {
   padding: 15px 32px;
   border: 3px solid lightgray;
   background-color: gray;
-  margin-top: 20px;
+  margin-top: 30px;
 
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  width: 720px;
-  transition-property: box-shadow scale;
+  width: 744px;
+  transition-property: color scale;
   transition-timing-function: ease-in-out;
   transition-duration: 0.8s;
   transition-delay: 0.2s;
@@ -1203,8 +1113,10 @@ li {
 .moreInfoButton:hover {
   /* font-size:17px; */
   /* box-shadow: 8px 8px 14px white; */
-  box-shadow: 7px 7px 10px rgba(250,250,250,0.49);
+  /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
     scale:1.05;
+    color:rgb(142, 0, 0);
+    /* color:var(--secondaryMenuColor); */
 }
 
 @media (max-width:426px) {
