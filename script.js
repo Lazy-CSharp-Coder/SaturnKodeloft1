@@ -91,9 +91,11 @@ function animateSubMenu ()
   }
   else 
   {
+    subMenu.classList.remove("slideInMenuTop");
     // subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => {
+
       subMenu.classList.add("hidden");
       subMenu.classList.remove("slideOutSubMenu");
 
