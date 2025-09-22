@@ -832,6 +832,7 @@ li {
   animation-duration: 0.6s;
   animation-delay:0;
   animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .slideOutSubMenu {
@@ -839,7 +840,7 @@ li {
 }
 
 .slideInSubMenu {
-  animation-name: animationSlideOutMenu;
+  animation-name: animationSlideInMenu;
 }
 
 
@@ -848,7 +849,7 @@ li {
   100% {transform: translateY(-100px); }
 }
 
-@keyframes animationSlideINMenu {
+@keyframes animationSlideInMenu {
   0% { transform: translateY(-100px);}
   100% {transform: translateY(0); }
 }

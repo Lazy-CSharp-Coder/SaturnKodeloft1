@@ -93,7 +93,12 @@ function animateSubMenu ()
   {
     // subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.remove("slideOutSubMenu");
-    subMenu.classList.add("hidden");
+    subMenu.addEventListener("animationend",  () => {
+      subMenu.classList.add("hidden");
+      subMenu.classList.remove("slideOutSubMenu");
+
+    });
+   
     console.log("hi from slide out");
   }  
   prevScrollPos = currentScrollPos;
