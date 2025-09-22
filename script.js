@@ -84,6 +84,10 @@ function animateSubMenu ()
 {
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
+  
+  if(window.innerWidth < 427) return 0;
+  
+  
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
   {
