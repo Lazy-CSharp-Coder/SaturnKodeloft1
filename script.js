@@ -102,16 +102,17 @@ function animateSubMenu ()
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
 
-    mouseWheelMoved = false;
+   
     });
-    
+    mouseWheelMoved = false;
     console.log("hi from slide out");
   }  
   prevScrollPos = currentScrollPos;
 
 }
-window.addEventListener("scroll" ,animateSubMenu);
 window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
+window.addEventListener("scroll" ,animateSubMenu);
+
 
 
 
