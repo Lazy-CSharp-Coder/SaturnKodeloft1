@@ -426,10 +426,12 @@ li {
 }
 .textFactCategorysDiv {
   font-weight: bold;
+  opacity: 0;
 
 }
 .textFactsSaturnDiv {
   font-weight: normal;
+  opacity: 0;
 }
 
 .textFactCategorys, .textFactsSaturn, .textFactsSaturnDistance {
