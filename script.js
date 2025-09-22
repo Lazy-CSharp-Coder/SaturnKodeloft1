@@ -96,7 +96,7 @@ function animateSubMenu ()
   }
   else if(mouseWheelMoved)
   {
-    // subMenu.classList.remove("slideInMenuTop");
+    // subMenu.classList.remove ("slideInMenuTop");
     // subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
