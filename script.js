@@ -79,7 +79,7 @@ function darkLightModeToggle()
 
 let prevScrollPos = window.scrollY;
 
-window.addEventListener("scroll", () => 
+function animateSubMenu () 
 {
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
@@ -88,7 +88,9 @@ window.addEventListener("scroll", () =>
   else subMenu.classList.add("hidden");
 
   prevScrollPos = currentScrollPos;
-});
+
+}
+window.addEventListener("scroll", animateSubMenu()); 
 
 
 
