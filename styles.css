@@ -366,7 +366,7 @@ li {
 
 .fadeInCredit {
   animation-duration: 1.5s;
-  animation-delay:6s;
+  animation-delay:16s;
 }
 
 @keyframes fadeInAnimation {
