@@ -89,7 +89,7 @@ function animateSubMenu ()
   {
 
   //  subMenu.classList.add("slideInMenuTop");
-   return;
+
   
   }
   console.log("hi from eventlistenere for mousemove");
