@@ -1223,7 +1223,8 @@ li {
   text-align: center;
   padding: 15px 32px;
   border: 3px solid lightgray;
-  background-color: gray;
+  background : 
+  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
   margin-top: 30px;
 
   border-radius: 6px;
