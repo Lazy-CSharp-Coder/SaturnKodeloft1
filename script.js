@@ -122,6 +122,7 @@ function animateSubMenu ()
           toTopButton.addEventListener("animationend", () => 
           { 
             toTopButton.classList.add("hidden"); 
+            toTopButton.removeEventListener("animationend");
 
           } );
   
