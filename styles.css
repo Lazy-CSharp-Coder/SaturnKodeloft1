@@ -467,10 +467,10 @@ li {
 
   bottom: 550px;
   right: 80px;
-  color:#7088C6;
-  
+  background-color:#7088C6;
+  color:black;
   padding: 20px;
-  border: 1px solid white;
+  border: 1px solid black;
 
 
 }
