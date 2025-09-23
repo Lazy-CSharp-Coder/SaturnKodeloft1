@@ -26,7 +26,7 @@ function hamburgerToggle()
   {
     navListElement.classList.remove("show");
     navListElement.classList.add("hideHeaderMenu");
-    navListElement.addEventListener("animationend", () => { navListElement.classList.add("hidden"); navListElement.classList.remove("hideHeaderMenu"); console.log('Animation slutt!');  });
+    navListElement.addEventListener("animationend", () => { navListElement.classList.add("hidden"); navListElement.classList.remove("hideHeaderMenu"); console.log('Animation slutt!');  }, {once: true});
 
     hamMenuShowing = false;
   }
