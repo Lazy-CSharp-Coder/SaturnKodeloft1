@@ -461,7 +461,8 @@ li {
 .toTop {
 
   position: relative;
-  bottom: 550px;
+  
+  bottom: 50px;
   right: 80px;
   background-color:#7088C6;
   color:black;
