@@ -459,8 +459,7 @@ li {
 }
 
 .toTop {
-  display: flex;
-  justify-content: flex-end;
+  
   position: sticky;
   bottom: 150px;
   right: 85px;
