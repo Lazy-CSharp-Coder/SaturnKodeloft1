@@ -129,7 +129,11 @@ function animateSubMenu ()
             toTopButtonVisible = false;
         }
         
-
+  if(window.location.pathname("/om.html")) 
+  {
+    console.log("you are on om page...returning from mousemove");
+    return;
+  }
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
   {
