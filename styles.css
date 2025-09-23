@@ -459,8 +459,7 @@ li {
 }
 
 .toTop {
-  display: flex;
-  flex-direction: flex-end;
+
   position: relative;
   bottom: 550px;
   right: 80px;
