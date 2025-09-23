@@ -55,7 +55,7 @@ function subMenuToggle()
         // subListElement.classList.remove("showSubMenu");
         subListElement.classList.add("hidden"); 
         subListElement.classList.remove("hideSubMenu"); 
-        console.log('Animation slutt!');  });
+        console.log('Animation slutt!');  }, {once: true});
     
     subMenuShowing = false;
   }
