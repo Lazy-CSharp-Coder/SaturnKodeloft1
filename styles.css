@@ -1231,17 +1231,14 @@ li {
   border-radius: 6px;
   cursor: pointer;
   width: 744px;
+ 
 
-  box-shadow:
-  -1px -1px 5px 0px #fff,
-  7px 7px 20px 0px #0003,
-  4px 4px 5px 0px #0002;
-    
+   
   transition-property: color scale border;
   transition-timing-function: ease-in-out;
   transition-duration: 0.8s;
   transition-delay: 0.2s;
-  */
+  
 }
 
 .moreInfoButton:hover {
@@ -1251,6 +1248,7 @@ li {
     scale:1.05;
     color:rgb(142, 0, 0);
     border: 4px solid #fca75c;
+ ;
     /* color:var(--secondaryMenuColor); */
 }
 
