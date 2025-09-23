@@ -460,7 +460,7 @@ li {
 
 .toTop {
   
-  display: flex;
+  display: inline-flexbox;
   flex-direction: flex-end;
   margin-left : auto;
   position: sticky;
@@ -470,7 +470,7 @@ li {
   color:white;
   padding: 20px;
   border: 1px solid white;
-  
+
 
 }
 
