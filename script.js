@@ -85,7 +85,7 @@ function animateSubMenu ()
 {
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
-  const toTop
+  const toTopButton = document.getElementById("toTop");
   if(window.scrollY > 200)
 
 
@@ -101,6 +101,12 @@ function animateSubMenu ()
       subMenuIsMissing = false; 
 
     }
+  }
+  
+  if(window.scrollY > 0)
+  {
+    toTopButton.classList.remove("hidden");
+     toTopButton.classList.add("showToTopButton");
   }
 
   console.log("hi from eventlistenere for mousemove");
@@ -134,10 +140,6 @@ function animateSubMenu ()
 }
 window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
 window.addEventListener("scroll" ,animateSubMenu);
-
-
-
-
 
 
   // const navListElement = document.querySelector(".navList"); // Bevist brukt klasse for kun et element med det klassenavnet
