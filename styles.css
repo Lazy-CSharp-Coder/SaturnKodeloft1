@@ -460,7 +460,9 @@ li {
 
 .toTop {
   
+  display: inline;
   position: sticky;
+
   bottom: 150px;
   right: 85px;
   color:white;
