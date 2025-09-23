@@ -102,7 +102,7 @@ function animateSubMenu ()
     }
   }
   
-  if((currentScrollPos > topButtonYLimit) && toTopButtonVisible == false)
+  if(currentScrollPos > topButtonYLimit && toTopButtonVisible == false)
   {
     toTopButton.classList.remove("removeToTopButton");
     toTopButton.classList.remove("hidden");
@@ -122,8 +122,8 @@ function animateSubMenu ()
           toTopButton.addEventListener("animationend", () => 
           { 
             toTopButton.classList.add("hidden"); 
-            toTopButton.removeEventListener("animationend");
-
+            toTopButton.removeEventListener("animationend", toTopButton);
+            console.log("i'm here");
           } );
   
 
