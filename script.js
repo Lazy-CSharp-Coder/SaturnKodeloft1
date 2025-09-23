@@ -4,7 +4,7 @@ let subMenuShowing = false;
 let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
-const topButtonYLimit = 10;
+const topButtonYLimit = 1000;
 
 function hamburgerToggle() 
 {
