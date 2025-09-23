@@ -460,12 +460,11 @@ li {
 
 .toTop {
   
+  position: fixed;
   
-  position: sticky;
-  /* top:0; */
-  /* left:0; */
   bottom: 50px;
   right: 80px;
+  
   background-color:#7088C6;
   color:black;
   padding: 20px;
@@ -474,7 +473,21 @@ li {
 
 .showToTopButton {
   display: flex;
+
+  animation-name: animToTopButton;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
 }
+
+@keyframes animToTopButton {
+
+  0% { transform: translateX(2000px);}
+  60% { transform: translateX(-200px);}
+  100% { transform: tranlateX(0); }
+}
+
 
 @media (max-width:426px) {
 
