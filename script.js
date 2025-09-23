@@ -128,7 +128,7 @@ function animateSubMenu ()
         console.log("i'm here");
  
       } );
-      toTopButton.removeEventListener("animationend", toTopButton);
+      // toTopButton.removeEventListener("animationend",toTopButton);
       toTopButtonVisible = false;
     }
   
