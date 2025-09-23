@@ -473,8 +473,7 @@ li {
 }
 
 .showToTopButton {
-  diplay: flex;
-  
+  display: flex;
 }
 
 @media (max-width:426px) {

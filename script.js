@@ -85,7 +85,10 @@ function animateSubMenu ()
 {
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
-  
+  const toTop
+  if(window.scrollY > 200)
+
+
   if(window.innerWidth < 427)
   {
     if(subMenuIsMissing)
