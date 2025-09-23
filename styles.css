@@ -469,7 +469,9 @@ li {
   left: 80px;
   color:white;
   padding: 20px;
-  background-color: #7088C6;
+  border: 1px solid white;
+  
+
 }
 
 @media (max-width:426px) {
