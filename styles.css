@@ -50,6 +50,15 @@ header {
 
 }
 
+audio {
+
+  position:fixed;
+  bottom :60px;
+  left : 20px;
+
+}
+
+
 .headerNav {
   flex-direction: row;
   align-items: center;
@@ -476,7 +485,15 @@ li {
 
   animation-name: animToTopButton;
   animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+}
+
+.removeToTopButton {
+  animation-name: animRemoveButton;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 
 }
@@ -488,6 +505,10 @@ li {
   100% { transform: tranlateX(0); }
 }
 
+@keyframes animRemoveButton {
+  0% { opacity: 1; }
+  100% { opacity: 0 }
+}
 
 @media (max-width:426px) {
 
