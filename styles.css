@@ -478,6 +478,7 @@ li {
   color:black;
   padding: 20px;
   border: 1px solid black;
+  width:92px;
 }
 
 .showToTopButton {
@@ -497,6 +498,8 @@ li {
   animation-fill-mode: forwards;
 
 }
+
+
 
 @keyframes animToTopButton {
 

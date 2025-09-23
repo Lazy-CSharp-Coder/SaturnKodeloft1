@@ -129,7 +129,7 @@ function animateSubMenu ()
             toTopButtonVisible = false;
         }
         
-  if(window.location.pathname("/om.html")) 
+  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html") 
   {
     console.log("you are on om page...returning from mousemove");
     return;
@@ -138,7 +138,7 @@ function animateSubMenu ()
   if(prevScrollPos > currentScrollPos)
   {
       subMenu.classList.remove("slideOutSubMenu");
-      subMen u.classList.remove("hidden");
+      subMenu.classList.remove("hidden");
 
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
