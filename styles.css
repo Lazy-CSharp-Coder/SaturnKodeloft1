@@ -459,6 +459,7 @@ li {
 }
 
 .toTop {
+  display: flex;
 
   position: relative;
   
