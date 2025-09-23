@@ -109,23 +109,25 @@ function animateSubMenu ()
 
     toTopButton.classList.add("showToTopButton");
     toTopButtonVisible = true;
+    console.log("Inne i legge til arrow" + toTopButtonVisible);
      
   }
-  else if(currentScrollPos < topButtonYLimit)
+  else if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
        {
-          if(toTopButtonVisible)
-          {
-            toTopButton.classList.remove("showToTopButton"); 
-            toTopButton.classList.add("removeToTopButton");
-            toTopButton.addEventListener("animationend", () => 
-            { 
-              toTopButton.classList.add("hidden"); 
-            } 
-            );
+          console.log(toTopButtonVisible);
+          
+          toTopButton.classList.remove("showToTopButton"); 
+          toTopButton.classList.remove("hidden");
+          toTopButton.classList.add("removeToTopButton");
+          toTopButton.addEventListener("animationend", () => 
+          { 
+            toTopButton.classList.add("hidden"); 
+          } );
+  
 
             toTopButtonVisible = false;
-          }
         }
+        
 
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
