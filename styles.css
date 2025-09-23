@@ -458,6 +458,15 @@ li {
   margin-bottom: 60px;
 }
 
+.toTop {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 15px;
+  right: 85px;
+  color:white;
+}
+
 @media (max-width:426px) {
 
   h2 {
