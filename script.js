@@ -112,24 +112,27 @@ function animateSubMenu ()
     console.log("Inne i legge til arrow" + toTopButtonVisible);
      
   }
-  else if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
-       {
-          console.log(toTopButtonVisible);
-          
-          toTopButton.classList.remove("showToTopButton"); 
-          toTopButton.classList.remove("hidden");
-          toTopButton.classList.add("removeToTopButton");
-          toTopButton.addEventListener("animationend", () => 
-          { 
-            toTopButton.classList.add("hidden"); 
-            toTopButton.removeEventListener("animationend", toTopButton);
-            console.log("i'm here");
-          } );
+  else
+  { 
+    if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
+    {
+      console.log(toTopButtonVisible);
+      
+      toTopButton.classList.remove("showToTopButton"); 
+      toTopButton.classList.remove("hidden");
+      toTopButton.classList.add("removeToTopButton");
+      toTopButton.addEventListener("animationend", () => 
+      { 
+        toTopButton.classList.add("hidden"); 
+        //
+        console.log("i'm here");
+ 
+      } );
+      toTopButton.removeEventListener("animationend", toTopButton);
+      toTopButtonVisible = false;
+    }
   
-
-            toTopButtonVisible = false;
-        }
-        
+  } 
   if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html") 
   {
     console.log("you are on om page...returning from mousemove");
