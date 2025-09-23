@@ -459,9 +459,8 @@ li {
 }
 
 .toTop {
-  display: flex;
-  flex: flex-end;
-
+  
+  
   position: sticky;
   /* top:0; */
   /* left:0; */
@@ -471,6 +470,11 @@ li {
   color:black;
   padding: 20px;
   border: 1px solid black;
+}
+
+.showToTopButton {
+  diplay: flex;
+  
 }
 
 @media (max-width:426px) {
