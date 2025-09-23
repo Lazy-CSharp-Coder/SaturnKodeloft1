@@ -461,10 +461,11 @@ li {
 .toTop {
   
   display: inline;
+    
   position: sticky;
 
   bottom: 550px;
-  left: 80px;
+  right: 80px;
   color:white;
   padding: 20px;
   border: 1px solid white;
