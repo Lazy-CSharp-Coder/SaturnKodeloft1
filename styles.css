@@ -461,7 +461,7 @@ li {
 .toTop {
   display: flex;
   flex-direction: flex-end;
-  position: sticky;
+  position: relative;
   bottom: 550px;
   right: 80px;
   background-color:#7088C6;
