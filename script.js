@@ -121,13 +121,7 @@ function animateSubMenu ()
       toTopButton.classList.remove("showToTopButton"); 
       toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
-      toTopButton.addEventListener("animationend", () => 
-      { 
-        toTopButton.classList.add("hidden"); 
-        //
-        console.log("i'm here");
- 
-      }, {once: true} );
+      toTopButton.addEventListener("animationend", () =>  { toTopButton.classList.add("hidden");}, {once: true} );
       // toTopButton.removeEventListener("animationend",toTopButton);
       toTopButtonVisible = false;
     }
@@ -158,7 +152,7 @@ function animateSubMenu ()
     subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
     subMenuIsMissing = true;
    
-    });
+    }, { once: true});
     mouseWheelMoved = false;
     console.log("hi from slide out");
   
