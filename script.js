@@ -102,24 +102,28 @@ function animateSubMenu ()
     }
   }
   
-  if(currentScrollPos > topButtonYLimit)
+  if((currentScrollPos > topButtonYLimit) && toTopButtonVisible == false)
   {
     toTopButton.classList.remove("hidden");
     toTopButton.classList.add("showToTopButton");
+    toTopButtonVisible = true;
      
   }
   else if(currentScrollPos < topButtonYLimit)
   {
+    if(toTopButtonVisible)
+    {
      toTopButton.classList.remove("showToTopButton");
      toTopButton.classList.add("removeToTopButton");
      toTopButton.addEventListener("animationend", () => { toTopButton.classList.add("hidden");});
      toTopButton.classList.add("hidden");
+     toTopButtonVisible == false;
+    }
   }
 
   console.log("hi from eventlistenere for mousemove");
   if(prevScrollPos > currentScrollPos)
   {
-
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
 
