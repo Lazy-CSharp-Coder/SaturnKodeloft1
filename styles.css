@@ -1042,6 +1042,9 @@ li {
     padding:12px 12px 12px 12px;
   }
 
+  .logoMaaneImg {
+    padding-right:18px;
+  }
   .moonImg {
     width:341px;
     margin:0;
