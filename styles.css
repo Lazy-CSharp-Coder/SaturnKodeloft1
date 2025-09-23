@@ -741,8 +741,8 @@ li {
   .logoTextDiv {
         
     justify-content: space-between;
-    gap:47px;
-    padding-left: 20px;
+    gap:3rem;
+    padding-left: 1.1rem;
   
 
   }
@@ -1043,7 +1043,7 @@ li {
   }
 
   .logoMaaneImg {
-    padding-right:18px;
+    padding-right:1.1rem;
   }
   .moonImg {
     width:341px;
@@ -1202,6 +1202,7 @@ li {
   }
   .logoTextDivRomferd {
     gap:5px;
+    padding-left:
   }
 
   .pioneerImg, .voyager1Img, .voyager2Img {
