@@ -465,6 +465,8 @@ li {
   bottom: 150px;
   right: 85px;
   color:white;
+  padding: 20px;
+  background-color: #7088C6;
 }
 
 @media (max-width:426px) {
