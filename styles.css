@@ -733,11 +733,17 @@ li {
   }
 
   .subMenuText {
-    font-size: 40px;
+    font-size: 38px;
     padding:0;
     margin:0;
   }
 
+  .logoTextDiv {
+    gap:35px;
+    padding-left: 20px;
+  
+
+  }
   .subMenuBurger {
     display:flex;
     color:var(--secondaryMenuColor);
