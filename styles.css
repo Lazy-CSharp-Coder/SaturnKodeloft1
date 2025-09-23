@@ -346,7 +346,7 @@ li {
 .fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit, .fadeInFacts {
 
    animation-name: fadeInAnimation;
-   animation-timing-function: ease-in;
+   animation-timing-function: ease-in-out;
    animation-fill-mode: forwards;
 }
 
