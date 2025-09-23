@@ -4,7 +4,7 @@ let subMenuShowing = false;
 let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
-const topButtonYLimit = 1000;
+const topButtonYLimit = 10;
 
 function hamburgerToggle() 
 {
@@ -103,7 +103,7 @@ function animateSubMenu ()
     }
   }
   
-  if(curretnScrollPos > topButtonYLimit)
+  if(currentScrollPos > topButtonYLimit)
   {
     toTopButton.classList.remove("hidden");
      toTopButton.classList.add("showToTopButton");
