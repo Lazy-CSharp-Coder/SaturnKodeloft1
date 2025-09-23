@@ -150,9 +150,7 @@ function animateSubMenu ()
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
-    subMenuIsMissing = true;
-   
-    }, { once: true});
+    subMenuIsMissing = true; }, { once: true});
     mouseWheelMoved = false;
     console.log("hi from slide out");
   
