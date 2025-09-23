@@ -119,7 +119,7 @@ function animateSubMenu ()
       console.log(toTopButtonVisible);
       
       toTopButton.classList.remove("showToTopButton"); 
-      // toTopButton.classList.remove("hidden");
+      toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
       toTopButton.addEventListener("animationend", () => 
       { 
@@ -127,7 +127,7 @@ function animateSubMenu ()
         //
         console.log("i'm here");
  
-      }, {once: true });
+      }, {once: true} );
       // toTopButton.removeEventListener("animationend",toTopButton);
       toTopButtonVisible = false;
     }
