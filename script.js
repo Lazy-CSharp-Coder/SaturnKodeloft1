@@ -3,6 +3,8 @@ let hamMenuShowing = false;
 let subMenuShowing = false;
 let mouseWheelMoved = false;
 let subMenuIsMissing = false;
+let toTopButtonVisible = false;
+const topButtonYLimit = 20;
 
 function hamburgerToggle() 
 {
@@ -86,8 +88,6 @@ function animateSubMenu ()
   const currentScrollPos = window.scrollY;
   const subMenu = document.getElementById("subMenuDiv");
   const toTopButton = document.getElementById("toTop");
-  if(window.scrollY > 200)
-
 
   if(window.innerWidth < 427)
   {
@@ -103,10 +103,16 @@ function animateSubMenu ()
     }
   }
   
-  if(window.scrollY > 0)
+  if(window.scrollY > topButtonYLimit)
   {
     toTopButton.classList.remove("hidden");
      toTopButton.classList.add("showToTopButton");
+     
+  }
+  else if(window.scrollY < topButtonYLimit)
+  {
+     toTopButton.classList.remove("showToTopButton");
+     toTopButton.classList.add("hidden");
   }
 
   console.log("hi from eventlistenere for mousemove");
