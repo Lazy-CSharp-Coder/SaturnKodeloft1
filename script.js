@@ -117,8 +117,11 @@ function animateSubMenu ()
           {
             toTopButton.classList.remove("showToTopButton"); 
             toTopButton.classList.add("removeToTopButton");
-            toTopButton.addEventListener("animationend", () => { 
-                                                                 toTopButton.classList.add("hidden");});
+            toTopButton.addEventListener("animationend", () => 
+            { 
+              toTopButton.classList.add("hidden"); 
+            } 
+            );
 
             toTopButtonVisible = false;
           }
