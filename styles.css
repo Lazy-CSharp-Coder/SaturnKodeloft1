@@ -460,7 +460,8 @@ li {
 
 .toTop {
   
-  display: inline;
+  display: flex;
+  flex-direction: flex-end;
     
   position: sticky;
 
