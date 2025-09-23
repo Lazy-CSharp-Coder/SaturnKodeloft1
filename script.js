@@ -4,7 +4,7 @@ let subMenuShowing = false;
 let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
-const topButtonYLimit = 500;
+const topButtonYLimit = 300;
 
 function hamburgerToggle() 
 {
@@ -122,6 +122,7 @@ function animateSubMenu ()
           toTopButton.addEventListener("animationend", () => 
           { 
             toTopButton.classList.add("hidden"); 
+
           } );
   
 
@@ -133,7 +134,7 @@ function animateSubMenu ()
   if(prevScrollPos > currentScrollPos)
   {
       subMenu.classList.remove("slideOutSubMenu");
-      subMenu.classList.remove("hidden");
+      subMen u.classList.remove("hidden");
 
       subMenu.classList.add("slideInMenuTop");
       console.log("hi from slide in");
