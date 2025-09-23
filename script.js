@@ -105,12 +105,14 @@ function animateSubMenu ()
   if(currentScrollPos > topButtonYLimit)
   {
     toTopButton.classList.remove("hidden");
-     toTopButton.classList.add("showToTopButton");
+    toTopButton.classList.add("showToTopButton");
      
   }
   else if(currentScrollPos < topButtonYLimit)
   {
      toTopButton.classList.remove("showToTopButton");
+     toTopButton.classList.add("removeToTopButton");
+     toTopButton.addEventListener("animationend", () => { toTopButton.classList.add("hidden");});
      toTopButton.classList.add("hidden");
   }
 
