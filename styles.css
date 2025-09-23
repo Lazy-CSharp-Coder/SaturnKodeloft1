@@ -729,16 +729,17 @@ li {
 
   .subMenuDiv {
     display: flex;
+    justify-content: space-between;
     top:94px;
   }
 
   .subMenuText {
     font-size: 35px;
-    padding:0;
-    margin:0;
+
   }
 
   .logoTextDiv {
+        
     gap:47x;
     padding-left: 20px;
   
