@@ -1,4 +1,5 @@
 /* GENERAL */
+
 @import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Story+Script&display=swap');
@@ -14,7 +15,6 @@
   --primaryFontFamily:"Story Script";
   --linkColor:lightblue;
   --borderColorMenu:white;
-   
 }
 
 * {
@@ -26,6 +26,7 @@
 }
 
 /* BODY */
+
 body {
 
   height:100%;
@@ -752,7 +753,6 @@ li {
 }
 
 .showSubMenu{
- 
   animation-name: slideInMenuTop;
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
@@ -762,7 +762,6 @@ li {
 }
 
 .hideSubMenu {
- 
     animation-name: slideOutMenuTop;
     animation-timing-function:ease-out;
     animation-fill-mode:forwards;
@@ -798,17 +797,14 @@ li {
 
   .subMenuText {
     font-size: 35px;
-
   }
 
   .logoTextDiv {
-        
     justify-content: space-between;
     gap:3rem;
     padding-left: 1.1rem;
-  
-
   }
+
   .subMenuBurger {
     display:flex;
     color:var(--secondaryMenuColor);
@@ -933,7 +929,6 @@ li {
 }
 
 /*  animasjonsklasser  */
-
 
 .slideOutSubMenu {
   animation-name: animationSlideOutMenu;
@@ -1146,7 +1141,7 @@ li {
   .titanCoreImg {
     width:391px;
   }
-  
+ 
 }
 
 /* ---------- romferd.html ----------- */
@@ -1157,6 +1152,7 @@ li {
   justify-content: center;
 
 }
+
 .pioneerImgTextDiv, .voyager1ImgTextDiv, .voyager2ImgTextDiv {
   flex-direction: column;
   align-items: center;
