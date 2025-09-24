@@ -967,8 +967,6 @@ li {
   animation-delay: 0;
 }
 
-
-
 @keyframes slideInRight {
   0% { transform:translateX(1000px);}
   60% { transform: translateX(-50px);}
@@ -996,9 +994,7 @@ li {
   100% { transform: translateX(0); }
 }
 
-
 /* --------- maane.html ------------ */
-
 
 .genereltListItem {
   padding-left:0px;
@@ -1142,7 +1138,6 @@ li {
   .titanCoreImg {
     width:391px;
   }
-
   
 }
 
@@ -1214,30 +1209,30 @@ li {
   padding-bottom:40px;
 }
 
-.moreInfoButton {
-  
+
+.button {
+  margin:30px;
+  width:744px;
+  height:200px;
+  color:black;
+  border-radius: 5px;
   font-family: var(--primaryTextFontFamily);
   font-size:19px;
-  font-weight: bold;
-  color: black;
+  text-align:center;
+  cursor: pointer;
+}
+
+.moreInfoButton {
+    
   text-align: center;
   padding: 15px 32px;
   border: 3px solid lightgray;
-  background: 
-  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
-  
-  margin-top: 30px;
-
-  border-radius: 6px;
-  cursor: pointer;
-  width: 744px;
- 
-
-   
-  transition-property: color scale border;
-  transition-timing-function: ease-in-out;
+  background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
+  line-height: 202px;   
+  transition-property: all;
+  transition-timing-function: ease;
   transition-duration: 0.8s;
-  transition-delay: 0.2s;
+  transition-delay: 0;
   
 }
 
@@ -1246,6 +1241,7 @@ li {
   /* box-shadow: 8px 8px 14px white; */
   /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
     scale:1.05;
+
     color:rgb(142, 0, 0);
     border: 4px solid #fca75c;
  ;
@@ -1337,20 +1333,18 @@ footer {
 }
 
 .textNASA {
- 
   text-align: center;
   text-decoration: underline;
 }
 
 .textMyName {
    color: #EE7700;
-
+ 
 }
 
 .myInfoDiv {
   flex-direction: column;
   justify-content: center;
-
 }
 
 .infoAndIconsDiv {
