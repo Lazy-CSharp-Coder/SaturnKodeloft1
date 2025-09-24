@@ -527,7 +527,9 @@ li {
    }
 
    .toTop {
-    width: 20px;
+    width: 42px;
+    padding: 5px;
+ 
    }
 
   .quotePP {
