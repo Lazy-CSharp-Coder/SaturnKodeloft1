@@ -15,7 +15,6 @@ else localStorage.setItem("selectedTheme", "darkMode");
 
 // ********************************************************
 
-
 function hamburgerToggle() 
 {
   console.log("Hi from hamburgerToggle");
@@ -41,8 +40,6 @@ function hamburgerToggle()
     hamMenuShowing = false;
   }
 }
-
-
 
 function subMenuToggle()
 {
@@ -137,7 +134,7 @@ function animateSubMenu ()
   
   if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
 
-  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller nedover
+  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
   
   if(prevScrollPos > currentScrollPos)
   {
@@ -159,6 +156,8 @@ function animateSubMenu ()
   prevScrollPos = currentScrollPos;
 
 }
+
+// event listeners for wheel og scroll
 
 window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
 window.addEventListener("scroll" ,animateSubMenu);
