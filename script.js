@@ -9,7 +9,7 @@ const topButtonYLimit = 300;
 const chosenTheme = localStorage.getItem("selectedTheme") ;
 
 if(chosenTheme != null) if(chosenTheme === "lightMode") darkLightModeToggle();
-else localStorage.add("selectedTheme", "darkMode");
+else localStorage.setItem("selectedTheme", "darkMode");
 
 function hamburgerToggle() 
 {
@@ -77,11 +77,11 @@ function darkLightModeToggle()
     mainElement.classList.add("lightMode");
     // imgElements.classList.add("ligthModeImages");
     darkMode = false;
-    localStorage.add("selectedTheme", "lightMode");
+    localStorage.setItem("selectedTheme", "lightMode");
   }
   else
   {  mainElement.classList.remove("lightMode");
-     localStorage.add("selectedTheme", "darkMode");
+     localStorage.setItem("selectedTheme", "darkMode");
      darkMode = true;
 
    }
