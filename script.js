@@ -6,10 +6,15 @@ let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
 
+// her finner jeg ut om brukeren har skiftet til lightMode
+
 const chosenTheme = localStorage.getItem("selectedTheme") ;
 
 if(chosenTheme != null) if(chosenTheme === "lightMode") darkLightModeToggle();
 else localStorage.setItem("selectedTheme", "darkMode");
+
+// ********************************************************
+
 
 function hamburgerToggle() 
 {
@@ -37,17 +42,16 @@ function hamburgerToggle()
   }
 }
 
+
+
 function subMenuToggle()
 {
-  console.log("inne i sub meny toggle");
-
   const subListElement = document.getElementById("subMenu");
   console.log(subListElement);
 
   if(subMenuShowing == false)
   {
     subListElement.classList.remove("hidden");
-    // subListElement.classList.remove("hideSubMenu");
     subListElement.classList.add("showSubMenu");
     subMenuShowing = true;
   }
@@ -57,7 +61,6 @@ function subMenuToggle()
     subListElement.classList.add("hideSubMenu");
     subListElement.addEventListener("animationend", () => { 
 
-        // subListElement.classList.remove("showSubMenu");
         subListElement.classList.add("hidden"); 
         subListElement.classList.remove("hideSubMenu"); 
         console.log('Animation slutt!');  }, {once: true});
@@ -104,7 +107,6 @@ function animateSubMenu ()
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
       subMenu.classList.add("slideInMenuTop");
-      
       mouseWheelMoved = false;
       subMenuIsMissing = false; 
     }
@@ -114,10 +116,8 @@ function animateSubMenu ()
   {
     toTopButton.classList.remove("removeToTopButton");
     toTopButton.classList.remove("hidden");
-
     toTopButton.classList.add("showToTopButton");
     toTopButtonVisible = true;
-    console.log("Inne i legge til arrow" + toTopButtonVisible);
      
   }
   else
@@ -130,59 +130,37 @@ function animateSubMenu ()
       toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
       toTopButton.addEventListener("animationend", () =>  { toTopButton.classList.add("hidden");}, {once: true} );
-      // toTopButton.removeEventListener("animationend",toTopButton);
       toTopButtonVisible = false;
     }
   
-  } 
-  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html") 
-  {
-    console.log("you are on om page...returning from mousemove");
-    return;
   }
-  console.log("hi from eventlistenere for mousemove");
+  
+  // går tilbake hvis det ikkke finnes en undermeny
+  
+  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
+
+  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller nedover
+  
   if(prevScrollPos > currentScrollPos)
   {
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
-
       subMenu.classList.add("slideInMenuTop");
-      console.log("hi from slide in");
       mouseWheelMoved = false;
       subMenuIsMissing = false;
   }
   else if(mouseWheelMoved)
   {
-    // subMenu.classList.remove ("slideInMenuTop");
-    // subMenu.classList.add("slideOutSubMenu");
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
     subMenuIsMissing = true; }, { once: true});
     mouseWheelMoved = false;
-    console.log("hi from slide out");
   
   }  
   prevScrollPos = currentScrollPos;
 
 }
+
 window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
 window.addEventListener("scroll" ,animateSubMenu);
-
-
-  // const navListElement = document.querySelector(".navList"); // Bevist brukt klasse for kun et element med det klassenavnet
-  // console.log(navListElement);
-
-  // Metode 1: Skrive CSS i JS som blir inline-CSS
-  // navListElement.style.display = "flex";
-  // navListElement.style.flexDirection = "column";
-
-  // Metode 2: Endre aktivt klassenavn via external-CSS fil
-  /*navListElement.classList.add("show");
-  navListElement.classList.remove("hidden");*/
-
-
-// Gjør funksjonen tilgjengelig i globalt scope slik at den kan brukes i inline onclick-egenskaper.
-//globalThis.hamburgerToggle = hamburgerToggle;
-
-
