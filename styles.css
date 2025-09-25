@@ -37,8 +37,8 @@ body {
 }
 
 /* HEADER */
+
 header {
-  
   background-color: black;   /* svart her, ikke variabel, skal alltid være svart */
   width:100%;
   justify-content: space-between;
@@ -47,18 +47,13 @@ header {
   top: 0;
   border: 1px solid var(--borderColorMenu);
   z-index: 10;
-
-
 }
 
 audio {
-
   position:fixed;
   bottom :7rem;
   left : 1.2rem;
-
 }
-
 
 .headerNav {
   flex-direction: row;
@@ -69,7 +64,6 @@ audio {
    
 }
 
-
 .darkLightIcon {
   padding-left:23px;
 }
@@ -77,6 +71,7 @@ audio {
 .darkLightListItem {
   display: none;
 }
+
 .hamburgerLine {
   display: none;
 }
@@ -85,15 +80,11 @@ audio {
   --primaryBackgroundColor:rgb(220, 220, 220);
   --primaryTextColor:black;
   --secondaryTextColor:black;
-  .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;   
-  }
+  .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;  }
   .linkWikiPage { color:darkred; }
   .moreInfoButton { border: 3px solid black; }
   .moreInfoButton:hover { box-shadow: 0px 0px 15px 3px black; }
-  
 }
-
- 
 
 a {
   color:var(--primaryMenuColor);
@@ -101,7 +92,6 @@ a {
 }
 
 .navListHeader {
-
   display: flex;
   flex-direction: row;
   font-family: var(--primaryFontFamily);
@@ -110,22 +100,16 @@ a {
   padding-left:0;
   gap:41px;
   list-style-type: none;
-
-   
-  
 }
 
 .hamburgerIcon {
   height:64px;
-  
   display: none;
 }
 
-.logoSaturnImg 
-{
+.logoSaturnImg {
   width:73px;
   height:69px;
-  
 }
 
 .hidden {
@@ -190,12 +174,10 @@ a {
     width: 100%;
     padding-right: 20px;
     padding-left: 20px;
-  
   }
 
   .hamburgerIcon {
     display: flex;
-   
   }
 
   .hamburgerLine {
@@ -593,8 +575,7 @@ li {
  
 }
 
-.zoomInClass
-{
+.zoomInClass{ 
   animation-name: scaleIn;
   animation-duration: 2.2s;
   animation-delay: 0;
@@ -629,8 +610,6 @@ li {
 /* -------   ringene.html klasser  ------------- */
 
 .subMenuDiv {
-
-  
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -638,13 +617,10 @@ li {
   width:100%;
   height: 98px;
   border: 1px solid var(--borderColorMenu);
-
   position:sticky;
   top:106px;
   background-color: black;
   z-index: 8;
-
-
 }
 
 .logoTextDiv {
@@ -656,7 +632,6 @@ li {
 .logoRingeneImg{
   width:88px;
   height: 63px;
- 
 }
 
 .subMenuAnchor {
@@ -670,6 +645,7 @@ li {
   width:auto;
   color:white;
 }
+
 .navListRingene
 {
   list-style-type: none;
@@ -682,6 +658,7 @@ li {
 .subMenuBurger {
   display: none;
 }
+
 .textImage
 {
   font-size: 10px;
@@ -693,6 +670,7 @@ li {
   flex-direction: column;
   align-items: center;
 }
+
 .komposisjonSection, .dannelseSection {
   flex-direction: column;
   align-items: center;
@@ -700,8 +678,7 @@ li {
 }
 
 .textQuestionDiv
-{
-  position: relative;
+{ position: relative;
   width:595px;
   height: 186px; 
   justify-content: center;
@@ -717,7 +694,6 @@ li {
 }
 
 .questionText {
-    
   width:auto;
   font-family: var(--primaryFontFamily);
   font-size:64px;
@@ -732,7 +708,6 @@ li {
   align-items: center;
   padding-bottom: 60px;
   padding-top: 60px;
-   
 }
 
 .videoText {
@@ -751,7 +726,6 @@ li {
   left:12.8rem;
   background-color: black;
   border: 1px solid #dcdcdc;
-
 }
 
 .showSubMenu{
@@ -887,12 +861,11 @@ li {
   
   .questionImage {
     width:59px;
- 
   }
 
   .videoText {
-   padding-top: 20px;
-   padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .video, .videoCassini {
@@ -915,7 +888,6 @@ li {
  /* Endrer farge på meny ved hover  */
 
  .subMenuColor, .headerMenuColor {
-    
     transition-property:color;
     transition-timing-function: ease-in-out;
     transition-delay:0;
@@ -946,9 +918,7 @@ li {
   100% {transform: translateY(-100px); }
 }
 
-
 .slideInLogo, .slideInMenuHeading, .slideInMenuItems, .slideInMenuBurger {
-
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
  
@@ -1067,18 +1037,15 @@ li {
 .titanSection, .titanImgText {
   flex-direction: column;
   align-items: center;
-
 }
 
 .titanImgText {
   padding-bottom: 40px;
-
 }
 
 .titanCoreImg {
   margin-top: 40px;
   margin-bottom: 40px;
-
 }
 
 @media (max-width:426px) {
@@ -1152,7 +1119,6 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .pioneerImgTextDiv, .voyager1ImgTextDiv, .voyager2ImgTextDiv {
@@ -1215,11 +1181,9 @@ li {
   padding-bottom:40px;
 }
 
-
 .button {
   margin:30px;
   width:744px;
-
   color:black;
   border-radius: 5px;
   font-family: var(--primaryTextFontFamily);
@@ -1239,7 +1203,6 @@ li {
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0;
-  
 }
 
 .moreInfoButton:hover {
