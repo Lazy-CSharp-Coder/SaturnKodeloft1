@@ -5,6 +5,14 @@ let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
+let chosenTheme;
+
+chosenTheme = localStorage.getItem("selectedTheme") ;
+
+if(chosenTheme != null)
+{
+   if(chosenTheme == "lightMode") darkLightModeToggle();
+}
 
 function hamburgerToggle() 
 {
@@ -72,11 +80,14 @@ function darkLightModeToggle()
     mainElement.classList.add("lightMode");
     // imgElements.classList.add("ligthModeImages");
     darkMode = false;
+    localStorage.add("selectedTheme", "lightMode");
   }
   else
   {  mainElement.classList.remove("lightMode");
+     localStorage.add("selectedTheme", "darkMode");
      darkMode = true;
-   }
+
+  }
 }
 
 // event listener for mousemove
