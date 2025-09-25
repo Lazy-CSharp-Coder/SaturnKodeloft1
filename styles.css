@@ -81,7 +81,7 @@ audio {
   --secondaryTextColor:black;
   .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;  }
   .linkWikiPage { color:darkred; }
-  .moreInfoButton { border: 3px solid black; }
+  .moreInfoButton { border: 4px solid black; }
   .moreInfoButton:hover { box-shadow: 0px 0px 15px 3px black; }
 }
 
@@ -1209,9 +1209,8 @@ li {
 }
 
 .moreInfoButton {
-    
-  margin: 25px 32px;
-  border: 3px solid lightgray;  
+   margin: 25px 32px;
+  border: 4px solid lightgray;  
   box-shadow: none;
   background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
   letter-spacing: 0px;
@@ -1219,20 +1218,14 @@ li {
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0;
-  
-}
+ }
 
 .moreInfoButton:hover {
-  /* font-size:17px; */
-  /* box-shadow: 8px 8px 14px white; */
-  /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
-    /* scale:1.05; */
-    box-shadow: 0px 0px 15px 3px #dcdcdc;
+  
+    box-shadow: 0px 0px 6px 3px #dcdcdc;
     color:rgb(142, 0, 0);
-    /* letter-spacing: 1px;; */
-    border: 4px solid #fca75c;
- ;
-    /* color:var(--secondaryMenuColor); */
+    border: 4px solid #EE7700;
+ 
 }
 
 @media (max-width:426px) {
