@@ -384,13 +384,11 @@ li {
   height:420px;
 }
 
-.omImgMobile
-{
+.omImgMobile{
   display: none;
 }
 
-.quotePP
-{
+.quotePP{
   font-family: "Gentium Plus";
   font-style: italic;
   font-size:20px;
@@ -454,13 +452,10 @@ li {
   margin-bottom: 60px;
 }
 
-.toTop {
-  
+.toTop {  
   position: fixed;
-  
   bottom: 50px;
   right: 80px;
-  
   background-color:#7088C6;
   color:black;
   padding: 20px;
@@ -470,7 +465,6 @@ li {
 
 .showToTopButton {
   display: flex;
-
   animation-name: animToTopButton;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
@@ -485,8 +479,6 @@ li {
   animation-fill-mode: forwards;
 
 }
-
-
 
 @keyframes animToTopButton {
 
@@ -516,7 +508,6 @@ li {
    .toTop {
     width: 42px;
     padding: 5px;
- 
    }
 
   .quotePP {
@@ -535,15 +526,18 @@ li {
   .omImg { 
     display:none; 
   }
+
   .omImgMobile { 
     display:flex;
     width:136px;
     height:121px;
   }
+
   .imageAndStatsDiv {
     gap:18px;
     padding-bottom: 19px;
   }
+
   .textFactCategorys, .textFactsSaturn {
     flex-direction: column;
     font-family: var(--primaryTextFontFamily);
@@ -612,8 +606,6 @@ li {
 /* -------   ringene.html klasser  ------------- */
 
 .subMenuDiv {
-
-  
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -621,13 +613,10 @@ li {
   width:100%;
   height: 98px;
   border: 1px solid var(--borderColorMenu);
-
   position:sticky;
   top:106px;
   background-color: black;
   z-index: 8;
-
-
 }
 
 .logoTextDiv {
@@ -653,6 +642,7 @@ li {
   width:auto;
   color:white;
 }
+
 .navListRingene
 {
   list-style-type: none;
@@ -665,8 +655,7 @@ li {
 .subMenuBurger {
   display: none;
 }
-.textImage
-{
+.textImage {
   font-size: 10px;
   text-align: center;
 }
@@ -676,6 +665,7 @@ li {
   flex-direction: column;
   align-items: center;
 }
+
 .komposisjonSection, .dannelseSection {
   flex-direction: column;
   align-items: center;
@@ -683,8 +673,7 @@ li {
 }
 
 .textQuestionDiv
-{
-  position: relative;
+{ position: relative;
   width:595px;
   height: 186px; 
   justify-content: center;
@@ -700,7 +689,6 @@ li {
 }
 
 .questionText {
-    
   width:auto;
   font-family: var(--primaryFontFamily);
   font-size:64px;
@@ -715,7 +703,6 @@ li {
   align-items: center;
   padding-bottom: 60px;
   padding-top: 60px;
-   
 }
 
 .videoText {
@@ -734,10 +721,9 @@ li {
   left:12.8rem;
   background-color: black;
   border: 1px solid #dcdcdc;
-
 }
 
-.showSubMenu{
+.showSubMenu {
   animation-name: slideInMenuTop;
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
@@ -762,8 +748,7 @@ li {
     font-size: 36px; 
   }
 
-  .navListRingene
-  {
+  .navListRingene {
       list-style-type: none;
       gap:3px;
       font-size: 19px;
@@ -1239,6 +1224,7 @@ li {
       padding-top:12px;
       padding-bottom:12px;
   }
+  
   .logoTextDivRomferd {
     gap:5px;
     padding-left:
@@ -1255,6 +1241,7 @@ li {
   .cassiniLaunchText {
     width:341px;
   }
+  
   .cassiniLaunchImgTextDiv {
     flex-direction: column-reverse;
     gap:31px;
@@ -1264,8 +1251,7 @@ li {
   .cassiniTitanImg {
     width: 420px;
   }
-
-  
+ 
   .grandFinaleImg {
     width: 399px;
   }
