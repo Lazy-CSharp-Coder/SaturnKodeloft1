@@ -6,12 +6,10 @@ let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
 
-let chosenTheme = localStorage.getItem("selectedTheme") ;
+const chosenTheme = localStorage.getItem("selectedTheme") ;
 
-if(chosenTheme != null)
-{
-   if(chosenTheme == "lightMode") darkLightModeToggle();
-}
+if(chosenTheme != null) if(chosenTheme === "lightMode") darkLightModeToggle();
+else localStorage.add("selectedTheme", "darkMode");
 
 function hamburgerToggle() 
 {
