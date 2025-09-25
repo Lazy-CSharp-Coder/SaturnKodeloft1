@@ -97,17 +97,7 @@ function animateSubMenu ()
   const subMenu = document.getElementById("subMenuDiv");
   const toTopButton = document.getElementById("toTop");
 
-  if(window.innerWidth < 427)
-  {
-    if(subMenuIsMissing)
-    {
-      subMenu.classList.remove("slideOutSubMenu");
-      subMenu.classList.remove("hidden");
-      subMenu.classList.add("slideInMenuTop");
-      mouseWheelMoved = false;
-      subMenuIsMissing = false; 
-    }
-  }
+
 
   // rutine for å få frem to top button når man har scrollet langt nok ned
   
@@ -130,6 +120,20 @@ function animateSubMenu ()
     }
   }
   
+  // skjekker hvis det er mobil - da skal meny ikke fjernes ved scroll down
+
+  if(window.innerWidth < 427)
+  {
+    if(subMenuIsMissing)
+    {
+      subMenu.classList.remove("slideOutSubMenu");
+      subMenu.classList.remove("hidden");
+      subMenu.classList.add("slideInMenuTop");
+      mouseWheelMoved = false;
+      subMenuIsMissing = false; 
+    }
+    return :
+  }
   // går tilbake hvis det ikkke finnes en undermeny
   
   if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
