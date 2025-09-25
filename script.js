@@ -111,6 +111,8 @@ function animateSubMenu ()
       subMenuIsMissing = false; 
     }
   }
+
+  // rutine for å få frem to top button når man har scrollet langt nok ned
   
   if(currentScrollPos > topButtonYLimit && toTopButtonVisible == false)
   {
@@ -118,21 +120,17 @@ function animateSubMenu ()
     toTopButton.classList.remove("hidden");
     toTopButton.classList.add("showToTopButton");
     toTopButtonVisible = true;
-     
   }
   else
   { 
     if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
     {
-      console.log(toTopButtonVisible);
-      
       toTopButton.classList.remove("showToTopButton"); 
       toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
       toTopButton.addEventListener("animationend", () =>  { toTopButton.classList.add("hidden");}, {once: true} );
       toTopButtonVisible = false;
     }
-  
   }
   
   // går tilbake hvis det ikkke finnes en undermeny
