@@ -81,8 +81,8 @@ audio {
   --secondaryTextColor:black;
   .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;  }
   .linkWikiPage { color:darkred; }
-  .moreInfoButton { border: 4px solid black; }
-  .moreInfoButton:hover {  box-shadow: 0px 0px 8px 3px black}
+  .moreInfoButton { border: 3px solid black; }
+  .moreInfoButton:hover { box-shadow: 0px 0px 15px 3px black; }
 }
 
 a {
@@ -167,15 +167,18 @@ a {
   header { height: 94px;} 
 
   .headerNav {
+  
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding-right: 20px;
     padding-left: 20px;
+  
   }
 
   .hamburgerIcon {
     display: flex;
+   
   }
 
   .hamburgerLine {
@@ -211,6 +214,7 @@ a {
 
 main {
   flex-grow: 1;
+
   color:var(--primaryTextColor);
   font-family: var(--primaryTextFontFamily);
   padding-bottom:52px;
@@ -336,6 +340,7 @@ li {
 /* animation klasser for hero page */
 
 .fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit, .fadeInFacts {
+
    animation-name: fadeInAnimation;
    animation-timing-function: ease-in;
    animation-fill-mode: forwards;
@@ -379,11 +384,13 @@ li {
   height:420px;
 }
 
-.omImgMobile {
+.omImgMobile
+{
   display: none;
 }
 
-.quotePP {
+.quotePP
+{
   font-family: "Gentium Plus";
   font-style: italic;
   font-size:20px;
@@ -412,8 +419,8 @@ li {
   font-family: var(--primaryTextFontFamily);
   font-size: 14px;
   width:auto;
+  
 }
-
 .textFactCategorysDiv {
   font-weight: bold;
   opacity: 0;
@@ -437,7 +444,6 @@ li {
 .linkWikiPage {
   color:var(--linkColor);
 }
-
 .quoteCarolyn {
   width:845px;
   text-align: center;
@@ -449,9 +455,12 @@ li {
 }
 
 .toTop {
+  
   position: fixed;
+  
   bottom: 50px;
   right: 80px;
+  
   background-color:#7088C6;
   color:black;
   padding: 20px;
@@ -461,10 +470,12 @@ li {
 
 .showToTopButton {
   display: flex;
+
   animation-name: animToTopButton;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+
 }
 
 .removeToTopButton {
@@ -472,9 +483,13 @@ li {
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+
 }
 
+
+
 @keyframes animToTopButton {
+
   0% { transform: translateX(2000px);}
   60% { transform: translateX(-200px);}
   100% { transform: tranlateX(0); }
@@ -520,18 +535,15 @@ li {
   .omImg { 
     display:none; 
   }
-
   .omImgMobile { 
     display:flex;
     width:136px;
     height:121px;
   }
-
   .imageAndStatsDiv {
     gap:18px;
     padding-bottom: 19px;
   }
-
   .textFactCategorys, .textFactsSaturn {
     flex-direction: column;
     font-family: var(--primaryTextFontFamily);
@@ -561,10 +573,12 @@ li {
     margin-top:37px;
     margin-bottom: 37px;
   }
+ 
 }
 
 .zoomInClass
-{ animation-name: scaleIn;
+{
+  animation-name: scaleIn;
   animation-duration: 2.2s;
   animation-delay: 0;
   animation-timing-function: ease-in-out;
@@ -584,7 +598,6 @@ li {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
 @keyframes slideInRight {
   0% { transform:translateX(3000);}
   /* 60% { transform:scale(1.2);} */
@@ -599,6 +612,8 @@ li {
 /* -------   ringene.html klasser  ------------- */
 
 .subMenuDiv {
+
+  
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -606,10 +621,13 @@ li {
   width:100%;
   height: 98px;
   border: 1px solid var(--borderColorMenu);
+
   position:sticky;
   top:106px;
   background-color: black;
   z-index: 8;
+
+
 }
 
 .logoTextDiv {
@@ -621,6 +639,7 @@ li {
 .logoRingeneImg{
   width:88px;
   height: 63px;
+ 
 }
 
 .subMenuAnchor {
@@ -634,8 +653,8 @@ li {
   width:auto;
   color:white;
 }
-
-.navListRingene{ 
+.navListRingene
+{
   list-style-type: none;
   gap:37px;
   font-size: 32px;
@@ -663,7 +682,8 @@ li {
   scroll-margin-top:220px;
 }
 
-.textQuestionDiv {
+.textQuestionDiv
+{
   position: relative;
   width:595px;
   height: 186px; 
@@ -695,6 +715,7 @@ li {
   align-items: center;
   padding-bottom: 60px;
   padding-top: 60px;
+   
 }
 
 .videoText {
@@ -877,10 +898,10 @@ li {
  /* Endrer farge på meny ved hover  */
 
  .subMenuColor, .headerMenuColor {
-    transition-property:color;
-    transition-timing-function: ease-in-out;
-    transition-delay:0;
-    transition-duration:0; 
+  transition-property:color;
+  transition-timing-function: ease-in-out;
+  transition-delay:0;
+  transition-duration:0; 
  }
 
 .headerMenuColor:hover {
@@ -909,6 +930,7 @@ li {
 
 
 .slideInLogo, .slideInMenuHeading, .slideInMenuItems, .slideInMenuBurger {
+
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
  
@@ -939,6 +961,7 @@ li {
   60% { transform: translateX(-50px);}
   100% { transform: translateX(0); }
 }
+
 @keyframes slideInTop {
   0% { transform:translateY(-100px);}
   100% { transform: translateY(0); }
@@ -986,7 +1009,6 @@ li {
 .moonImg, .enceladusImg1, .enceladusImg2 {
   width:550px;
 }
-
 .moonImg {
   margin-top: 170px;
 }
@@ -1073,7 +1095,6 @@ li {
   }
 
   .moonSection {
-
     flex-direction: column;
     padding-bottom: 51px;
   }
@@ -1087,6 +1108,7 @@ li {
   .enceladusImg1 {
     margin-bottom: 30px;
   }
+
   .enceladusDiv {
     flex-direction: column;
     margin-top: 0;
@@ -1187,8 +1209,9 @@ li {
 }
 
 .moreInfoButton {
+    
   margin: 25px 32px;
-  border: 4px solid lightgray;  
+  border: 3px solid lightgray;  
   box-shadow: none;
   background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
   letter-spacing: 0px;
@@ -1196,6 +1219,7 @@ li {
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0;
+  
 }
 
 .moreInfoButton:hover {
@@ -1203,10 +1227,11 @@ li {
   /* box-shadow: 8px 8px 14px white; */
   /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
     /* scale:1.05; */
-    box-shadow: 0px 0px 8px 3px #dcdcdc;
+    box-shadow: 0px 0px 15px 3px #dcdcdc;
     color:rgb(142, 0, 0);
     /* letter-spacing: 1px;; */
-    border: 4px solid #EE7700;
+    border: 4px solid #fca75c;
+ ;
     /* color:var(--secondaryMenuColor); */
 }
 
@@ -1221,7 +1246,6 @@ li {
       padding-top:12px;
       padding-bottom:12px;
   }
-
   .logoTextDivRomferd {
     gap:5px;
     padding-left:
@@ -1238,7 +1262,6 @@ li {
   .cassiniLaunchText {
     width:341px;
   }
-
   .cassiniLaunchImgTextDiv {
     flex-direction: column-reverse;
     gap:31px;
@@ -1248,6 +1271,7 @@ li {
   .cassiniTitanImg {
     width: 420px;
   }
+
   
   .grandFinaleImg {
     width: 399px;
@@ -1255,15 +1279,18 @@ li {
 
   .grandFinaleHeadingText {
     font-size: 24px;
+
   }
   
   .grandFinaleImgTextDiv {
     padding-bottom:0px;
+
   }
   
   .moreInfoButton {
     width: 344px;
     font-size:12px;
+
   }
 }
 
@@ -1279,6 +1306,7 @@ footer {
   justify-content: space-between;
   align-items:center;
   height:94px;
+   
 } 
 
 .logoKodeloftetImg {
@@ -1299,6 +1327,7 @@ footer {
 
 .textMyName {
    color: #EE7700;
+ 
 }
 
 .myInfoDiv {
@@ -1335,3 +1364,6 @@ footer {
   }
 
 }
+
+
+

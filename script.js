@@ -132,7 +132,7 @@ function animateSubMenu ()
       mouseWheelMoved = false;
       subMenuIsMissing = false; 
     }
-    return :
+    return;
   }
   // går tilbake hvis det ikkke finnes en undermeny
   
