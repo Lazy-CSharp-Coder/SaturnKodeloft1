@@ -5,9 +5,8 @@ let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
-let chosenTheme;
 
-chosenTheme = localStorage.getItem("selectedTheme") ;
+let chosenTheme = localStorage.getItem("selectedTheme") ;
 
 if(chosenTheme != null)
 {
@@ -87,7 +86,7 @@ function darkLightModeToggle()
      localStorage.add("selectedTheme", "darkMode");
      darkMode = true;
 
-  }
+   }
 }
 
 // event listener for mousemove
