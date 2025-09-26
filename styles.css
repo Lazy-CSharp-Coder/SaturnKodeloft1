@@ -1232,7 +1232,7 @@ li {
   border: 3px solid lightgray;
   background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
   letter-spacing: 0px;
-  transition-property: color border scale;
+  transition-property: color border;
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0;
@@ -1243,12 +1243,11 @@ li {
   /* font-size:17px; */
   /* box-shadow: 8px 8px 14px white; */
   /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
-    scale:1.05;
+    
 
     color:rgb(142, 0, 0);
     /* letter-spacing: 1px;; */
-    border: 4px solid #fca75c;
- 
+    border: 4px solid #EE7700;
     /* color:var(--secondaryMenuColor); */
 }
 
