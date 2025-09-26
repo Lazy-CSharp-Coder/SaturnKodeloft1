@@ -85,9 +85,8 @@ audio {
   --primaryBackgroundColor:rgb(220, 220, 220);
   --primaryTextColor:black;
   --secondaryTextColor:black;
-  .lightModeImg {     box-shadow: 0px 0px 5px 5px rgba(0,0,0, 0.7); border-radius: 5px;   
-  }
-  .linkWikiPage { color:darkred; }
+  .moreInfoButton:hover { box-shadow: 0px 0px 5px 5px rgba(0,0,0, 0.7);  }
+    .linkWikiPage { color:darkred; }
   .moreInfoButton { border: 3px solid black; }
 }
 
