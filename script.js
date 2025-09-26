@@ -10,8 +10,9 @@ const topButtonYLimit = 300;
 
 const chosenTheme = localStorage.getItem("selectedTheme") ;
 
-if(chosenTheme != null) if(chosenTheme === "lightMode") darkLightModeToggle();
-else localStorage.setItem("selectedTheme", "darkMode");
+if(chosenTheme != null) 
+  if(chosenTheme === "lightMode") darkLightModeToggle();
+  else localStorage.setItem("selectedTheme", "darkMode");
 
 // ********************************************************
 

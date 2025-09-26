@@ -38,6 +38,7 @@ body {
 
 /* HEADER */
 header {
+  
   background-color: black;   /* svart her, ikke variabel, skal alltid være svart */
   width:100%;
   justify-content: space-between;
@@ -46,13 +47,18 @@ header {
   top: 0;
   border: 1px solid var(--borderColorMenu);
   z-index: 10;
+
+
 }
 
 audio {
+
   position:fixed;
   bottom :7rem;
   left : 1.2rem;
+
 }
+
 
 .headerNav {
   flex-direction: row;
@@ -63,6 +69,7 @@ audio {
    
 }
 
+
 .darkLightIcon {
   padding-left:23px;
 }
@@ -70,7 +77,6 @@ audio {
 .darkLightListItem {
   display: none;
 }
-
 .hamburgerLine {
   display: none;
 }
@@ -79,11 +85,13 @@ audio {
   --primaryBackgroundColor:rgb(220, 220, 220);
   --primaryTextColor:black;
   --secondaryTextColor:black;
-  .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;  }
+  .lightModeImg {   box-shadow: 5px 5px 15px 17px rgba(0,0,0,0.49); border-radius: 5px;   
+  }
   .linkWikiPage { color:darkred; }
-  .moreInfoButton { border: 4px solid black; }
-  .moreInfoButton:hover { box-shadow: 0px 0px 15px 3px black; }
+  .moreInfoButton { border: 3px solid black; }
 }
+
+ 
 
 a {
   color:var(--primaryMenuColor);
@@ -91,6 +99,7 @@ a {
 }
 
 .navListHeader {
+
   display: flex;
   flex-direction: row;
   font-family: var(--primaryFontFamily);
@@ -99,16 +108,22 @@ a {
   padding-left:0;
   gap:41px;
   list-style-type: none;
+
+   
+  
 }
 
 .hamburgerIcon {
   height:64px;
+  
   display: none;
 }
 
-.logoSaturnImg {
+.logoSaturnImg 
+{
   width:73px;
   height:69px;
+  
 }
 
 .hidden {
@@ -384,11 +399,13 @@ li {
   height:420px;
 }
 
-.omImgMobile{
+.omImgMobile
+{
   display: none;
 }
 
-.quotePP{
+.quotePP
+{
   font-family: "Gentium Plus";
   font-style: italic;
   font-size:20px;
@@ -452,10 +469,13 @@ li {
   margin-bottom: 60px;
 }
 
-.toTop {  
+.toTop {
+  
   position: fixed;
+  
   bottom: 50px;
   right: 80px;
+  
   background-color:#7088C6;
   color:black;
   padding: 20px;
@@ -465,6 +485,7 @@ li {
 
 .showToTopButton {
   display: flex;
+
   animation-name: animToTopButton;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
@@ -479,6 +500,8 @@ li {
   animation-fill-mode: forwards;
 
 }
+
+
 
 @keyframes animToTopButton {
 
@@ -508,6 +531,7 @@ li {
    .toTop {
     width: 42px;
     padding: 5px;
+ 
    }
 
   .quotePP {
@@ -526,18 +550,15 @@ li {
   .omImg { 
     display:none; 
   }
-
   .omImgMobile { 
     display:flex;
     width:136px;
     height:121px;
   }
-
   .imageAndStatsDiv {
     gap:18px;
     padding-bottom: 19px;
   }
-
   .textFactCategorys, .textFactsSaturn {
     flex-direction: column;
     font-family: var(--primaryTextFontFamily);
@@ -606,6 +627,8 @@ li {
 /* -------   ringene.html klasser  ------------- */
 
 .subMenuDiv {
+
+  
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -613,10 +636,13 @@ li {
   width:100%;
   height: 98px;
   border: 1px solid var(--borderColorMenu);
+
   position:sticky;
   top:106px;
   background-color: black;
   z-index: 8;
+
+
 }
 
 .logoTextDiv {
@@ -642,7 +668,6 @@ li {
   width:auto;
   color:white;
 }
-
 .navListRingene
 {
   list-style-type: none;
@@ -655,7 +680,8 @@ li {
 .subMenuBurger {
   display: none;
 }
-.textImage {
+.textImage
+{
   font-size: 10px;
   text-align: center;
 }
@@ -665,7 +691,6 @@ li {
   flex-direction: column;
   align-items: center;
 }
-
 .komposisjonSection, .dannelseSection {
   flex-direction: column;
   align-items: center;
@@ -673,7 +698,8 @@ li {
 }
 
 .textQuestionDiv
-{ position: relative;
+{
+  position: relative;
   width:595px;
   height: 186px; 
   justify-content: center;
@@ -689,6 +715,7 @@ li {
 }
 
 .questionText {
+    
   width:auto;
   font-family: var(--primaryFontFamily);
   font-size:64px;
@@ -703,6 +730,7 @@ li {
   align-items: center;
   padding-bottom: 60px;
   padding-top: 60px;
+   
 }
 
 .videoText {
@@ -721,9 +749,10 @@ li {
   left:12.8rem;
   background-color: black;
   border: 1px solid #dcdcdc;
+
 }
 
-.showSubMenu {
+.showSubMenu{
   animation-name: slideInMenuTop;
   animation-timing-function:ease-in-out;
   animation-fill-mode:backwards;
@@ -748,7 +777,8 @@ li {
     font-size: 36px; 
   }
 
-  .navListRingene {
+  .navListRingene
+  {
       list-style-type: none;
       gap:3px;
       font-size: 19px;
@@ -883,10 +913,11 @@ li {
  /* Endrer farge på meny ved hover  */
 
  .subMenuColor, .headerMenuColor {
-  transition-property:color;
-  transition-timing-function: ease-in-out;
-  transition-delay:0;
-  transition-duration:0; 
+    
+    transition-property:color;
+    transition-timing-function: ease-in-out;
+    transition-delay:0;
+    transition-duration:0; 
  }
 
 .headerMenuColor:hover {
@@ -920,13 +951,11 @@ li {
   animation-fill-mode:backwards;
  
 }
-
 .slideInLogo {
   animation-name: slideInLeft;
   animation-duration: 1.5s;
   animation-delay: 0;
 }
-
 .slideInMenuHeading {
   animation-name: slideInTop;
   animation-duration:1.5s;
@@ -946,7 +975,6 @@ li {
   60% { transform: translateX(-50px);}
   100% { transform: translateX(0); }
 }
-
 @keyframes slideInTop {
   0% { transform:translateY(-100px);}
   100% { transform: translateY(0); }
@@ -1037,15 +1065,18 @@ li {
 .titanSection, .titanImgText {
   flex-direction: column;
   align-items: center;
+
 }
 
 .titanImgText {
   padding-bottom: 40px;
+
 }
 
 .titanCoreImg {
   margin-top: 40px;
   margin-bottom: 40px;
+
 }
 
 @media (max-width:426px) {
@@ -1080,6 +1111,7 @@ li {
   }
 
   .moonSection {
+
     flex-direction: column;
     padding-bottom: 51px;
   }
@@ -1093,12 +1125,13 @@ li {
   .enceladusImg1 {
     margin-bottom: 30px;
   }
-
   .enceladusDiv {
+    
     flex-direction: column;
     margin-top: 0;
     padding-bottom: 30px;
     gap:30px;
+    
   }
   
   .titanImg {
@@ -1194,23 +1227,29 @@ li {
 }
 
 .moreInfoButton {
-   margin: 25px 32px;
-  border: 4px solid lightgray;  
-  box-shadow: none;
+    
+  margin: 25px 32px;
+  border: 3px solid lightgray;
   background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%);
   letter-spacing: 0px;
-  transition-property: color border box-shadow;
+  transition-property: color border scale;
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0;
- }
+  
+}
 
 .moreInfoButton:hover {
-  
-    box-shadow: 0px 0px 6px 3px #dcdcdc;
+  /* font-size:17px; */
+  /* box-shadow: 8px 8px 14px white; */
+  /* box-shadow: 7px 7px 10px rgba(250,250,250,0.49); */
+    scale:1.05;
+
     color:rgb(142, 0, 0);
-    border: 4px solid #EE7700;
+    /* letter-spacing: 1px;; */
+    border: 4px solid #fca75c;
  
+    /* color:var(--secondaryMenuColor); */
 }
 
 @media (max-width:426px) {
@@ -1224,7 +1263,6 @@ li {
       padding-top:12px;
       padding-bottom:12px;
   }
-  
   .logoTextDivRomferd {
     gap:5px;
     padding-left:
@@ -1241,7 +1279,6 @@ li {
   .cassiniLaunchText {
     width:341px;
   }
-  
   .cassiniLaunchImgTextDiv {
     flex-direction: column-reverse;
     gap:31px;
@@ -1251,7 +1288,8 @@ li {
   .cassiniTitanImg {
     width: 420px;
   }
- 
+
+  
   .grandFinaleImg {
     width: 399px;
   }
@@ -1335,6 +1373,7 @@ footer {
     text-align: left;
     font-size: 10px;
     padding-left: 20px;
+    
   }
 
   .infoAndIconsDiv {
