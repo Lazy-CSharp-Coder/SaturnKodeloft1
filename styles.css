@@ -225,14 +225,21 @@ a {
 /* MAIN */
 
 main {
+
   flex-grow: 1;
 
   color:var(--primaryTextColor);
   font-family: var(--primaryTextFontFamily);
   padding-bottom:52px;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--primaryBackgroundColor);
+}
+
+.mainClass {
+    display: flex;
+  
 }
 
 h1 {
@@ -240,6 +247,8 @@ h1 {
   font-size: 96px;
   font-weight: normal;
   opacity: 0;
+  margin-top: 0;
+ 
 }
 
 h2 {
@@ -255,17 +264,20 @@ h3 {
 
 p {
   /* font-family: var(--primaryTextFontFamily); */
-  font-size:16px;
-  width:744px;
+  font-size:1em;
+  /* width:744px;  */
+  width: 29%;
   color:var(--primaryTextColor);
 }
 
 li {
   padding:0;
 }
-.section {
+.sectionHome {
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  gap: 6em;
+  height: 100%;
 }
 
 /* Hero page klasser  */
@@ -275,21 +287,28 @@ li {
   justify-self: center;
   align-items: center;
   color:var(--primaryTextColor);
-  padding-top:67px;
+  margin-bottom : 5.9em;
+  /* margin-top:67px; */
 }
 
 .heroImg {
-  width: 765px;
+  /* width: 765px;
   height: 682px;
   margin-left: 50px;
-  margin-top:108px;
+  margin-top:108px; */
+  /* width: 48em; */
+  width: 50%;
+  /* margin-left: 3.1em; */
+  margin-top : 3em;
   opacity: 0;
 
 }
 .quoteJK {
   font-family: "Italianno";
-  font-size:36px;
-  width:525px;
+  /* font-size:36px; */
+  width: 16em;
+  /* width: 40%; */
+  font-size : 2.2em;
   padding:0;
   margin:0;
   opacity: 0;
