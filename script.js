@@ -222,3 +222,30 @@ allSections.forEach((section) =>
   observer.observe(section);
 });
 
+const translateButton = document.querySelector("#languageButton");
+let isNorwegian = true;
+console.log(translateButton);
+
+translateButton.addEventListener("click", () =>
+{
+   const mainNorwegian = document.querySelector("#mainNorwegian");
+   const mainEnglish = document.querySelector("#mainEnglish");
+  if(isNorwegian)
+  {
+    mainNorwegian.classList.add("hidden");
+    mainEnglish.classList.remove("hidden");
+    isNorwegian = false;
+    translateButton.textContent = "Oversett til Norsk"
+  }
+  else
+  { 
+ 
+    mainEnglish.classList.add("hidden");
+    mainNorwegian.classList.remove("hidden");
+    isNorwegian = true;
+    translateButton.textContent = "Translate to English"
+
+  }
+
+
+});
