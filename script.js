@@ -15,9 +15,8 @@ const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Ly
 const ringsMenuEng = ["Description", "Composition", "Creation"];
 const ringsMenuNorsk = ["Beskrivelse", "Komposisjon", "Dannelse"];
 
-const moonsMenuNorsk = ["Generelt", "Mimas", "Rhea","Thetys","Dione", "Iapetus", "Enceladus", "Titan" ];
-const moonsMenuEng = ["Generally", "Mimas", "Rhea","Thetys","Dione", "Iapetus", "Enceladus", "Titan" ];
-
+const moonsNorsk = "Generelt";
+const moonsEng = "Overview";
 
 
 let languageSelected = mainMenuNorsk;
@@ -36,7 +35,7 @@ let languageSelected = mainMenuNorsk;
   ringsMenuArray[1] = document.getElementById("compositionref");
   ringsMenuArray[2] = document.getElementById("creationref");
 
-
+  moonsGeneral = document.getElementById("generalref");
 
 const translateButton = document.querySelector("#languageButton");
 
@@ -88,7 +87,12 @@ if(currentPage === "/ringene.html" && !isNorwegian)
       item.textContent = ringsMenuEng[index];
       
     })
-}
+} else if(currentPage === "/maanene.html" && !isNorwegian) 
+       {
+          moonsGeneral.textContent = moonsEng;
+        
+       };
+      
 
 
 
@@ -329,7 +333,7 @@ translateButton.addEventListener("click", () =>
       item.textContent = ringLanguageSelected[index];
       
     })
-  } 
+  } else  if(currentPage === "/maanene.html") moonsGeneral.textContent = isNorwegian ? moonsNorsk : moonsEng;
     if(window.location.pathname != "/om.html") return;  // tester her nå
 
     const mainNorwegian = document.querySelector("#mainNorwegian");
