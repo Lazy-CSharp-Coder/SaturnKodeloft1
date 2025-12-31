@@ -11,6 +11,15 @@ let isNorwegian = true;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
+
+const ringsMenuEng = ["Description", "Composition", "Creation"];
+const ringsMenuNorsk = ["Beskrivelse", "Komposisjon", "Dannelse"];
+
+const moonsMenuNorsk = ["Generelt", "Mimas", "Rhea","Thetys","Dione", "Iapetus", "Enceladus", "Titan" ];
+const moonsMenuEng = ["Generally", "Mimas", "Rhea","Thetys","Dione", "Iapetus", "Enceladus", "Titan" ];
+
+
+
 let languageSelected = mainMenuNorsk;
  const refArray = [];
   refArray[0] = document.getElementById("homeref");
@@ -20,6 +29,14 @@ let languageSelected = mainMenuNorsk;
   refArray[4] = document.getElementById("expeditionsref");
   refArray[5] = document.getElementById("darklighthamburger");
   console.log(refArray);
+
+  const ringsMenuArray = [];
+
+  ringsMenuArray[0] = document.getElementById("descriptionref");
+  ringsMenuArray[1] = document.getElementById("compositionref");
+  ringsMenuArray[2] = document.getElementById("creationref");
+
+
 
 const translateButton = document.querySelector("#languageButton");
 
@@ -58,6 +75,23 @@ const chosenTheme = null;
 if(chosenTheme != null) 
   if(chosenTheme === "lightMode") darkLightModeToggle();
   else localStorage.setItem("selectedTheme", "darkMode");
+
+
+// undermeny språk
+
+const currentPage = window.location.pathname;
+
+if(currentPage === "/ringene.html" && !isNorwegian)
+{
+    ringsMenuArray.forEach((item, index) =>
+    { 
+      item.textContent = ringsMenuEng[index];
+      
+    })
+}
+
+
+
 
 // ********************************************************
 
@@ -287,6 +321,15 @@ translateButton.addEventListener("click", () =>
        refArray[i].textContent = languageSelected[i];
     }
     
+  if(currentPage === "/ringene.html")
+  {
+    const ringLanguageSelected = isNorwegian ? ringsMenuNorsk : ringsMenuEng;
+    ringsMenuArray.forEach((item, index) =>
+    { 
+      item.textContent = ringLanguageSelected[index];
+      
+    })
+  } 
     if(window.location.pathname != "/om.html") return;  // tester her nå
 
     const mainNorwegian = document.querySelector("#mainNorwegian");
