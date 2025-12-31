@@ -166,3 +166,40 @@ function animateSubMenu ()
 
 window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
 window.addEventListener("scroll" ,animateSubMenu);
+
+
+
+// intersection observer - skal animere inn månene først når de kommer til syne
+
+const observerOptions =
+{
+  root: null, 
+  rootMargin : "0px",
+  threshold : 0.1
+}
+
+
+function observerCallback(entries, observer)
+{
+  entries.forEach((entry) => 
+  {
+    if(entry.isIntersecting) 
+    {
+      // legg inn fadeInFromBelowAnim
+       console.log("element is visible", entry.target.id);
+    }
+    else{
+      console.log("element not visbile", entry.target.id);
+    }
+  });
+
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+const allSections = document.querySelectorAll("section");
+allSections.forEach((section) => 
+{
+  observer.observe(section);
+});
+
