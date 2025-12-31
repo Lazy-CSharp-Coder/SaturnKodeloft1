@@ -8,7 +8,8 @@ const topButtonYLimit = 300;
 
 // her finner jeg ut om brukeren har skiftet til lightMode
 
-const chosenTheme = localStorage.getItem("selectedTheme") ;
+// const chosenTheme = localStorage.getItem("selectedTheme") ;
+const chosenTheme = null;
 
 if(chosenTheme != null) 
   if(chosenTheme === "lightMode") darkLightModeToggle();
@@ -67,21 +68,32 @@ function subMenuToggle()
   }
 } 
 
+const lightModeUrl = "Images/sunblazinglogo.png";
+const darkModeUrl = "Images/moonbluelogo2.png";
+
+
 function darkLightModeToggle() 
 {
   console.log("hi from darkLight mode");
   
   const mainElement = document.querySelector(".mainClass");
+  const imageElement = document.querySelector("#darkLightIcon");
+  console.log(imageElement);
   // const imgElements = document.querySelector(".imgClass");
   if(darkMode)
   {
     mainElement.classList.add("lightMode");
     // imgElements.classList.add("ligthModeImages");
     darkMode = false;
+    imageElement.src = darkModeUrl;
+
+    console.log(imageElement);
     localStorage.setItem("selectedTheme", "lightMode");
   }
   else
   {  mainElement.classList.remove("lightMode");
+     imageElement.src = lightModeUrl;
+
      localStorage.setItem("selectedTheme", "darkMode");
      darkMode = true;
 
@@ -174,18 +186,25 @@ window.addEventListener("scroll" ,animateSubMenu);
 const observerOptions =
 {
   root: null, 
-  rootMargin : "0px",
-  threshold : 0.1
+  rootMargin : "10px 0px",
+  threshold : 0.3
 }
 
 
 function observerCallback(entries, observer)
 {
+  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
+  console.log(entries);
   entries.forEach((entry) => 
   {
     if(entry.isIntersecting) 
     {
       // legg inn fadeInFromBelowAnim
+      entry.target.classList.remove("notVisible");
+      entry.target.classList.add("fadeInFromBelowAnim");
+
+      
+
        console.log("element is visible", entry.target.id);
     }
     else{

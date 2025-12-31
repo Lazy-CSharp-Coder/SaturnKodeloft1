@@ -15,7 +15,9 @@
 
 <body class="flex">
     <header class="flex">
-        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images/dark_light.png" alt="fant ikke icon" />
+          <div class="languageDiv"> <img onclick="darkLightModeToggle()"  id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png" alt="fant ikke icon" />
+        <button class="languageButton">Translate to<br>English</button>
+      </div>
         <nav class="flex headerNav">
           <ul id="headerMenu" class="flex navListHeader hidden">
             <li>
@@ -96,7 +98,7 @@
 
             </p>
         </section>
-        <section id="mimas" class="flex moonSection">
+        <section id="mimas" class="flex moonSection notVisible">
             <img class="moonImg lightModeImg desktopSetting" src="Images/Mimas_Cassini.jpg" alt="fant ikke bilde" />
             <div class="flex moonDiv">
                 <h3>Mimas</h3>
@@ -118,7 +120,7 @@
                 </p>
             </div>
         </section>
-        <section id="rhea" class="flex moonSection">
+        <section id="rhea" class="flex moonSection notVisible">
 
             <div class="flex moonDiv">
                 <h3>Rhea</h3>
@@ -140,7 +142,7 @@
             </div>
             <img class="moonImg lightModeImg desktopSetting" src="Images/rhea_adj.png" alt="fant ikke bilde" />
         </section>
-        <section id="tethys" class="flex moonSection">
+        <section id="tethys" class="flex moonSection notVisible">
             <img class="moonImg lightModeImg desktopSetting" src="Images/Tethys.jpg" alt="fant ikke bilde" />
             <div class="flex moonDiv">
                 <h3>Tethys</h3>
@@ -157,7 +159,7 @@
                 <p> Tethys var en mytologisk gigant i gresk mytologi, datter av Uranos og Gaia.</p>
             </div>
         </section>
-        <section id="dione" class="flex moonSection">
+        <section id="dione" class="flex moonSection notVisible">
 
             <div class="moonDiv">
                 <h3>Dione</h3>
@@ -177,7 +179,7 @@
             </div>
             <img class="moonImg lightModeImg desktopSetting" src="Images/dioneadj.png" alt="fant ikke bilde" />
         </section>
-        <section id="iapetus" class="flex moonSection">
+        <section id="iapetus" class="flex moonSection notVisible">
             <img class="moonImg lightModeImg desktopSetting" src="Images/iapetus.png" alt="fant ikke bilde" />
             <div class="moonDiv">
                 <h3>Iapetus</h3>
@@ -197,7 +199,7 @@
                 </p>
             </div>
         </section>
-        <section id="enceladus" class="flex enceladusSection">
+        <section id="enceladus" class="flex enceladusSection notVisible">
 
             <div class="flex enceladusDiv">
                 <div class="moonDiv">
@@ -224,7 +226,7 @@
                 </div>
                 <img class="enceladusImg1 lightModeImg desktopSetting" src="Images/enceladus1.png" alt="fant ikke bilde" />
             </div>
-            <div class="flex enceladusDiv">
+            <section id="enceladus2" class="flex enceladusDiv notVisible">
                 <img class="enceladusImg2 lightModeImg" src="Images/enceladus2.png" alt="fant ikke bilde" />
                 <div class="moonDiv">
                     <p>
@@ -243,9 +245,9 @@
                         denne vulkanen.
                     </p>
                 </div>
-            </div>
+            </section>
         </section>
-        <section id="titan" class="flex titanSection">
+        <section id="titan" class="flex titanSection notVisible">
 
             <h3>Titan</h3>
             <div class="flex titanImgText">
@@ -271,7 +273,10 @@
             <p> Det antas at Titan har består i hovedsak av fem lag. En kjerne av stein på ca. 4000 km, omringet av
                 vannis. Man antar så at det neste laget består av saltvann, under overflaten av is og stein. 
             </p>
+            </section>
 
+           <section id="titan2" class="flex titanSection notVisible"> 
+            
             <img class="titanCoreImg lightModeImg" src="Images/titankjerne.png" alt="fant ikke bilde" />
 
             <p> Titan bruker 15 dager og 22 timer rundt Saturn. Den er også i bundet rotasjon rundt Saturn. Den har, som
@@ -284,6 +289,7 @@
             </p>
             <p>  Titan er en fellesbetegnelse på gruppen av titaner, guder og gudinner i gresk mytologi.</p>
         </section>
+
         <a href="#generelt"><img id="toTop" class="toTop hidden removeToTopButton" src="/Images/uparrow.png"></a>
     </main>
 

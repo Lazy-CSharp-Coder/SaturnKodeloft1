@@ -15,7 +15,9 @@
 
 <body class="flex">
     <header class="flex">
-        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images/dark_light.png" alt="fant ikke icon" />
+        <div class="languageDiv"> <img onclick="darkLightModeToggle()"  id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"  alt="fant ikke icon" />
+        <button class="languageButton">Translate to<br>English</button>
+      </div>
         <nav class="flex headerNav">
           <ul id="headerMenu" class="flex navListHeader hidden">
             <li>
@@ -71,7 +73,7 @@
             </nav>
         </div>
 
-        <section id="beskrivelse" class="flex beskrivelseSection">
+        <section id="beskrivelse" class="flex beskrivelseSection notVisible">
             <!-- Hero / Main / Home -->
 
             <h3>Beskrivelse av ringene</h3>
@@ -98,7 +100,7 @@
                 påvirkningen ringene får av månene til Saturn.Allikevel er det strukturer i ringene som vi fremdeles ikke har noe forklaring på.
             </p>
         </section>
-        <section id="komposisjon" class="flex komposisjonSection">
+        <section id="komposisjon" class="flex komposisjonSection notVisible">
             <div class="flex textQuestionDiv">
                 <p class="questionText"> Hva består ringene av</p>
                 <img class="questionImage" src="/Images/questionmark.png">
@@ -116,7 +118,7 @@
                 flere og flere partikler samles i ringene, oppstår flere kollisjoner og partiklene minsker i størrelse.
             </p>
         </section>
-        <section id="dannelse" class="flex dannelseSection">
+        <section id="dannelse" class="flex dannelseSection notVisible">
             <div class="flex textQuestionDiv">
                 <p class="questionText"> Hvordan oppstod ringene</p>
                 <img class="questionImage" src="/Images/questionmark.png">

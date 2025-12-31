@@ -62,7 +62,7 @@
 
 .fadeInFromBelowAnim
 {
-  animation: fadeInFromBelow 0.8s ease 0s 1 normal forwards;
+  animation: fadeInFromBelow 0.8s ease 0s 1 normal backwards;
 }
 
 

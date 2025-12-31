@@ -21,7 +21,7 @@
 }
 
 .moonImg, .enceladusImg1, .enceladusImg2 {
-  width:550px;
+  width:40%;
 }
 .moonImg {
   margin-top: 170px;
@@ -45,6 +45,7 @@
   align-items:center;
  /* width: 1350px; */
   gap:7vw;
+
 
   padding-bottom: 120px;
 }

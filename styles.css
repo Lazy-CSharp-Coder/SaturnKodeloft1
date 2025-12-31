@@ -72,8 +72,39 @@ audio {
 
 
 .darkLightIcon {
-  padding-left:23px;
+  margin-left:28px;
+  height: 64px;
+  /* height: 60px; */
+  filter:brightness(80%)
 }
+
+
+.languageDiv {
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ gap: 50px;
+  color: #b17226;
+}
+
+.languageButton {
+   padding: 5px 10px;
+  color: inherit;
+  font-family: var(--primaryFontFamily);
+  font-size: 1em;
+
+  background-color: var(--primaryBackgroundColor);
+  border : 1px solid black;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+
+}
+
+.languageButton:hover {
+  border-color: #b17226;
+   color:#7088C6;
+}
+
 
 .darkLightListItem {
   display: none;
@@ -82,6 +113,13 @@ audio {
   display: none;
 }
 
+.headerMenuColor {
+  transition: color 0.3s ease-in;
+}
+
+.headerMenuColor:hover {
+  color:#7088C6;
+}
 .lightMode {
   --primaryBackgroundColor:rgb(220, 220, 220);
   --primaryTextColor:black;
@@ -109,6 +147,7 @@ a {
   gap:41px;
   list-style-type: none;
   
+  
 }
 
 .hamburgerIcon {
@@ -119,8 +158,8 @@ a {
 
 .logoSaturnImg 
 {
-  width:73px;
-  height:69px;
+  /* width:73px; */
+  height:63px;
   
 }
 
@@ -239,8 +278,9 @@ main {
   transition: all 0.5s ease;
 }
 
-.mainClass {
-    
+.mainClassHero {
+    display: flex;
+    align-items: center;
     
   
   
@@ -377,6 +417,13 @@ li {
   }
 }
 
+.visible {
+  opacity: 1;
+}
+
+.notVisible {
+  opacity: 0;
+}
 
 /* animation klasser for hero page */
 
@@ -946,9 +993,7 @@ li {
     transition-duration:0; 
  }
 
-.headerMenuColor:hover {
-  color:#7088C6;
-  
+
 }
 .subMenuColor:hover {
   color: rgb(192, 0, 0);
@@ -1216,7 +1261,7 @@ footer {
 
 .textNASA {
   text-align: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .textMyName {

@@ -15,7 +15,9 @@
 
 <body class="flex">
     <header class="flex">
-        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images//dark_light.png" alt="fant ikke icon" />
+        <div class="languageDiv"> <img onclick="darkLightModeToggle()"  id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"  alt="fant ikke icon" />
+        <button class="languageButton">Translate to<br>English</button>
+      </div>
         <nav class="flex headerNav">
             <ul id="headerMenu" class="flex navListHeader hidden">
                 <li>
@@ -74,7 +76,7 @@
             </nav>
         </div>
 
-        <section id="pioneer11" class="flex romferdSection">
+        <section id="pioneer11" class="flex romferdSection notVisible">
             <h3>Pioneer 11 (1979)</h3>
             <div class="flex pioneerImgTextDiv">
                 <img class="pioneerImg lightModeImg" src="/Images/pioneer.png" alt="fant ikke bilde" />
@@ -90,7 +92,7 @@
             </p>
 
         </section>
-        <section id="voyager1" class="flex romferdSection">
+        <section id="voyager1" class="flex romferdSection notVisible">
             <h3>Voyager 1 (1980)</h3>
             <div class="flex voyager1ImgTextDiv">
                 <img class="voyager1Img lightModeImg" src="/Images/voyager1.png" alt="fant ikke bilde" />
@@ -112,7 +114,7 @@
             <a href="https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/"> 
                 <button class="button moreInfoButton" >Voyagers 1 reise til Saturn <br> Trykk for mer info</button> </a>
         </section>
-        <section id="voyager2" class="flex romferdSection">
+        <section id="voyager2" class="flex romferdSection notVisible">
             <h3>Voyager 2 (1981)</h3>
             <div class="flex voyager2ImgTextDiv">
                 <img class="voyager2Img lightModeImg" src="/Images/voyager2.png" alt="fant ikke bilde" />
@@ -131,7 +133,7 @@
             <a href="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"> 
                 <button class="button moreInfoButton" >Hvor er Voyager 1 og 2 nå ? <br> Trykk for mer info</button> </a>
         </section>
-        <section id="cassini" class="flex romferdSection">
+        <section id="cassini" class="flex romferdSection notVisible">
             <h3 class="desktopSetting">Cassini/Hyguens (2004-2017)</h3>
             <h3 class="mobileSetting"> Cassini/Hyguens<br>(2004-2017)</h3>
            
@@ -157,13 +159,19 @@
                 <img class="cassiniTitanImg lightModeImg" src="/Images/cassinititan.png" alt="fant ikke bilde" />
                 <p class="textImage"> Cassini og soloppgang ved Titan (artist rendering)</p>
             </div>
+            
+                
+        </section>
+        <section id="cassini_video" class="flex romferdSection notVisible">
+            <h4 class="grandFinaleHeadingText">Oppdagelser</h4>
             <p>I løpet av sin ferd frem til 2017, gjorde Cassini store oppdagelser om Saturn og dens måner. Den oppdaget
                 Enceladus påvirkning på E-ringen. Man oppdaget at Titan hadde regn, sjøer og elver av metan. Og den
                 oppdaget gigantiske virvelstormer rundt polområdene til Saturn for å nevne noe.
             </p>
             <video class="videoCassini" preload="none" poster="Images/preloadimgCassini.png" video width="1280" height="720" controls>
                 <source src="https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~medium.mp4" 
-                type="video/mp4"> Nettleseren støtter ikke video avspilling </video>
+                type="video/mp4"> Nettleseren støtter ikke video avspilling </video></section>
+        <section id="cassini_finale" class="flex romferdSection notVisible" >    
             <p class="grandFinaleHeadingText">“The Grand Finale”</p>
             <p>
                 Den 15. september 2017, gikk Cassini inn i atmosfæren på Saturn, hvor den sendte data så lenge den kunne
