@@ -15,38 +15,55 @@
 
 <body class="flex">
 
-  <header class="flex">
-    <img onclick="darkLightModeToggle()" id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"  alt="fant ikke icon" />
-
-    <nav class="flex headerNav">
-      <ul id="headerMenu" class="flex navListHeader hidden">
-        <li>
-          <a class= "headerMenuColor" href="#home">Hjem</a>
-        </li>
-        <li>
-          <a class= "headerMenuColor" href="/om.html">Om</a>
-        </li>
-        <li>
-          <a class="headerMenuColor" href="/ringene.html">Ringene</a>
-        </li>
-        <li>
-          <a class="headerMenuColor" href="/maanene.html">Månene</a>
-        </li>
-        <li>
-          <a class="headerMenuColor" href="/romferdene.html">Romferdene</a>
-        </li>
-        <hr class="hamburgerLine">
-        <li class="darkLightListItem"> </li>
-        <li onclick="darkLightModeToggle()" class="darkLightListItem">D/L Lysmodus</li>
-
-      </ul>
-      <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon"/>
-      <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
-    
-    </nav>
-
-  </header>
-
+   <header class="flex">
+      <div class="languageDiv">
+        <img
+          onclick="darkLightModeToggle()"
+          id="darkLightIcon"
+          class="darkLightIcon"
+          src="Images/sunblazinglogo.png"
+          alt="fant ikke icon"
+        />
+        <button id="languageButton" class="languageButton">
+          Translate to<br />English
+        </button>
+      </div>
+      <nav class="flex headerNav">
+        <ul id="headerMenu" class="flex navListHeader hidden">
+          <li>
+            <a id="homeref" class="headerMenuColor" href="#home">Hjem</a>
+          </li>
+          <li>
+            <a id="aboutref" class="headerMenuColor" href="/om.html">Om</a>
+          </li>
+          <li>
+            <a id="ringsref" class="headerMenuColor" href="/ringene.html">Ringene</a>
+          </li>
+          <li>
+            <a id="moonsref" class="headerMenuColor" href="/maanene.html">Månene</a>
+          </li>
+          <li>
+            <a id="expeditionsref" class="headerMenuColor" href="/romferdene.html">Romferdene</a>
+          </li>
+          <hr class="hamburgerLine" />
+          <li class="darkLightListItem"></li>
+          <li id="darklighthamburger" onclick="darkLightModeToggle()" class="darkLightListItem">
+            D/L Lysmodus
+          </li>
+        </ul>
+        <img
+          onclick="hamburgerToggle()"
+          class="hamburgerIcon"
+          src="Images/hamburger.png"
+          alt="Hamburger meny ikon"
+        />
+        <img
+          class="logoSaturnImg"
+          src="Images/logoheader.png"
+          alt="fant ikke logo"
+        />
+      </nav>
+    </header>
   <main class="mainClass mainClassHero">
     
     <section id="home" class="flex sectionHome">

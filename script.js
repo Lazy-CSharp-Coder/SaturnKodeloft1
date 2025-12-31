@@ -5,6 +5,50 @@ let mouseWheelMoved = false;
 let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
+let isNorwegian = true;
+
+
+
+const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
+const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
+let languageSelected = mainMenuNorsk;
+ const refArray = [];
+  refArray[0] = document.getElementById("homeref");
+  refArray[1] = document.getElementById("aboutref");
+  refArray[2] = document.getElementById("ringsref");
+  refArray[3] = document.getElementById("moonsref");
+  refArray[4] = document.getElementById("expeditionsref");
+  refArray[5] = document.getElementById("darklighthamburger");
+  console.log(refArray);
+
+const translateButton = document.querySelector("#languageButton");
+
+console.log(translateButton);
+
+
+const chosenLanguage = localStorage.getItem("selectedLanguage");
+if(chosenLanguage != null) 
+if(chosenLanguage == "english")
+{
+    languageSelected = mainMenuEng;
+    isNorwegian = false;
+    for(let i = 0; i < 6; ++i)
+    {
+      refArray[i].textContent = languageSelected[i];
+    }
+
+} else localStorage.setItem("selectedLanguage", "norwegian");
+
+
+if(isNorwegian)
+  { 
+      translateButton.textContent = "Tranlate to English";
+    }
+else {
+  
+  translateButton.textContent = "Oversett til Norsk";
+}
+
 
 // her finner jeg ut om brukeren har skiftet til lightMode
 
@@ -222,30 +266,48 @@ allSections.forEach((section) =>
   observer.observe(section);
 });
 
-const translateButton = document.querySelector("#languageButton");
-let isNorwegian = true;
-console.log(translateButton);
-
 translateButton.addEventListener("click", () =>
 {
-   const mainNorwegian = document.querySelector("#mainNorwegian");
-   const mainEnglish = document.querySelector("#mainEnglish");
-  if(isNorwegian)
-  {
-    mainNorwegian.classList.add("hidden");
-    mainEnglish.classList.remove("hidden");
-    isNorwegian = false;
-    translateButton.textContent = "Oversett til Norsk"
-  }
-  else
-  { 
+   
+    isNorwegian = !isNorwegian;
+
+    languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
+
+    if(isNorwegian)
+      { localStorage.setItem("selectedLanguage", "norwegian");
+         translateButton.textContent = "Tranlate to English";
+        }
+    else {
+      localStorage.setItem("selectedLanguage", "english");
+      translateButton.textContent = "Oversett til Norsk";
+    }
+
+    for(let i = 0; i < 6; ++i)
+    {
+       refArray[i].textContent = languageSelected[i];
+    }
+    
+    if(window.location.pathname != "/om.html") return;  // tester her nå
+
+    const mainNorwegian = document.querySelector("#mainNorwegian");
+    const mainEnglish = document.querySelector("#mainEnglish");
+
+    if(!isNorwegian)
+    {
+
+      mainNorwegian.classList.add("hidden");
+      mainEnglish.classList.remove("hidden");
+
+     
+      
+    }
+    else
+    { 
+      mainEnglish.classList.add("hidden");
+      mainNorwegian.classList.remove("hidden");
+      isNorwegian = true;
+      translateButton.textContent = "Translate to English";
  
-    mainEnglish.classList.add("hidden");
-    mainNorwegian.classList.remove("hidden");
-    isNorwegian = true;
-    translateButton.textContent = "Translate to English"
+    }
+ });
 
-  }
-
-
-});

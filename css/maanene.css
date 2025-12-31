@@ -56,14 +56,16 @@
 
 .moonDiv {
   flex-direction: column;
+  justify-content: center;
   
 
 }
 
 .enceladusDiv {
   flex-direction: row;
+  align-items: center;
   padding-bottom:110px;
-  gap:82px;
+  gap:7vw;
 }
 
 .titanSection, .titanImgText {
@@ -80,6 +82,7 @@
 .titanCoreImg {
   margin-top: 40px;
   margin-bottom: 40px;
+  border-radius : 5px;
 
 }
 
@@ -128,14 +131,16 @@
 
   .enceladusImg1 {
     margin-bottom: 30px;
+    width: 40%;
   }
   .enceladusDiv {
     
     flex-direction: column;
+
     margin-top: 0;
     padding-bottom: 30px;
     gap:30px;
-    
+
   }
   
   .titanImg {
