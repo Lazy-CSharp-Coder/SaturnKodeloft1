@@ -15,38 +15,43 @@
 
 <body class="flex">
     <header class="flex">
-        <img onclick="darkLightModeToggle()" class="darkLightIcon" src="Images//dark_light.png" alt="fant ikke icon" />
+        <div class="languageDiv">
+            <img onclick="darkLightModeToggle()" id="darkLightIcon" class="darkLightIcon"
+                src="Images/sunblazinglogo.png" alt="fant ikke icon" />
+            <button id="languageButton" class="languageButton">
+                Translate to English
+            </button>
+        </div>
         <nav class="flex headerNav">
             <ul id="headerMenu" class="flex navListHeader hidden">
                 <li>
-                    <a class="headerMenuColor" href="/index.html">Hjem</a>
+                    <a id="homeref" class="headerMenuColor" href="/index.html">Hjem</a>
                 </li>
                 <li>
-                    <a class="headerMenuColor" href="/om.html">Om</a>
+                    <a id="aboutref" class="headerMenuColor" href="/om.html">Om</a>
                 </li>
                 <li>
-                    <a class="headerMenuColor" href="/ringene.html">Ringene</a>
+                    <a id="ringsref" class="headerMenuColor" href="/ringene.html">Ringene</a>
                 </li>
                 <li>
-                    <a class="headerMenuColor" href="/maanene.html">Månene</a>
+                    <a id="moonsref" class="headerMenuColor" href="/maanene.html">Månene</a>
                 </li>
                 <li>
-                    <a class="headerMenuColor" href="#pioneer11">Romferdene</a>
+                    <a id="expeditionsref" class="headerMenuColor" href="#pioneer11">Romferdene</a>
                 </li>
-                <hr class="hamburgerLine">
-                <li class="darkLightListItem"> </li>
-                <li onclick="darkLightModeToggle()" class="darkLightListItem">D/L Lysmodus</li>
-
+                <hr class="hamburgerLine" />
+                <li class="darkLightListItem"></li>
+                <li id="darklighthamburger" onclick="darkLightModeToggle()" class="darkLightListItem">
+                    D/L Lysmodus
+                </li>
             </ul>
-            <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon" />
+            <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png"
+                alt="Hamburger meny ikon" />
             <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
-
         </nav>
-
     </header>
-
-    <main class="mainClass">
-        <div id="subMenuDiv" class="flex subMenuDiv slideInMenuTop hidden">
+    <main id="mainNorwegian" class="mainClass">
+        <div id="subMenuDivNorwegian" class="flex subMenuDiv slideInMenuTop hidden">
             <div class="flex logoTextDivRomferd">
                 <img class="logoRomferdImg slideInLogo" src="/Images/romferdlogo.png" alt="fant ikke logo" />
                 <div class="flex subMenuTextAndBurgerDiv">
@@ -57,16 +62,16 @@
             <nav class="flex romferdeneNav">
                 <ul id="subMenu" class="flex navListRomferdene hidden slideInMenuItems">
                     <li>
-                        <a class="subMenuAnchor subMenuColor" href="#pioneer11">Pioneer 11</a>
+                        <a id="pioneerref" class="subMenuAnchor subMenuColor" href="#pioneer11">Pioneer 11</a>
                     </li>
                     <li>
-                        <a class="subMenuAnchor subMenuColor" href="#voyager1">Voyager 1</a>
+                        <a id="voyager1ref" class="subMenuAnchor subMenuColor" href="#voyager1">Voyager 1</a>
                     </li>
                     <li>
-                        <a class="subMenuAnchor subMenuColor" href="#voyager2">Voyager 2</a>
+                        <a id="voyager2ref" class="subMenuAnchor subMenuColor" href="#voyager2">Voyager 2</a>
                     </li>
                     <li>
-                        <a class="subMenuAnchor subMenuColor" href="#cassini">Cassini/Hyguens</a>
+                        <a id="cassiniref" class="subMenuAnchor subMenuColor" href="#cassini">Cassini/Hyguens</a>
                     </li>
 
                 </ul>
@@ -74,7 +79,7 @@
             </nav>
         </div>
 
-        <section id="pioneer11" class="flex romferdSection">
+        <section id="pioneer11" class="flex romferdSection notVisible">
             <h3>Pioneer 11 (1979)</h3>
             <div class="flex pioneerImgTextDiv">
                 <img class="pioneerImg lightModeImg" src="/Images/pioneer.png" alt="fant ikke bilde" />
@@ -82,20 +87,20 @@
                     Pioneer 11 på vei mot Saturn - Maleri av Hurley Wilson
                 </p>
             </div>
-            <p> Pioneer 11 ble skutt opp 6. april 1973 </p>
+            <p> Pioneer 11 ble skutt opp 6. april 1973. </p>
             <p>
-                NASA Pioneer 11 var den først sonden som tok Saturn i nærmere øyesyn. Vi fikk den første detaljerte syn
+                NASA's Pioneer 11 var den først sonden som tok Saturn i nærmere øyesyn. Vi fikk den første detaljerte
+                syn
                 på ringene og månene. Pioneer 11 kunne også bekrefte at forskernes antagelser angående Titans størrelse
                 og masse, var riktige. Den oppdaget two nye måner, Janus og Epimetheus.
             </p>
 
         </section>
-        <section id="voyager1" class="flex romferdSection">
+        <section id="voyager1" class="flex romferdSection notVisible">
             <h3>Voyager 1 (1980)</h3>
             <div class="flex voyager1ImgTextDiv">
                 <img class="voyager1Img lightModeImg" src="/Images/voyager1.png" alt="fant ikke bilde" />
-                <p class="textImage"> Voyager I på vei ut av solsystemet og inn i interstellart rom (artist rendering)
-                </p>
+                <!-- <p class="textImage"> Voyager I på vei ut av solsystemet og inn i interstellart rom (artist rendering) </p> -->
             </div>
             <p>
                 Voyager I ble skutt opp 5. september 1977. </p>
@@ -109,17 +114,26 @@
                 Voyager 1 passerte Pioneer 10 (skutt opp 2. mars, 1972) 17. februar 1998. Den 12. august 2012 gikk
                 sonden ut av solsystemet vårt og ble det første menneskeskapte fartøyet i interstellart rom.
             </p>
-            <a href="https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/"> 
-                <button class="button moreInfoButton" >Voyagers 1 reise til Saturn <br> Trykk for mer info</button> </a>
+            <div class="questionVoyagerDiv">
+                <img class="questionMarkImg" src="/Images/questionmark2.png" />
+                <p class="linkTextVoyager">Vil du vite mer om Voyagers 1 reise til Saturn ? Trykk <a
+                        class="anchorVoyager"
+                        href="https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/" target="_blank">her
+                    </a> for mer informasjon. </p>
+                <img class="questionMarkImg2" src="/Images/questionmark2.png" />
+            </div>
+
+
         </section>
-        <section id="voyager2" class="flex romferdSection">
+        <section id="voyager2" class="flex romferdSection notVisible">
             <h3>Voyager 2 (1981)</h3>
             <div class="flex voyager2ImgTextDiv">
-                <img class="voyager2Img lightModeImg" src="/Images/voyager2.png" alt="fant ikke bilde" />
-                <p class="textImage">Testing av Voyager 2 </p>
+                <img class="voyager2Img lightModeImg" src="Images/voyagerImage2.jpg" alt="fant ikke bilde" />
+                <!-- <p class="textImage">Voyager 2 illustrasjon</p> -->
             </div>
             <p>
-                Den ble skutt opp 20. august 1977 og passerte Saturn i august 1981. Den fløy 23 000 km nærmere Saturn
+                Voyager 2 ble skutt opp 20. august 1977 og passerte Saturn i august 1981. Den fløy 23 000 km nærmere
+                Saturn
                 enn Voyager 1 og sendte tilbake mer detaljerte data om ringene. Den ble under forbiflyvningen truffet av
                 mikro-støv, noe som medførte at stabiliseringmotorene måtte avfyres flere ganger. Den tok flere bilder
                 av månene, blant annet Enceladus og Tethys. Den tok også målinger av temperaturen på Saturn. Flere av
@@ -128,13 +142,18 @@
             <p>
                 Voyager 2 gikk over i interstellart rom 5. november 2018.
             </p>
-            <a href="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"> 
-                <button class="button moreInfoButton" >Hvor er Voyager 1 og 2 nå ? <br> Trykk for mer info</button> </a>
+            <div class="questionVoyagerDiv">
+                <img class="questionMarkImg" src="/Images/questionmark2.png" />
+                <p class="linkTextVoyager">Hvor befinner Voyager 1 og 2 seg nå ? Trykk <a class="anchorVoyager"
+                        href="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+                        target="_blank">her </a> for mer informasjon. </p>
+                <img class="questionMarkImg2" src="/Images/questionmark2.png" />
+            </div>
         </section>
-        <section id="cassini" class="flex romferdSection">
+        <section id="cassini" class="flex romferdSection notVisible">
             <h3 class="desktopSetting">Cassini/Hyguens (2004-2017)</h3>
             <h3 class="mobileSetting"> Cassini/Hyguens<br>(2004-2017)</h3>
-           
+
             <div class="flex cassiniLaunchImgTextDiv">
 
                 <p class="cassiniLaunchText">
@@ -144,7 +163,7 @@
                     Saturn, dens måner og nærområdene.
 
                 </p>
-                <img class="cassiniLaunchImg lightModeImg" src="/Images/launchcassini.jpg" alt="fant ikke bilde" />
+                <img class="cassiniLaunchImg lightModeImg" src="/Images/launchcassini2.jpg" alt="fant ikke bilde" />
             </div>
             <p>
                 Ett av målene var månen Titan. Cassini skulle separeres fra Huygens, en 335 kg tung sonde, gitt av ESA,
@@ -157,13 +176,23 @@
                 <img class="cassiniTitanImg lightModeImg" src="/Images/cassinititan.png" alt="fant ikke bilde" />
                 <p class="textImage"> Cassini og soloppgang ved Titan (artist rendering)</p>
             </div>
+
+
+        </section>
+        <section id="cassini_video" class="flex romferdSection notVisible">
+            <h4 class="grandFinaleHeadingText">Oppdagelser</h4>
             <p>I løpet av sin ferd frem til 2017, gjorde Cassini store oppdagelser om Saturn og dens måner. Den oppdaget
                 Enceladus påvirkning på E-ringen. Man oppdaget at Titan hadde regn, sjøer og elver av metan. Og den
                 oppdaget gigantiske virvelstormer rundt polområdene til Saturn for å nevne noe.
             </p>
-            <video class="videoCassini" preload="none" poster="Images/preloadimgCassini.png" video width="1280" height="720" controls>
-                <source src="https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~medium.mp4" 
-                type="video/mp4"> Nettleseren støtter ikke video avspilling </video>
+            <video class="videoCassini" preload="none" poster="Images/preloadimgCassini.png" video width="1280"
+                height="720" controls>
+                <source
+                    src="https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~medium.mp4"
+                    type="video/mp4"> Nettleseren støtter ikke video avspilling
+            </video>
+        </section>
+        <section id="cassini_finale" class="flex romferdSection notVisible">
             <p class="grandFinaleHeadingText">“The Grand Finale”</p>
             <p>
                 Den 15. september 2017, gikk Cassini inn i atmosfæren på Saturn, hvor den sendte data så lenge den kunne
@@ -177,8 +206,168 @@
                 <p class="textImage"> “The Grand Finale” - Cassini’s tur inn i Saturns atmosfære (artist rendering)</p>
             </div>
         </section>
-        <a href="#pioneer11"><img id="toTop" class="toTop hidden removeToTopButton" src="/Images/uparrow.png"></a>
+
     </main>
+
+    <main id="mainEnglish" class="mainClass">
+        <div id="subMenuDivNorwegian" class="flex subMenuDiv slideInMenuTop hidden">
+            <div class="flex logoTextDivRomferd">
+                <img class="logoRomferdImg slideInLogo" src="/Images/romferdlogo.png" alt="fant ikke logo" />
+                <div class="flex subMenuTextAndBurgerDiv">
+                    <p class="subMenuText slideInMenuHeading">Expeditions to Saturn</p>
+                    <p onclick="subMenuToggle()" class="subMenuBurger slideInMenuBurger">Meny</p>
+                </div>
+            </div>
+            <nav class="flex romferdeneNav">
+                <ul id="subMenu" class="flex navListRomferdene hidden slideInMenuItems">
+                    <li>
+                        <a id="pioneerref" class="subMenuAnchor subMenuColor" href="#pioneer11Eng">Pioneer 11</a>
+                    </li>
+                    <li>
+                        <a id="voyager1ref" class="subMenuAnchor subMenuColor" href="#voyager1Eng">Voyager 1</a>
+                    </li>
+                    <li>
+                        <a id="voyager2ref" class="subMenuAnchor subMenuColor" href="#voyager2Eng">Voyager 2</a>
+                    </li>
+                    <li>
+                        <a id="cassiniref" class="subMenuAnchor subMenuColor" href="#cassiniEng">Cassini/Hyguens</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <section id="pioneer11Eng" class="flex romferdSection notVisible">
+            <h3>Pioneer 11 (1979)</h3>
+            <div class="flex pioneerImgTextDiv">
+                <img class="pioneerImg lightModeImg" src="/Images/pioneer.png" alt="fant ikke bilde" />
+                <p class="textImage">
+                    Pioneer 11 on its way to Saturn - Painting by Hurley Wilson
+                </p>
+            </div>
+            <p>Pioneer 11 was launched on April 6, 1973. </p>
+            <p>
+                NASA's Pioneer 11 was the first probe to take a close look at Saturn. It gave us the first detailed view
+                of its rings and moons. Pioneer 11 also confirmed that scientists had made assumptions about Titan's
+                size and mass. It discovered two new moons, Janus and Epimetheus.
+            </p>
+
+        </section>
+        <section id="voyager1Eng" class="flex romferdSection notVisible">
+            <h3>Voyager 1 (1980)</h3>
+            <div class="flex voyager1ImgTextDiv">
+                <img class="voyager1Img lightModeImg" src="/Images/voyager1.png" alt="fant ikke bilde" />
+                <!-- <p class="textImage"> Voyager I på vei ut av solsystemet og inn i interstellart rom (artist rendering) </p> -->
+            </div>
+            <p>
+
+                Voyager I was launched on September 5, 1977.</p>
+            <p>
+                The main objective of Voyager 1 was to explore the outer planets Jupiter and Saturn. It passed Saturn in
+                November 1980. It discovered two new moons, Thebe and Metis, and one of the rings, the G ring. It also
+                discovered complex structures in the rings, including "shepherd moons", moons that kept the structure of
+                some of the rings under "control". It also found that Titan's atmosphere consisted mostly of nitrogen.
+            </p>
+            <p>
+                Voyager 1 passed Pioneer 10 (launched March 2, 1972) on February 17, 1998. On August 12, 2012, the probe
+                exited our solar system and became the first human-made vessel in interstellar space.
+            </p>
+            <div class="questionVoyagerDiv">
+                <img class="questionMarkImg" src="/Images/questionmark2.png" />
+                <p class="linkTextVoyager">Want to know more about Voyager 1's journey to Saturn? Click <a
+                        class="anchorVoyager"
+                        href="https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/" target="_blank">here
+                    </a> or more information. </p>
+                <img class="questionMarkImg2" src="/Images/questionmark2.png" />
+            </div>
+
+
+        </section>
+        <section id="voyager2Eng" class="flex romferdSection notVisible">
+            <h3>Voyager 2 (1981)</h3>
+            <div class="flex voyager2ImgTextDiv">
+                <img class="voyager2Img lightModeImg" src="Images/voyagerImage2.jpg" alt="fant ikke bilde" />
+                <!-- <p class="textImage">Voyager 2 illustrasjon</p> -->
+            </div>
+            <p>
+                Voyager 2 was launched on August 20, 1977, and passed Saturn in August 1981. It flew 23,000 km closer to
+                Saturn than Voyager 1 and returned more detailed data about the rings. During the flyby, it was hit by
+                micro-dust, which required the stabilization engines to be fired several times. It took several images
+                of the moons, including Enceladus and Tethys. It also took measurements of the temperature of Saturn.
+                Several of Saturn's moons were discovered by Voyager 2.
+            </p>
+            <p>
+                Voyager 2 entered interstellar space on November 5, 2018.
+            </p>
+            <div class="questionVoyagerDiv">
+                <img class="questionMarkImg" src="/Images/questionmark2.png" />
+                <p class="linkTextVoyager">Where are Voyager 1 og 2 now ? Click <a class="anchorVoyager"
+                        href="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+                        target="_blank">here </a> for more information. </p>
+                <img class="questionMarkImg2" src="/Images/questionmark2.png" />
+            </div>
+        </section>
+        <section id="cassiniEng" class="flex romferdSection notVisible">
+            <h3 class="desktopSetting">Cassini/Hyguens (2004-2017)</h3>
+            <h3 class="mobileSetting"> Cassini/Hyguens<br>(2004-2017)</h3>
+
+            <div class="flex cassiniLaunchImgTextDiv">
+
+                <p class="cassiniLaunchText">
+                    The Cassini-Huygens probe, named after Giovanni Cassini and Christiaan Huygens, was launched from
+                    Cape Canaveral, Florida, on October 15, 1997. It was a collaboration between NASA and ESA (European
+                    Space Agency), as well as ASI (Agenzia Spaziale Italiana - Italian Space Agency). Its main objective
+                    was Saturn, its moons and the surrounding area.
+
+                </p>
+                <img class="cassiniLaunchImg lightModeImg" src="/Images/launchcassini2.jpg" alt="fant ikke bilde" />
+            </div>
+            <p>
+                One of the targets was the moon Titan. Cassini was two separate from Huygens, a 335 kg probe provided by
+                ESA, part of which would enter Titan's atmosphere and land there. It lay dormant during its 6.7-year
+                journey to Saturn. It was released in December 2004, and on January 14, 2005, the probe landed on the
+                surface of Titan. Huygens sent data during its 2 hours and 27 minutes journey towards Titan's surface.
+                This was the first landing on a moon in the outer part of our solar system.
+            </p>
+            <div class="flex cassiniTitanImgTextDiv">
+                <img class="cassiniTitanImg lightModeImg" src="/Images/cassinititan.png" alt="fant ikke bilde" />
+                <p class="textImage"> Cassini og soloppgang ved Titan (artist rendering)</p>
+            </div>
+
+
+        </section>
+        <section id="cassini_video" class="flex romferdSection notVisible">
+            <h4 class="grandFinaleHeadingText">Discoveries</h4>
+            <p>During its journey until 2017, Cassini made major discoveries about Saturn and its moons. It discovered
+                Enceladus' impact on the E ring. Titan was discovered to have rain, lakes, and rivers of methane. And it
+                discovered giant vortexes around Saturn's polar regions, to name a few.
+            </p>
+            <video class="videoCassini" preload="none" poster="Images/preloadimgCassini.png" video width="1280"
+                height="720" controls>
+                <source
+                    src="https://images-assets.nasa.gov/video/GSFC_20170912_Cassini_m12709_CIRS_Short/GSFC_20170912_Cassini_m12709_CIRS_Short~medium.mp4"
+                    type="video/mp4">Your browser doesn't support video
+            </video>
+        </section>
+        <section id="cassini_finale" class="flex romferdSection notVisible">
+            <p class="grandFinaleHeadingText">“The Grand Finale”</p>
+            <p>
+                On September 15, 2017, Cassini entered Saturn's atmosphere, where it sent data for as long as it could
+                before burning up. One of the reasons Cassini ended its days this way was the risk of impacting possible
+                life on Enceladus. If it had drifted around Saturn, there was a possibility that it could end up
+                crashing into this moon. That would then potentially affect the evolution of the only other place in our
+                solar system that may have developed, or could develop, biological life.
+            </p>
+            <div class="flex grandFinaleImgTextDiv">
+                <img class="grandFinaleImg lightModeImg" src="/Images/cassinigrandfinale.png" alt="fant ikke bilde" />
+                <p class="textImage">“The Grand Finale” - Cassini’s tur inn i Saturns atmosfære (artist rendering)</p>
+            </div>
+        </section>
+
+    </main>
+    <a id="toTopRef" href="#pioneer11"><img id="toTop" class="toTop hidden removeToTopButton"
+            src="/Images/uparrow.png"></a>
 
     <footer class="flex">
         <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo" />

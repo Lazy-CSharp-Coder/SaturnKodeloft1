@@ -1,0 +1,1 @@
+blue moon in header : (Image credit: Colin Wooderson / 500px via Getty Images)

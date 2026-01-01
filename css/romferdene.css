@@ -1,0 +1,251 @@
+
+
+/* ---------- romferd.html ----------- */
+
+.romferdSection {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pioneerImgTextDiv, .voyager1ImgTextDiv, .voyager2ImgTextDiv {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 47px;
+}
+
+.navListRomferdene {
+  list-style-type: none;
+  gap:47px;
+  font-size: 32px;
+  padding-left:0;
+  padding-right:33px;
+}
+
+.logoTextDivRomferd {
+  padding-left: 33px;
+  gap:47px;
+  align-items: center;
+}
+
+.romferdSection {
+  scroll-margin-top: 200px;
+}
+
+.pioneerImg, .voyager1Img, .voyager2Img {
+    width : 48vw;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to left, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 5%, black 85%, transparent 100%);
+  mask-mode: alpha;
+  /* Combine the masks so they all apply */
+  mask-composite: intersect; 
+}
+
+.cassiniLaunchImg {
+  width:20vw;
+}
+
+.cassiniLaunchText {
+  width: 20vw;
+}
+
+.cassiniLaunchImgTextDiv {
+  gap:110px;
+  margin-bottom:104px;
+}
+
+.cassiniTitanImg {
+  width:58vw;
+  
+}
+
+.cassiniTitanImgTextDiv, .grandFinaleImgTextDiv {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 47px;
+
+}
+
+
+.grandFinaleHeadingText {
+  font-family: var(--primaryFontFamily);
+  font-size: 48px;
+  text-align: center;
+}
+
+.grandFinaleImg {
+    width: 58vw;
+    margin-top: 25px;
+}
+.videoCassini {
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+
+.button {
+  margin:30px;
+  width:744px;
+
+  color:black;
+  border-radius: 5px;
+  font-family: var(--primaryTextFontFamily);
+  font-size:19px;
+  text-align:center;
+  cursor: pointer;
+}
+
+.linkTextVoyager {
+    
+  /* margin: 25px 32px; */
+  /* border: 3px solid lightgray;
+  background:  linear-gradient(0deg, rgba(100,100,100,1) 0%, rgba(160, 160,160,1) 100%); */
+  background: transparent;
+  color:var(primaryTextColor);
+    text-align: left;
+  letter-spacing: 0px;
+  width: fit-content;
+  margin-top: 10px;
+  margin-left: 50px;
+
+left:20px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+
+
+  
+}
+
+.questionMarkImg, .questionMarkImg2 {
+    animation-name: fadeInOut;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.questionMarkImg2 {
+    animation-delay: 1.5s;
+    display: none;
+}
+
+@keyframes fadeInOut
+{
+    0% { opacity: 0;}
+    50% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+.questionMarkImg {
+    height: 50px;
+     position :absolute; 
+    top: 0%;
+    left : 0%;
+    opacity: 0.4;
+    transition: all 0.4s ease;
+ 
+}
+
+.questionMarkImg2 {
+    height: 50px;
+     position :absolute; 
+    top: 0%;
+    right : 0%;
+    opacity: 0.4;
+    transition: all 0.4s ease;
+ 
+}
+
+
+.questionMarkImg:hover, .questionMarkImg2:hover {
+    /* opacity : 1; */
+    scale: 1.4;
+}
+.anchorVoyager
+{    color : #6437e8;;
+    
+    transition: all 0.4s ease-in-out;
+}
+
+.anchorVoyager:hover {
+   color: lightskyblue;
+}
+.questionVoyagerDiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    position: relative;
+  width: 41vw;
+  height: fit-content;
+    margin-top: 20px;
+
+}
+
+.linkTextVoyager:hover {
+
+    /* scale: 1.15; */
+   
+ }
+
+
+@media (max-width:426px) {
+
+  .navListRomferdene {
+    list-style-type: none;
+      gap:3px;
+      font-size: 19px;
+      padding-left:12px;
+      padding-right:12px;
+      padding-top:12px;
+      padding-bottom:12px;
+  }
+  .logoTextDivRomferd {
+    gap:5px;
+  }
+
+  .pioneerImg, .voyager1Img, .voyager2Img {
+    width: 344px;
+  }
+
+  .cassiniLaunchImg {
+    width:295px;
+  }
+
+  .cassiniLaunchText {
+    width:341px;
+  }
+  .cassiniLaunchImgTextDiv {
+    flex-direction: column-reverse;
+    gap:31px;
+    padding-bottom: 25px;
+  }
+
+  .cassiniTitanImg {
+    width: 420px;
+  }
+
+  
+  .grandFinaleImg {
+    width: 399px;
+  }
+
+  .grandFinaleHeadingText {
+    font-size: 24px;
+
+  }
+  
+  .grandFinaleImgTextDiv {
+    padding-bottom:0px;
+
+  }
+  
+  .moreInfoButton {
+    width: 344px;
+    font-size:12px;
+
+  }
+}
