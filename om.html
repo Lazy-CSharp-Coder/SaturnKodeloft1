@@ -1,353 +1,276 @@
 <!DOCTYPE html>
 <html lang="no">
-  <!-- head = informasjon til nettleser -->
+<!-- head = informasjon til nettleser -->
 
-  <head>
-    <title>Om</title>
-    <link href="Images/code.png" rel="icon" type="image/png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!-- External files -->
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <!-- body = informasjon til nettsiden -->
+<head>
+  <title>Om</title>
+  <link href="Images/code.png" rel="icon" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- External files -->
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<!-- body = informasjon til nettsiden -->
 
-  <body class="flex">
-    <header class="flex">
-      <div class="languageDiv">
-        <img
-          onclick="darkLightModeToggle()"
-          id="darkLightIcon"
-          class="darkLightIcon"
-          src="Images/sunblazinglogo.png"
-          alt="fant ikke icon"
-        />
-        <button id="languageButton" class="languageButton">
-          Translate to English
-        </button>
+<body class="flex">
+  <header class="flex">
+    <div class="languageDiv">
+      <img onclick="darkLightModeToggle()" id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"
+        alt="fant ikke icon" />
+      <button id="languageButton" class="languageButton">
+        Translate to English
+      </button>
+    </div>
+    <nav class="flex headerNav">
+      <ul id="headerMenu" class="flex navListHeader hidden">
+        <li>
+          <a id="homeref" class="headerMenuColor" href="/index.html">Hjem</a>
+        </li>
+        <li>
+          <a id="aboutref" class="headerMenuColor" href="#om">Om</a>
+        </li>
+        <li>
+          <a id="ringsref" class="headerMenuColor" href="/ringene.html">Ringene</a>
+        </li>
+        <li>
+          <a id="moonsref" class="headerMenuColor" href="/maanene.html">Månene</a>
+        </li>
+        <li>
+          <a id="expeditionsref" class="headerMenuColor" href="/romferdene.html">Romferdene</a>
+        </li>
+        <hr class="hamburgerLine" />
+        <li class="darkLightListItem"></li>
+        <li id="darklighthamburger" onclick="darkLightModeToggle()" class="darkLightListItem">
+          D/L Lysmodus
+        </li>
+      </ul>
+      <img onclick="hamburgerToggle()" class="hamburgerIcon" src="Images/hamburger.png" alt="Hamburger meny ikon" />
+      <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
+    </nav>
+  </header>
+
+  <main id="mainNorwegian" class="mainClass">
+    <section id="om" class="flex omSection">
+      <!-- Hero / Main / Home -->
+      <div class="flex headingAndQuoteDiv">
+        <h2>Saturn</h2>
+        <div class="flex imageAndQuoteDiv">
+          <img class="omImgMobile lightModeImg" src="Images/HeroImg.png" alt="fant ikke img" />
+          <p class="quotePP">
+            “Our solar system is fantastically bizarre. There are worlds with
+            features we never imagined. Storms larger than planets, moons with
+            under-surface oceans, lakes of methane, worldlets that swap
+            places...and that's just at Saturn. “ (Phil Plait)
+          </p>
+        </div>
       </div>
-      <nav class="flex headerNav">
-        <ul id="headerMenu" class="flex navListHeader hidden">
-          <li>
-            <a id="homeref" class="headerMenuColor" href="/index.html">Hjem</a>
-          </li>
-          <li>
-            <a id="aboutref" class="headerMenuColor" href="#om">Om</a>
-          </li>
-          <li>
-            <a id="ringsref" class="headerMenuColor" href="/ringene.html">Ringene</a>
-          </li>
-          <li>
-            <a id="moonsref" class="headerMenuColor" href="/maanene.html">Månene</a>
-          </li>
-          <li>
-            <a id="expeditionsref" class="headerMenuColor" href="/romferdene.html">Romferdene</a>
-          </li>
-          <hr class="hamburgerLine" />
-          <li class="darkLightListItem"></li>
-          <li id="darklighthamburger" onclick="darkLightModeToggle()" class="darkLightListItem">
-            D/L Lysmodus
-          </li>
-        </ul>
-        <img
-          onclick="hamburgerToggle()"
-          class="hamburgerIcon"
-          src="Images/hamburger.png"
-          alt="Hamburger meny ikon"
-        />
-        <img
-          class="logoSaturnImg"
-          src="Images/logoheader.png"
-          alt="fant ikke logo"
-        />
-      </nav>
-    </header>
-
-    <main id="mainNorwegian" class="mainClass">
-      <section id="om" class="flex omSection">
-        <!-- Hero / Main / Home -->
-        <div class="flex headingAndQuoteDiv">
-          <h2>Saturn</h2>
-          <div class="flex imageAndQuoteDiv">
-            <img
-              class="omImgMobile lightModeImg"
-              src="Images/HeroImg.png"
-              alt="fant ikke img"
-            />
-            <p class="quotePP">
-              “Our solar system is fantastically bizarre. There are worlds with
-              features we never imagined. Storms larger than planets, moons with
-              under-surface oceans, lakes of methane, worldlets that swap
-              places...and that's just at Saturn. “ (Phil Plait)
-            </p>
-          </div>
+      <div class="flex imageAndStatsDiv">
+        <img class="omImg lightModeImg zoomInClass" src="Images/HeroImg.png" alt="fant ikke img" />
+        <div class="flex textFactCategorysDiv fadeInFacts">
+          <p class="textFactCategorys">Planet kategori :</p>
+          <p class="textFactCategorys">Avstand fra jorden :</p>
+          <p class="textFactCategorys mobileSetting"><br /></p>
+          <p class="textFactCategorys">Omkrets (ekvator) :</p>
+          <p class="textFactCategorys">Aksehelning :</p>
+          <p class="textFactCategorys">Masse :</p>
+          <p class="textFactCategorys">Tetthet :</p>
+          <p class="textFactCategorys">Ett døgn :</p>
+          <p class="textFactCategorys">Ett år :</p>
         </div>
-        <div class="flex imageAndStatsDiv">
-          <img
-            class="omImg lightModeImg zoomInClass"
-            src="Images/HeroImg.png"
-            alt="fant ikke img"
-          />
-          <div class="flex textFactCategorysDiv fadeInFacts">
-            <p class="textFactCategorys">Planet kategori :</p>
-            <p class="textFactCategorys">Avstand fra jorden :</p>
-            <p class="textFactCategorys mobileSetting"><br /></p>
-            <p class="textFactCategorys">Omkrets (ekvator) :</p>
-            <p class="textFactCategorys">Aksehelning :</p>
-            <p class="textFactCategorys">Masse :</p>
-            <p class="textFactCategorys">Tetthet :</p>
-            <p class="textFactCategorys">Ett døgn :</p>
-            <p class="textFactCategorys">Ett år :</p>
+        <div class="flex textFactsSaturnDiv fadeInFacts">
+          <p class="textFactsSaturn">Gassplanet</p>
+          <div class="flex minMaxFactDiv">
+            <p class="textFactsSaturnDistance">Min. : ca. 1,1 mill. km -</p>
+            <p class="textFactsSaturnDistance">Max : ca. 1,6 mill. km</p>
           </div>
-          <div class="flex textFactsSaturnDiv fadeInFacts">
-            <p class="textFactsSaturn">Gassplanet</p>
-            <div class="flex minMaxFactDiv">
-              <p class="textFactsSaturnDistance">Min. : ca. 1,1 mill. km -</p>
-              <p class="textFactsSaturnDistance">Max : ca. 1,6 mill. km</p>
-            </div>
-            <p class="textFactsSaturn">378 675 km</p>
-            <p class="textFactsSaturn">26,72 grader (Jorden : 23,4 grader)</p>
-            <p class="textFactsSaturn">95 ganger Jordens</p>
-            <p class="textFactsSaturn">0,69 g/cm3 - lavere enn vann</p>
-            <p class="textFactsSaturn">10,23 timer</p>
-            <p class="textFactsSaturn">29,42 jordår</p>
-          </div>
+          <p class="textFactsSaturn">378 675 km</p>
+          <p class="textFactsSaturn">26,72 grader (Jorden : 23,4 grader)</p>
+          <p class="textFactsSaturn">95 ganger Jordens</p>
+          <p class="textFactsSaturn">0,69 g/cm3 - lavere enn vann</p>
+          <p class="textFactsSaturn">10,23 timer</p>
+          <p class="textFactsSaturn">29,42 jordår</p>
         </div>
-        <p>
-          Saturn er den sjette planeten i vårt solsystem, oppkalt etter den
-          romerske guden Saturn, gud for jordbruk og såing. Den er også den nest
-          største i diameter, rett etter Jupiter, den største planeten i vårt
-          solsytem. Den er en av 4 gassplaneter hvor de andre er Jupiter, Uranus
-          og Neptun. Den har sin bane mellom Jupiter og Uranus.
-        </p>
-        <img
-          class="solarSystemImg lightModeImg"
-          src="Images/solsystemet.png"
-          alt="fant ikke bilde"
-        />
-        <p>
-          Saturn er velkjent for sitt fantastiske ringsystem. Det var lenge en
-          oppfattning at det var den eneste planeten i solsytemet vårt som hadde
-          ringer, men vi vet nå at det er feil. Både Jupiter, Uranus og Neptun
-          har ringer, men langt ifra så spektakulære og tydelige som Saturns
-          ringer.
-        </p>
-        <p>
-          Det er funnet nedtegnede observasjoner av assyriske astronomer
-          allerede 700 år fvt.
-          <a
-            class="linkWikiPage"
-            href="https://no.wikipedia.org/wiki/Galileo_Galilei"
-          >
-            Galileo Galilei
-          </a>
-          (f. 1564 - d. 1642) var den første som observerte ringene, men trodde
-          da at han så var to måner og senere ett trippel planetsystem.
-          <a
-            class="linkWikiPage"
-            href="https://no.wikipedia.org/wiki/Christiaan_Huygens"
-          >
-            Chrisiaan Huygens
-          </a>
-          (f. 1629 - d. 1695), en nederlansk matematiker og fysiker. var den
-          første som oppdaget at dette faktisk var ringer i 1655.
-        </p>
-        <a
-          title="Saturn-Internal-de.png: FrancescoA. The original uploader was FrancescoA at German Wikipedia. derivative work: 
-                Danmichaelo, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
-          href="https://commons.wikimedia.org/wiki/File:Saturn-internal.jpg"
-        >
-          <img
-            class="saturnCoreImg lightModeImg"
-            src="Images/kjernesaturn.png"
-            alt="fant ikke bilde"
-        /></a>
-
-        <p>
-          Saturn består hovedsakelig av gass, for det meste hydrogen og helium.
-          De fleste fysiske modeller antar den har en fast kjerne, sannsynligvis
-          av stein. Etter vår mening, så er det ikke mulig for liv å eksistere
-          på Saturn. Den er også sterkt flattrykt, pga. den raske rotasjonen og
-          har en tetthet som er lavere enn vann. Temperaturen går fra +12 000
-          grader Celcius til -170 grader Celcius. Nordlys er blitt observert på
-          Saturn og magnetfeltet er ca. 578 ganger så kraftig som Jordens.
-        </p>
-        <p class="quoteCarolyn">
-          "When you see it floating in the eyepiece of your telescope, you feel
-          as if you've uncovered mystery in the cosmos." -
-          <a
-            class="linkWikiPage"
-            href="https://en.wikipedia.org/wiki/Carolyn_Porco"
-          >
-            Carolyn Porco
-          </a>
-          about Saturn
-        </p>
-      </section>
-
-      <a href="#om"
-        ><img
-          id="toTop"
-          class="toTop hidden removeToTopButton"
-          src="/Images/uparrow.png"
-      /></a>
-    </main>
-
-    <main id="mainEnglish" class="mainEnglish hidden">
-      <section id="om" class="flex omSection">
-        <!-- Hero / Main / Home -->
-        <div class="flex headingAndQuoteDiv">
-          <h2>Saturn</h2>
-          <div class="flex imageAndQuoteDiv">
-            <img
-              class="omImgMobile lightModeImg"
-              src="Images/HeroImg.png"
-              alt="fant ikke img"
-            />
-            <p class="quotePP">
-              “Our solar system is fantastically bizarre. There are worlds with
-              features we never imagined. Storms larger than planets, moons with
-              under-surface oceans, lakes of methane, worldlets that swap
-              places...and that's just at Saturn. “ (Phil Plait)
-            </p>
-          </div>
-        </div>
-        <div class="flex imageAndStatsDiv">
-          <img
-            class="omImg lightModeImg zoomInClass"
-            src="Images/HeroImg.png"
-            alt="fant ikke img"
-          />
-          <div class="flex textFactCategorysDiv fadeInFacts">
-            <p class="textFactCategorys">Planet category :</p>
-            <p class="textFactCategorys">Distance from earth :</p>
-            <p class="textFactCategorys mobileSetting"><br /></p>
-            <p class="textFactCategorys">Circumference (equator) :</p>
-            <p class="textFactCategorys">Axis inclination :</p>
-            <p class="textFactCategorys">Mass :</p>
-            <p class="textFactCategorys">Density :</p>
-            <p class="textFactCategorys">One day :</p>
-            <p class="textFactCategorys">One Year :</p>
-          </div>
-          <div class="flex textFactsSaturnDiv fadeInFacts">
-            <p class="textFactsSaturn">Gassplanet</p>
-            <div class="flex minMaxFactDiv">
-              <p class="textFactsSaturnDistance">Min. : ca. 1,1 mill. km -</p>
-              <p class="textFactsSaturnDistance">Max : ca. 1,6 mill. km</p>
-            </div>
-            <p class="textFactsSaturn">378 675 km</p>
-            <p class="textFactsSaturn">26,72 degrees (Earth : 23,4 degrees)</p>
-            <p class="textFactsSaturn">95 times Earth's</p>
-            <p class="textFactsSaturn">0,69 g/cm3 - lower than water</p>
-            <p class="textFactsSaturn">10,23 hours</p>
-            <p class="textFactsSaturn">29,42 Earth years</p>
-          </div>
-        </div>
-        <p>
-          Saturn is the sixth planet in our solar system, named after the Roman
-          god Saturn, god of agriculture and sowing. It is also the second
-          largest in diameter, right after Jupiter, the largest planet in our
-          solar system. It is one of 4 gas planets, the others being Jupiter,
-          Uranus and Neptune. It has its orbit between Jupiter and Uranus.
-        </p>
-        <img
-          class="solarSystemImg lightModeImg"
-          src="Images/solsystemet.png"
-          alt="fant ikke bilde"
-        />
-        <p>
-          Saturn is well known for its amazing ring system. It was long believed
-          that it was the only planet in our solar system to have rings, but we
-          now know that this is wrong. Jupiter, Uranus and Neptune all have
-          rings, but they are nowhere near as spectacular and clear as Saturn's
-          rings.
-        </p>
-        <p>
-          Recorded observations by Assyrian astronomers have been found as early
-          as 700 BCE.
-          <a
-            class="linkWikiPage"
-            href="https://no.wikipedia.org/wiki/Galileo_Galilei"
-          >
-            Galileo Galilei
-          </a>
-
-          (b. 1564 - d. 1642) was the first to observe the rings, but then
-          thought that he saw two moons and later a triple planetary system.
-          <a
-            class="linkWikiPage"
-            href="https://no.wikipedia.org/wiki/Christiaan_Huygens"
-          >
-            Chrisiaan Huygens
-          </a>
-
-          (b. 1629 - d. 1695), a Dutch mathematician and physicist. was the
-          first to discover that these were actually rings in 1655.
-        </p>
-        <a
-          title="Saturn-Internal-de.png: FrancescoA. The original uploader was FrancescoA at German Wikipedia. derivative work: 
-                Danmichaelo, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
-          href="https://commons.wikimedia.org/wiki/File:Saturn-internal.jpg"
-        >
-          <img
-            class="saturnCoreImg lightModeImg"
-            src="Images/saturncoreeng.png"
-            alt="fant ikke bilde"
-        /></a>
-
-        <p>
-          Saturn is composed mainly of gas, mostly hydrogen and helium. Most
-          physical models assume it has a solid core, probably made of rock. In
-          our opinion, it is not possible for life to exist on Saturn. It is
-          also very flattened, due to its rapid rotation, and has a density
-          lower than water. The temperature ranges from +12,000 degrees Celsius
-          to -170 degrees Celsius. Northern lights have been observed on Saturn
-          and the magnetic field is about 578 times as strong as Earth's.
-        </p>
-        <p class="quoteCarolyn">
-          "When you see it floating in the eyepiece of your telescope, you feel
-          as if you've uncovered mystery in the cosmos." -
-          <a
-            class="linkWikiPage"
-            href="https://en.wikipedia.org/wiki/Carolyn_Porco"
-          >
-            Carolyn Porco
-          </a>
-          about Saturn
-        </p>
-      </section>
-
-      <a href="#om"
-        ><img
-          id="toTop"
-          class="toTop hidden removeToTopButton"
-          src="/Images/uparrow.png"
-      /></a>
-    </main>
-
-    <footer class="flex">
-      <img
-        class="logoKodeloftetImg"
-        src="Images/kodeloftalpha_hvit.png"
-        alt="fant ikke logo"
-      />
-      <div class="divNASA">
-        <p class="textNASA">All pictures taken from NASA</p>
-        <p class="textNASA">if not specified otherwise</p>
       </div>
-      <div class="flex infoAndIconsDiv">
-        <div class="flex myInfoDiv">
-          <p class="textWSCreated">Web side laget av</p>
-          <p class="textMyName">Harald N.</p>
-        </div>
-        <a href="mailto:haraldn.kodeloftet@gmail.com" target="_blank">
-          <img src="Images/email42px.png" alt="fant ikke icon" />
+      <p>
+        Saturn er den sjette planeten i vårt solsystem, oppkalt etter den
+        romerske guden Saturn, gud for jordbruk og såing. Den er også den nest
+        største i diameter, rett etter Jupiter, den største planeten i vårt
+        solsytem. Den er en av 4 gassplaneter hvor de andre er Jupiter, Uranus
+        og Neptun. Den har sin bane mellom Jupiter og Uranus.
+      </p>
+      <img class="solarSystemImg lightModeImg" src="Images/solsystemet.png" alt="fant ikke bilde" />
+      <p>
+        Saturn er velkjent for sitt fantastiske ringsystem. Det var lenge en
+        oppfattning at det var den eneste planeten i solsytemet vårt som hadde
+        ringer, men vi vet nå at det er feil. Både Jupiter, Uranus og Neptun
+        har ringer, men langt ifra så spektakulære og tydelige som Saturns
+        ringer.
+      </p>
+     
+     
+    </section>
+    <section id="omSection2" class="flex omSection" >
+        <p>
+        Det er funnet nedtegnede observasjoner av assyriske astronomer
+        allerede 700 år fvt.
+        <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/Galileo_Galilei">
+          Galileo Galilei
         </a>
-        <a href="https://github.com/Lazy-CSharp-Coder" target="_blank">
-          <img src="Images/github32px.png" alt="fant ikke icon"
-        /></a>
+        (f. 1564 - d. 1642) var den første som observerte ringene, men trodde
+        da at han så var to måner og senere ett trippel planetsystem.
+        <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/Christiaan_Huygens">
+          Chrisiaan Huygens
+        </a>
+        (f. 1629 - d. 1695), en nederlansk matematiker og fysiker. var den
+        første som oppdaget at dette faktisk var ringer i 1655.
+      </p>
+
+       <a title="Saturn-Internal-de.png: FrancescoA. The original uploader was FrancescoA at German Wikipedia. derivative work: 
+                Danmichaelo, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:Saturn-internal.jpg">
+        <img class="saturnCoreImg lightModeImg" src="Images/kjernesaturn.png" alt="fant ikke bilde" /></a>
+
+      <p>
+        Saturn består hovedsakelig av gass, for det meste hydrogen og helium.
+        De fleste fysiske modeller antar den har en fast kjerne, sannsynligvis
+        av stein. Etter vår mening, så er det ikke mulig for liv å eksistere
+        på Saturn. Den er også sterkt flattrykt, pga. den raske rotasjonen og
+        har en tetthet som er lavere enn vann. Temperaturen går fra +12 000
+        grader Celcius til -170 grader Celcius. Nordlys er blitt observert på
+        Saturn og magnetfeltet er ca. 578 ganger så kraftig som Jordens.
+      </p>
+      <p class="quoteCarolyn">
+        "When you see it floating in the eyepiece of your telescope, you feel
+        as if you've uncovered mystery in the cosmos." -
+        <a class="linkWikiPage" href="https://en.wikipedia.org/wiki/Carolyn_Porco">
+          Carolyn Porco
+        </a>
+        about Saturn
+      </p>
+    </section>
+
+    <a id="toTopRef" href="#om"><img id="toTop" class="toTop hidden removeToTopButton" src="/Images/uparrow.png" /></a>
+  </main>
+
+  <main id="mainEnglish" class="mainEnglish hidden">
+    <section id="om" class="flex omSection">
+      <!-- Hero / Main / Home -->
+      <div class="flex headingAndQuoteDiv">
+        <h2>Saturn</h2>
+        <div class="flex imageAndQuoteDiv">
+          <img class="omImgMobile lightModeImg" src="Images/HeroImg.png" alt="fant ikke img" />
+          <p class="quotePP">
+            “Our solar system is fantastically bizarre. There are worlds with
+            features we never imagined. Storms larger than planets, moons with
+            under-surface oceans, lakes of methane, worldlets that swap
+            places...and that's just at Saturn. “ (Phil Plait)
+          </p>
+        </div>
       </div>
-    </footer>
-  </body>
+      <div class="flex imageAndStatsDiv">
+        <img class="omImg lightModeImg zoomInClass" src="Images/HeroImg.png" alt="fant ikke img" />
+        <div class="flex textFactCategorysDiv fadeInFacts">
+          <p class="textFactCategorys">Planet category :</p>
+          <p class="textFactCategorys">Distance from earth :</p>
+          <p class="textFactCategorys mobileSetting"><br /></p>
+          <p class="textFactCategorys">Circumference (equator) :</p>
+          <p class="textFactCategorys">Axis inclination :</p>
+          <p class="textFactCategorys">Mass :</p>
+          <p class="textFactCategorys">Density :</p>
+          <p class="textFactCategorys">One day :</p>
+          <p class="textFactCategorys">One Year :</p>
+        </div>
+        <div class="flex textFactsSaturnDiv fadeInFacts">
+          <p class="textFactsSaturn">Gassplanet</p>
+          <div class="flex minMaxFactDiv">
+            <p class="textFactsSaturnDistance">Min. : ca. 1,1 mill. km -</p>
+            <p class="textFactsSaturnDistance">Max : ca. 1,6 mill. km</p>
+          </div>
+          <p class="textFactsSaturn">378 675 km</p>
+          <p class="textFactsSaturn">26,72 degrees (Earth : 23,4 degrees)</p>
+          <p class="textFactsSaturn">95 times Earth's</p>
+          <p class="textFactsSaturn">0,69 g/cm3 - lower than water</p>
+          <p class="textFactsSaturn">10,23 hours</p>
+          <p class="textFactsSaturn">29,42 Earth years</p>
+        </div>
+      </div>
+      <p>
+        Saturn is the sixth planet in our solar system, named after the Roman
+        god Saturn, god of agriculture and sowing. It is also the second
+        largest in diameter, right after Jupiter, the largest planet in our
+        solar system. It is one of 4 gas planets, the others being Jupiter,
+        Uranus and Neptune. It has its orbit between Jupiter and Uranus.
+      </p>
+      <img class="solarSystemImg lightModeImg" src="Images/solsystemet.png" alt="fant ikke bilde" />
+      <p>
+        Saturn is well known for its amazing ring system. It was long believed
+        that it was the only planet in our solar system to have rings, but we
+        now know that this is wrong. Jupiter, Uranus and Neptune all have
+        rings, but they are nowhere near as spectacular and clear as Saturn's
+        rings.
+      </p>
+      <p>
+        Recorded observations by Assyrian astronomers have been found as early
+        as 700 BCE.
+        <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/Galileo_Galilei">
+          Galileo Galilei
+        </a>
+
+        (b. 1564 - d. 1642) was the first to observe the rings, but then
+        thought that he saw two moons and later a triple planetary system.
+        <a class="linkWikiPage" href="https://no.wikipedia.org/wiki/Christiaan_Huygens">
+          Chrisiaan Huygens
+        </a>
+
+        (b. 1629 - d. 1695), a Dutch mathematician and physicist. was the
+        first to discover that these were actually rings in 1655.
+      </p>
+      <a title="Saturn-Internal-de.png: FrancescoA. The original uploader was FrancescoA at German Wikipedia. derivative work: 
+                Danmichaelo, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:Saturn-internal.jpg">
+        <img class="saturnCoreImg lightModeImg" src="Images/saturncoreeng.png" alt="fant ikke bilde" /></a>
+
+      <p>
+        Saturn is composed mainly of gas, mostly hydrogen and helium. Most
+        physical models assume it has a solid core, probably made of rock. In
+        our opinion, it is not possible for life to exist on Saturn. It is
+        also very flattened, due to its rapid rotation, and has a density
+        lower than water. The temperature ranges from +12,000 degrees Celsius
+        to -170 degrees Celsius. Northern lights have been observed on Saturn
+        and the magnetic field is about 578 times as strong as Earth's.
+      </p>
+      <p class="quoteCarolyn">
+        "When you see it floating in the eyepiece of your telescope, you feel
+        as if you've uncovered mystery in the cosmos." -
+        <a class="linkWikiPage" href="https://en.wikipedia.org/wiki/Carolyn_Porco">
+          Carolyn Porco
+        </a>
+        about Saturn
+      </p>
+    </section>
+
+    <a href="#om"><img id="toTop" class="toTop hidden removeToTopButton" src="/Images/uparrow.png" /></a>
+  </main>
+
+  <footer class="flex">
+    <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo" />
+    <div class="divNASA">
+      <p class="textNASA">All pictures taken from NASA</p>
+      <p class="textNASA">if not specified otherwise</p>
+    </div>
+    <div class="flex infoAndIconsDiv">
+      <div class="flex myInfoDiv">
+        <p class="textWSCreated">Web side laget av</p>
+        <p class="textMyName">Harald N.</p>
+      </div>
+      <a href="mailto:haraldn.kodeloftet@gmail.com" target="_blank">
+        <img src="Images/email42px.png" alt="fant ikke icon" />
+      </a>
+      <a href="https://github.com/Lazy-CSharp-Coder" target="_blank">
+        <img src="Images/github32px.png" alt="fant ikke icon" /></a>
+    </div>
+  </footer>
+</body>
+
 </html>

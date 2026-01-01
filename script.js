@@ -29,16 +29,16 @@ let languageSelected = mainMenuNorsk;
   refArray[5] = document.getElementById("darklighthamburger");
   console.log(refArray);
 
-  const ringsMenuArray = [];
+  // const ringsMenuArray = [];
 
-  ringsMenuArray[0] = document.getElementById("descriptionref");
-  ringsMenuArray[1] = document.getElementById("compositionref");
-  ringsMenuArray[2] = document.getElementById("creationref");
+  // ringsMenuArray[0] = document.getElementById("descriptionref");
+  // ringsMenuArray[1] = document.getElementById("compositionref");
+  // ringsMenuArray[2] = document.getElementById("creationref");
 
-  moonsGeneral = document.getElementById("generalref");
+  // moonsGeneral = document.getElementById("generalref");
 
 const translateButton = document.querySelector("#languageButton");
-
+const currentPage = window.location.pathname;
 console.log(translateButton);
 
 
@@ -46,24 +46,8 @@ const chosenLanguage = localStorage.getItem("selectedLanguage");
 if(chosenLanguage != null) 
 if(chosenLanguage == "english")
 {
-    languageSelected = mainMenuEng;
-    isNorwegian = false;
-    for(let i = 0; i < 6; ++i)
-    {
-      refArray[i].textContent = languageSelected[i];
-    }
-
+    switchLanguage();
 } else localStorage.setItem("selectedLanguage", "norwegian");
-
-
-if(isNorwegian)
-  { 
-      translateButton.textContent = "Tranlate to English";
-    }
-else {
-  
-  translateButton.textContent = "Oversett til Norsk";
-}
 
 
 // her finner jeg ut om brukeren har skiftet til lightMode
@@ -76,28 +60,6 @@ if(chosenTheme != null)
   else localStorage.setItem("selectedTheme", "darkMode");
 
 
-// undermeny språk
-
-const currentPage = window.location.pathname;
-
-if(currentPage === "/ringene.html" && !isNorwegian)
-{
-    ringsMenuArray.forEach((item, index) =>
-    { 
-      item.textContent = ringsMenuEng[index];
-      
-    })
-} else if(currentPage === "/maanene.html" && !isNorwegian) 
-       {
-          moonsGeneral.textContent = moonsEng;
-        
-       };
-      
-
-
-
-
-// ********************************************************
 
 function hamburgerToggle() 
 {
@@ -189,8 +151,10 @@ let prevScrollPos = window.scrollY;
 function animateSubMenu () 
 {
   const currentScrollPos = window.scrollY;
-  const subMenu = document.getElementById("subMenuDiv");
-  const toTopButton = document.getElementById("toTop");
+  const chosenSub = isNorwegian ? "subMenuDivNorwegian" : "subMenuDivEnglish";
+  const subMenu = document.getElementById(chosenSub);
+
+    const toTopButton = document.getElementById("toTop");
 
 
 
@@ -231,7 +195,7 @@ function animateSubMenu ()
   }
   // går tilbake hvis det ikkke finnes en undermeny
   
-  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
+  if(currentPage == "/om.html" || currentPage == "/index.html")  return;
 
   // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
   
@@ -275,7 +239,7 @@ const observerOptions =
 
 function observerCallback(entries, observer)
 {
-  if(window.location.pathname == "/om.html" || window.location.pathname == "/index.html")  return;
+  if(currentPage == "/index.html")  return;
   console.log(entries);
   entries.forEach((entry) => 
   {
@@ -306,55 +270,91 @@ allSections.forEach((section) =>
 
 translateButton.addEventListener("click", () =>
 {
-   
-    isNorwegian = !isNorwegian;
+   switchLanguage();
+  //   isNorwegian = !isNorwegian;
 
-    languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
+  //   languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
 
-    if(isNorwegian)
-      { localStorage.setItem("selectedLanguage", "norwegian");
-         translateButton.textContent = "Tranlate to English";
-        }
-    else {
+  //   if(isNorwegian)
+  //     { localStorage.setItem("selectedLanguage", "norwegian");
+  //        translateButton.textContent = "Tranlate to English";
+  //       }
+  //   else {
+  //     localStorage.setItem("selectedLanguage", "english");
+  //     translateButton.textContent = "Oversett til Norsk";
+  //   }
+
+  //   for(let i = 0; i < 6; ++i)
+  //   {
+  //      refArray[i].textContent = languageSelected[i];
+  //   }
+    
+  // if(currentPage === "/ringene.html")
+  // {
+  //   const ringLanguageSelected = isNorwegian ? ringsMenuNorsk : ringsMenuEng;
+  //   ringsMenuArray.forEach((item, index) =>
+  //   { 
+  //     item.textContent = ringLanguageSelected[index];
+      
+  //   })
+  // } else  if(currentPage === "/maanene.html") moonsGeneral.textContent = isNorwegian ? moonsNorsk : moonsEng;
+ 
+});
+
+
+function switchLanguage()
+{
+  isNorwegian = !isNorwegian;
+  const languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
+  const toTopRef = document.getElementById("toTopRef");
+
+  // sett i local storage hva språk som er valgt
+
+  if(isNorwegian)
+  { 
+      localStorage.setItem("selectedLanguage", "norwegian");
+      translateButton.textContent = "Tranlate to English";
+      if(currentPage === "/ringene.html") toTopRef.href = "#beskrivelse";
+      else if(currentPage === "/maanene.html") toTopRef.href = "#generelt";
+          else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11";
+      
+  }
+  else 
+  { 
       localStorage.setItem("selectedLanguage", "english");
       translateButton.textContent = "Oversett til Norsk";
-    }
+      if(currentPage === "/ringene.html") toTopRef.href = "#beskrivelseEng";
+      else if(currentPage === "/maanene.html") toTopRef.href = "#genereltEng";
+           else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11Eng";
+  }
 
-    for(let i = 0; i < 6; ++i)
-    {
-       refArray[i].textContent = languageSelected[i];
-    }
-    
-  if(currentPage === "/ringene.html")
+  for(let i = 0; i < 6; ++i)
   {
-    const ringLanguageSelected = isNorwegian ? ringsMenuNorsk : ringsMenuEng;
-    ringsMenuArray.forEach((item, index) =>
-    { 
-      item.textContent = ringLanguageSelected[index];
+      refArray[i].textContent = languageSelected[i];
+  }
+
+  if( (currentPage ==="/om.html" || currentPage === "/ringene.html") || currentPage === "/maanene.html") 
+  {
+      const mainNorwegian = document.querySelector("#mainNorwegian");
+      const mainEnglish = document.querySelector("#mainEnglish");
+
+      if(!isNorwegian)
+      {
+
+        mainNorwegian.classList.add("hidden");
+        mainEnglish.classList.remove("hidden");
+
       
-    })
-  } else  if(currentPage === "/maanene.html") moonsGeneral.textContent = isNorwegian ? moonsNorsk : moonsEng;
-    if(window.location.pathname != "/om.html") return;  // tester her nå
-
-    const mainNorwegian = document.querySelector("#mainNorwegian");
-    const mainEnglish = document.querySelector("#mainEnglish");
-
-    if(!isNorwegian)
-    {
-
-      mainNorwegian.classList.add("hidden");
-      mainEnglish.classList.remove("hidden");
-
-     
-      
-    }
-    else
-    { 
-      mainEnglish.classList.add("hidden");
-      mainNorwegian.classList.remove("hidden");
-      isNorwegian = true;
-      translateButton.textContent = "Translate to English";
+        
+      }
+      else
+      { 
+        mainEnglish.classList.add("hidden");
+        mainNorwegian.classList.remove("hidden");
+        
+      }
+  }
+  
  
-    }
- });
 
+}
