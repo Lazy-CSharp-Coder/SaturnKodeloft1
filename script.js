@@ -11,7 +11,8 @@ let isNorwegian = true;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
-
+const lightModeUrl = "Images/sunblazinglogo.png";
+const darkModeUrl = "Images/moonbluelogo2.png";
 
 
 let languageSelected = mainMenuNorsk;
@@ -42,12 +43,9 @@ if(chosenLanguage == "english")
 
 // her finner jeg ut om brukeren har skiftet til lightMode
 
-// const chosenTheme = localStorage.getItem("selectedTheme") ;
-const chosenTheme = null;
-
-if(chosenTheme != null) 
-  if(chosenTheme === "lightMode") darkLightModeToggle();
-  else localStorage.setItem("selectedTheme", "darkMode");
+const chosenTheme = localStorage.getItem("selectedTheme") 
+if(chosenTheme) if(chosenTheme === "lightMode") darkLightModeToggle();
+                else localStorage.setItem("selectedTheme", "darkMode");
 
 
 
@@ -102,8 +100,7 @@ function subMenuToggle()
   }
 } 
 
-const lightModeUrl = "Images/sunblazinglogo.png";
-const darkModeUrl = "Images/moonbluelogo2.png";
+
 
 
 function darkLightModeToggle() 
@@ -348,7 +345,11 @@ function switchLanguage()
         currentMain = mainNorwegian;
       }
   }
-  
- 
+  if(!darkMode)
+  {
+    darkMode = true;
+    darkLightModeToggle();
+  }
+   
 
 }
