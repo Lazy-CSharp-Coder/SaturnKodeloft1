@@ -427,7 +427,7 @@ li {
 
 /* animation klasser for hero page */
 
-.fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit, .fadeInFacts {
+.fadeInImage, .fadeInHeading, .fadeInQuote, .fadeInCredit, .fadeInFacts, .fadeInQuotePP {
 
    animation-name: fadeInAnimation;
    animation-timing-function: ease-in;
@@ -459,6 +459,7 @@ li {
  }
 
 
+
 /* ----------- om.html klasser --------- */
 
 .omSection {
@@ -468,8 +469,11 @@ li {
 }
 
 .omImg {
-  width:471px;
-  height:420px;
+  /* width:471px;
+  height:420px; */
+  width : 25vw;
+  min-width: 350px;
+  
 }
 
 .omImgMobile
@@ -538,6 +542,7 @@ li {
 }
 
 .solarSystemImg, .saturnCoreImg {
+  width: 50vw;
   margin-top:60px;
   margin-bottom: 60px;
 }
@@ -664,6 +669,16 @@ li {
  
 }
 
+
+.rotateAndFadeInImage {
+  animation: rotateFade 1.8s ease-in 0s 1 normal backwards;
+}
+
+@keyframes rotateFade {
+  0% {transform: rotateZ(38deg); scale: 0;}
+  100% { scale: 1;   transform: rotateZ(0deg);}
+}
+
 .zoomInClass
 {
   animation-name: scaleIn;
@@ -692,8 +707,14 @@ li {
   100% {transform:translateX(0);}
 }
 
+.fadeInQuotePP 
+{
+  animation-duration: 1.9s;
+  animation-delay: 0;
+}
+
 .fadeInFacts {
-  animation-duration: 2.2s;
+  animation-duration: 2.5s;
   animation-delay:0.2s;
 }
 
@@ -840,6 +861,14 @@ li {
     animation-fill-mode:forwards;
     animation-duration: 1s;
     animation-delay: 0;
+}
+
+.ringSystemImg {
+  width: 50vw;
+}
+
+.cassiniShadowImg {
+  width: 80vw;
 }
 
 @media (max-width:426px) {
@@ -990,7 +1019,7 @@ li {
     transition-property:color;
     transition-timing-function: ease-in-out;
     transition-delay:0;
-    transition-duration:0; 
+    transition-duration:0.4s; 
  }
 
 

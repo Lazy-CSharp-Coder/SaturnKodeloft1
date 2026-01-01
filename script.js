@@ -12,11 +12,6 @@ let isNorwegian = true;
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
 
-const ringsMenuEng = ["Description", "Composition", "Creation"];
-const ringsMenuNorsk = ["Beskrivelse", "Komposisjon", "Dannelse"];
-
-const moonsNorsk = "Generelt";
-const moonsEng = "Overview";
 
 
 let languageSelected = mainMenuNorsk;
@@ -29,15 +24,10 @@ let languageSelected = mainMenuNorsk;
   refArray[5] = document.getElementById("darklighthamburger");
   console.log(refArray);
 
-  // const ringsMenuArray = [];
-
-  // ringsMenuArray[0] = document.getElementById("descriptionref");
-  // ringsMenuArray[1] = document.getElementById("compositionref");
-  // ringsMenuArray[2] = document.getElementById("creationref");
-
-  // moonsGeneral = document.getElementById("generalref");
-
 const translateButton = document.querySelector("#languageButton");
+let  currentMain = document.getElementById("mainNorwegian");
+
+
 const currentPage = window.location.pathname;
 console.log(translateButton);
 
@@ -120,22 +110,23 @@ function darkLightModeToggle()
 {
   console.log("hi from darkLight mode");
   
-  const mainElement = document.querySelector(".mainClass");
+  
   const imageElement = document.querySelector("#darkLightIcon");
-  console.log(imageElement);
+
   // const imgElements = document.querySelector(".imgClass");
   if(darkMode)
   {
-    mainElement.classList.add("lightMode");
+    currentMain.classList.add("lightMode");
     // imgElements.classList.add("ligthModeImages");
     darkMode = false;
     imageElement.src = darkModeUrl;
 
-    console.log(imageElement);
+    // console.log(imageElement);
     localStorage.setItem("selectedTheme", "lightMode");
   }
   else
-  {  mainElement.classList.remove("lightMode");
+  {
+     currentMain.classList.remove("lightMode");
      imageElement.src = lightModeUrl;
 
      localStorage.setItem("selectedTheme", "darkMode");
@@ -317,6 +308,7 @@ function switchLanguage()
       if(currentPage === "/ringene.html") toTopRef.href = "#beskrivelse";
       else if(currentPage === "/maanene.html") toTopRef.href = "#generelt";
           else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11";
+            else if(currentPage === "/om.html") toTopRef.href ="#om";
       
   }
   else 
@@ -326,6 +318,7 @@ function switchLanguage()
       if(currentPage === "/ringene.html") toTopRef.href = "#beskrivelseEng";
       else if(currentPage === "/maanene.html") toTopRef.href = "#genereltEng";
            else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11Eng";
+              else if(currentPage === "/om.html") toTopRef.href ="#omEng";
   }
 
   for(let i = 0; i < 6; ++i)
@@ -343,6 +336,7 @@ function switchLanguage()
 
         mainNorwegian.classList.add("hidden");
         mainEnglish.classList.remove("hidden");
+        currentMain = mainEnglish;
 
       
         
@@ -351,7 +345,7 @@ function switchLanguage()
       { 
         mainEnglish.classList.add("hidden");
         mainNorwegian.classList.remove("hidden");
-        
+        currentMain = mainNorwegian;
       }
   }
   
