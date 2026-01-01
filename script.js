@@ -326,7 +326,7 @@ function switchLanguage()
       refArray[i].textContent = languageSelected[i];
   }
 
-  if( (currentPage ==="/om.html" || currentPage === "/ringene.html") || currentPage === "/maanene.html") 
+  if(currentPage != "/index.html") 
   {
       const mainNorwegian = document.querySelector("#mainNorwegian");
       const mainEnglish = document.querySelector("#mainEnglish");
