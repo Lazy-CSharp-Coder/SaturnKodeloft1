@@ -19,8 +19,11 @@ const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Ly
 const lightModeUrl = "Images/sunblazinglogo.png";
 const darkModeUrl = "Images/moonbluelogo2.png";
 
-
-
+ if(!darkMode)
+  {
+    darkMode = true;
+    darkLightModeToggle();
+  }
 
 
 let languageSelected = mainMenuNorsk;
@@ -416,12 +419,7 @@ function switchLanguage()
        
       }
   }
-  if(!darkMode)
-  {
-    darkMode = true;
-    darkLightModeToggle();
-  }
-
+ 
 
     // legge inn nytt element...translate to english
     if(hasHamLanguageBeenAdded && mobileMode)
