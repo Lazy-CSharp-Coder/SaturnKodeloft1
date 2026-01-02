@@ -1,3 +1,30 @@
+.subMenuDivExp {
+    display: flex;
+ 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--primaryFontFamily);
+  width:100vw;
+  height: 98px;
+  border: 1px solid var(--borderColorMenu);
+
+  position:sticky;
+  top:94px;
+  background-color: black;
+  z-index: 8;
+
+
+}
+
+.subMenuTextExp {
+    font-size:60px;
+  margin:0;
+  padding:0;
+  width:auto;
+  color:white;
+
+}
 
 
 /* ---------- romferd.html ----------- */
@@ -163,14 +190,16 @@ left:20px;
     /* opacity : 1; */
     scale: 1.4;
 }
+
 .anchorVoyager
-{    color : #6437e8;;
-    
-    transition: all 0.4s ease-in-out;
+{   
+  color : lightskyblue;
+  transition: all 0.4s ease-in-out;
 }
 
-.anchorVoyager:hover {
-   color: lightskyblue;
+ .anchorVoyager:hover {
+
+    color: var(--secondaryMenuColor);
 }
 .questionVoyagerDiv
 {
@@ -179,8 +208,8 @@ left:20px;
     justify-content:left;
     align-items: center;
     position: relative;
-  width: 41vw;
-  height: fit-content;
+    width: 41vw;
+    height: fit-content;
     margin-top: 20px;
 
 }
@@ -200,6 +229,16 @@ left:20px;
   .logoTextDivRomferd {
     gap:5px;
   }
+
+  .subMenuDivExp {
+    display: flex;
+    font-size: 100px;
+ }
+
+ .subMenuTextExp {
+  font-size: 30px;
+ }
+
 
   .pioneerImg, .voyager1Img, .voyager2Img {
     width: 344px;
@@ -242,4 +281,10 @@ left:20px;
     font-size:12px;
 
   }
+  
+  .questionVoyagerDiv {
+    margin-top: 10px;
+    width: 80%;
+  }
+  
 }

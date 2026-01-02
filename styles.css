@@ -277,6 +277,7 @@ a {
   .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene, .subMenuDiv {
     display: flex;
   }
+
   .laguageListItemMobile {
     display: none;
   }
@@ -624,7 +625,7 @@ li {
 
    p {
     font-size: 10px;
-    width:341px;
+    width:80%;
    }
 
    .toTop {
@@ -919,6 +920,7 @@ li {
     justify-content: space-between;
     top:94px;
   }
+
 
   .subMenuText {
     font-size: 35px;
