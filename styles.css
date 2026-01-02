@@ -18,6 +18,7 @@
   --linkColor:lightblue;
   --borderColorMenu:white;
   --addedHamItemsColor : rgb(234, 212, 190);   
+  --borderMobileMenuColor : #0f5d99;
 
 }
 
@@ -86,12 +87,12 @@ audio {
  display: flex;
  align-items: center;
  justify-content: space-evenly;
- gap: 50px;
+ gap: 40px;
   color: #b17226;
 }
 
 .languageButton {
-   padding: 5px 10px;
+   padding: 10px 20px;
   color: inherit;
   font-family: var(--primaryFontFamily);
   font-size: 1.5em;
@@ -165,8 +166,15 @@ a {
 
 .hamburgerIcon {
   height:64px;
-  
+  filter:brightness(65%);
   display: none;
+  /* animation: filter 7s linear 0s infinite normal forwards; */
+}
+
+@keyframes filter 
+{
+  0% {filter: hue-rotate(0deg);}
+  100% { filter:hue-rotate(360deg)}
 }
 
 .logoSaturnImg 
@@ -249,7 +257,7 @@ a {
   .hamburgerLine {
     display: flex;
     color:white;
-    width:100px;
+    width:110px;
     /* border: 1px solid white; */
   }
 

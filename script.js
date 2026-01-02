@@ -12,7 +12,7 @@ let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
 let mobileMode = viewPort <= 426 ? true : false;
-let tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
+let tabletMode = viewPort > 427 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -167,7 +167,7 @@ function darkLightModeToggle()
      darkMode = true;
 
    }
-   setDarkLightModeMobileText();
+   if(mobileMode) setDarkLightModeMobileText();
    if(mobileMode) animateOutHeaderMenu();
 
 }
