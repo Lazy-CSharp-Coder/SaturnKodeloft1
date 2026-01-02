@@ -1156,7 +1156,7 @@ footer {
 } 
 
 .logoKodeloftetImg {
-  width:120px;
+  width:155px;
   padding-left: 28px;
 
 }
@@ -1173,18 +1173,21 @@ footer {
 
 .textMyName {
    color: #EE7700;
+   
  
 }
 
 .myInfoDiv {
   flex-direction: column;
+  gap: 0;
   justify-content: center;
+  align-items: center;
 }
 
 .infoAndIconsDiv {
   flex-direction: row;
   align-items: center;
-  gap:10px;
+  gap:15px;
   padding-right:36px;
 }
 

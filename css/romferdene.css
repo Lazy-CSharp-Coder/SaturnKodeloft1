@@ -85,8 +85,9 @@
 }
 
 .cassiniLaunchImgTextDiv {
-  gap:110px;
+  gap:50px;
   margin-bottom:104px;
+  align-items: center;
 }
 
 .cassiniTitanImg {
@@ -189,7 +190,7 @@ left:20px;
 
 
 .questionMarkImg:hover {
-    /* opacity : 1; */
+    opacity : 1;
   transform: scale(1.4);
 }
 

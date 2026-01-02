@@ -20,6 +20,9 @@ const lightModeUrl = "Images/sunblazinglogo.png";
 const darkModeUrl = "Images/moonbluelogo2.png";
 
 
+
+
+
 let languageSelected = mainMenuNorsk;
  const refArray = [];
   refArray[0] = document.getElementById("homeref");
@@ -33,9 +36,30 @@ let languageSelected = mainMenuNorsk;
 const translateButton = document.querySelector("#languageButton");
 let  currentMain = document.getElementById("mainNorwegian");
 
-
 const currentPage = window.location.pathname;
 console.log(translateButton);
+
+const cassiniLaunchImgArray = 
+[
+    "Images/launchcassini.jpg",
+    "Images/launchcassini2.jpg",
+    "Images/launchcassini3.jpg"
+];
+
+
+function swapCassiniLaunch()
+{
+   const lowerLimit = 1800;
+   const cassiniLaunchImg = document.getElementById("cassiniLaunchImg");
+   if(viewPort > lowerLimit) 
+   {
+     
+      cassiniLaunchImg.src = cassiniLaunchImgArray[2];
+    } 
+    else cassiniLaunchImg.src = cassiniLaunchImgArray[0];
+}
+
+// swapCassiniLaunch();
 
 function updateViewportInfo()
 {
@@ -337,7 +361,8 @@ function switchLanguage()
   const toTopRef = document.getElementById("toTopRef");
 
   // sett i local storage hva språk som er valgt
-
+  const textWSCreated = document.getElementById("textWSCreated");
+  
   if(isNorwegian)
   { 
       localStorage.setItem("selectedLanguage", "norwegian");
@@ -346,7 +371,8 @@ function switchLanguage()
       else if(currentPage === "/maanene.html") toTopRef.href = "#generelt";
           else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11";
             else if(currentPage === "/om.html") toTopRef.href ="#om";
-      
+
+     textWSCreated.textContent = "Web side laget av";
   }
   else 
   { 
@@ -356,6 +382,7 @@ function switchLanguage()
       else if(currentPage === "/maanene.html") toTopRef.href = "#genereltEng";
            else if(currentPage === "/romferdene.html") toTopRef.href = "#pioneer11Eng";
               else if(currentPage === "/om.html") toTopRef.href ="#omEng";
+      textWSCreated.textContent = "Web page created by";
   }
 
   for(let i = 0; i < 6; ++i)
@@ -368,12 +395,14 @@ function switchLanguage()
       const mainNorwegian = document.querySelector("#mainNorwegian");
       const mainEnglish = document.querySelector("#mainEnglish");
 
+
       if(!isNorwegian)
       {
 
         mainNorwegian.classList.add("hidden");
         mainEnglish.classList.remove("hidden");
         currentMain = mainEnglish;
+      
 
       
         
@@ -383,6 +412,7 @@ function switchLanguage()
         mainEnglish.classList.add("hidden");
         mainNorwegian.classList.remove("hidden");
         currentMain = mainNorwegian;
+       
       }
   }
   if(!darkMode)
