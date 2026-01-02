@@ -18,7 +18,8 @@
   --linkColor:lightblue;
   --borderColorMenu:white;
   --addedHamItemsColor : rgb(234, 212, 190);   
-  --borderMobileMenuColor : #0f5d99;
+  /* --borderMobileMenuColor :#3b628a; */
+  --borderMobileMenuColor: rgb(221, 221, 221);
 
 }
 
@@ -165,8 +166,9 @@ a {
 }
 
 .hamburgerIcon {
-  height:64px;
-  filter:brightness(65%);
+  height:66px;
+  filter:brightness(80%);
+  opacity: 1;
   display: none;
   /* animation: filter 7s linear 0s infinite normal forwards; */
 }
@@ -203,7 +205,7 @@ a {
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid white;
+  border: 1px solid var(--borderMobileMenuColor);
 }
 
 .show {
@@ -256,7 +258,7 @@ a {
 
   .hamburgerLine {
     display: flex;
-    color:white;
+    border-color:var(--borderMobileMenuColor);
     width:110px;
     /* border: 1px solid white; */
   }
@@ -875,7 +877,8 @@ li {
   top:4.8rem;
   left:12.8rem;
   background-color: black;
-  border: 1px solid #dcdcdc;
+  /* border: 1px solid #dcdcdc; */
+  border: 1px solid var(--borderMobileMenuColor);
 
 }
 
@@ -1027,8 +1030,7 @@ li {
   
   .questionImage {
     width:59px;
- 
-  }
+   }
 
   .videoText {
    padding-top: 20px;
