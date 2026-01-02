@@ -929,10 +929,11 @@ li {
 
   .logoTextDiv {
     display: flex;
-    justify-content:space-evenly;
-    width: 100%;
-    gap: 0;
-    margin-right: 10vw;
+    justify-content:space-between;
+    /* width: 100%; */
+    align-items: center;
+    /* gap: 0; */
+    /* margin-right: 10vw; */
     /* gap:3rem; */
     /* padding-left: 1.1rem; */
   }
