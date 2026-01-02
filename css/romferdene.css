@@ -54,6 +54,7 @@
   padding-left: 33px;
   gap:47px;
   align-items: center;
+
 }
 
 .romferdSection {
@@ -146,6 +147,18 @@ left:20px;
   
 }
 
+.logoRomferdImg
+{
+  
+  mask-image: linear-gradient(to top, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to left, transparent 0%, black 5%, black 85%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 5%, black 85%, transparent 100%);
+  mask-mode: alpha;
+  /* Combine the masks so they all apply */
+  mask-composite: intersect; 
+}
+
 .questionMarkImg, .questionMarkImg2 {
     animation-name: fadeInOut;
     animation-duration: 3.5s;
@@ -227,12 +240,20 @@ left:20px;
       padding-bottom:12px;
   }
   .logoTextDivRomferd {
-    gap:5px;
+  
+    justify-content: space-between;
+    /* gap: 47px; */
+    align-items: center;
+    
+
   }
 
   .subMenuDivExp {
-    display: flex;
     font-size: 100px;
+
+    padding:0;
+    margin: 0;
+
  }
 
  .subMenuTextExp {

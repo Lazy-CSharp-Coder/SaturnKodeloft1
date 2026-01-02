@@ -58,6 +58,7 @@
 .moonDiv {
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   
 
 }
@@ -113,7 +114,10 @@
     margin:0;
     margin-bottom: 30px;
   }
+.moonDiv {
+  display: flex;
 
+}
   .genereltSection {
     padding-bottom:50px;
   }
@@ -121,9 +125,11 @@
   .moonSection {
 
     flex-direction: column;
+ 
     padding-bottom: 51px;
   }
 
+  
   .enceladusImg1, .enceladusImg2 {
     width:341px;
     margin-top: 0;

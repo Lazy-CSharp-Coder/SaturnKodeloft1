@@ -764,6 +764,7 @@ li {
 }
 
 .logoTextDiv {
+
   align-items: center;
   gap:47px;
   padding-left:28px;
@@ -927,9 +928,13 @@ li {
   }
 
   .logoTextDiv {
-    justify-content: space-between;
-    gap:3rem;
-    padding-left: 1.1rem;
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    gap: 0;
+    margin-right: 10vw;
+    /* gap:3rem; */
+    /* padding-left: 1.1rem; */
   }
 
   .subMenuBurger {
@@ -955,7 +960,8 @@ li {
 
   .subMenuTextAndBurgerDiv {
     flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    align-items:center;
     gap:0px;
   }
 

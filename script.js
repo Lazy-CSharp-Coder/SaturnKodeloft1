@@ -59,6 +59,19 @@ const chosenTheme = localStorage.getItem("selectedTheme")
 if(chosenTheme) if(chosenTheme === "lightMode") darkLightModeToggle();
                 else localStorage.setItem("selectedTheme", "darkMode");
 
+
+function animateOutHeaderMenu()
+{ 
+  const navListElement = document.getElementById("headerMenu");
+  console.log(navListElement);
+   navListElement.classList.remove("show");
+    navListElement.classList.add("hideHeaderMenu");
+    navListElement.addEventListener("animationend", () => { navListElement.classList.add("hidden"); navListElement.classList.remove("hideHeaderMenu"); console.log('Animation slutt!');  }, {once: true});
+
+    hamMenuShowing = false;
+
+}
+
 function hamburgerToggle() 
 {
   console.log("Hi from hamburgerToggle");
@@ -96,11 +109,7 @@ function hamburgerToggle()
   }
   else
   {
-    navListElement.classList.remove("show");
-    navListElement.classList.add("hideHeaderMenu");
-    navListElement.addEventListener("animationend", () => { navListElement.classList.add("hidden"); navListElement.classList.remove("hideHeaderMenu"); console.log('Animation slutt!');  }, {once: true});
-
-    hamMenuShowing = false;
+    animateOutHeaderMenu();
   }
 }
 
@@ -159,6 +168,7 @@ function darkLightModeToggle()
 
    }
    setDarkLightModeMobileText();
+   animateOutHeaderMenu();
 
 }
 // event listener for mousemove
@@ -392,6 +402,7 @@ function switchLanguage()
         if(isNorwegian) translateListElement.textContent = "Switch to English";
         else translateListElement.textContent = "Bytt til Norsk";
       }
+        animateOutHeaderMenu();
       if(subMenuShowing)
       {
        
@@ -403,6 +414,7 @@ function switchLanguage()
         subListElement.classList.add("hidden"); 
         subMenuShowing = false;
         subMenuToggle();
+      
     }
 
     setDarkLightModeMobileText();
