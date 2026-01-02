@@ -19,12 +19,8 @@ const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Ly
 const lightModeUrl = "Images/sunblazinglogo.png";
 const darkModeUrl = "Images/moonbluelogo2.png";
 
- if(!darkMode)
-  {
-    darkMode = true;
-    darkLightModeToggle();
-  }
-
+const pageTitle = document.title;
+console.log("du er nå pa side :" +  pageTitle);
 
 let languageSelected = mainMenuNorsk;
  const refArray = [];
@@ -294,7 +290,7 @@ const observerOptions =
 
 function observerCallback(entries, observer)
 {
-  if(currentPage == "/index.html")  return;
+  if(pageTitle == "Home") return;
   console.log(entries);
   entries.forEach((entry) => 
   {
@@ -394,35 +390,35 @@ function switchLanguage()
       refArray[i].textContent = languageSelected[i];
   }
 
-  if(currentPage != "/index.html") 
+
+  const mainNorwegian = document.querySelector("#mainNorwegian");
+  const mainEnglishId = pageTitle == "Home" ? "#mainNorwegian" : "#mainEnglish";
+  const mainEnglish = document.querySelector(mainEnglishId);
+
+
+  if(!isNorwegian)
   {
-      const mainNorwegian = document.querySelector("#mainNorwegian");
-      const mainEnglish = document.querySelector("#mainEnglish");
 
+    mainNorwegian.classList.add("hidden");
+    mainEnglish.classList.remove("hidden");
+    currentMain = mainEnglish;
+  
 
-      if(!isNorwegian)
-      {
-
-        mainNorwegian.classList.add("hidden");
-        mainEnglish.classList.remove("hidden");
-        currentMain = mainEnglish;
-      
-
-      
-        
-      }
-      else
-      { 
-        mainEnglish.classList.add("hidden");
-        mainNorwegian.classList.remove("hidden");
-        currentMain = mainNorwegian;
-       
-      }
+  
+    
   }
+  else
+  { 
+    mainEnglish.classList.add("hidden");
+    mainNorwegian.classList.remove("hidden");
+    currentMain = mainNorwegian;
+    
+  }
+
  
 
     // legge inn nytt element...translate to english
-    if(hasHamLanguageBeenAdded && mobileMode)
+    if(mobileMode)
     {
       const translateListElement = document.getElementById(mobileLanguageListElementId);
       console.log(translateListElement);
@@ -444,10 +440,11 @@ function switchLanguage()
         subMenuShowing = false;
         subMenuToggle();
       
-    }
+      }
 
-    setDarkLightModeMobileText();
-  }
+    
+    }
+  if(mobileMode) setDarkLightModeMobileText();
 }
 
 function setDarkLightModeMobileText()
