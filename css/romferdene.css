@@ -252,7 +252,7 @@ left:20px;
 
 
   .pioneerImg, .voyager1Img, .voyager2Img {
-    width: 344px;
+    width: 90%;
   }
 
   .cassiniLaunchImg {
@@ -260,12 +260,13 @@ left:20px;
   }
 
   .cassiniLaunchText {
-    width:341px;
+    width:300px;
   }
   .cassiniLaunchImgTextDiv {
     flex-direction: column-reverse;
     gap:31px;
-    padding-bottom: 25px;
+    margin: 0;
+
   }
   .mobileSetting {
     display: flex;
@@ -280,11 +281,14 @@ left:20px;
     display: block;
     width: 95%;
   }
+
+  .cassiniTitanImgTextDiv {
+    padding: 0;
+  }
   
   .grandFinaleImg {
-    width: 399px;
+    width: 95%;
   }
-
   .grandFinaleHeadingText {
     font-size: 24px;
 
@@ -306,4 +310,4 @@ left:20px;
     width: 80%;
   }
   
-}
+

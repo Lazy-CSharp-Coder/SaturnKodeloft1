@@ -867,6 +867,7 @@ li {
 }
 
 .videoText {
+  width: 90%;
   padding-bottom: 20px;
   padding-top: 40px;
   flex-direction: column;
@@ -998,6 +999,7 @@ li {
 
   .cassiniShadowImg {
     padding-top:0;
+    width: 90%;
   }
 
   .moleculeImgText {
@@ -1010,12 +1012,9 @@ li {
     height: 94px; 
   }
 
-  .cassiniShadowImg {
-    width:408px;
-    
-  }
+  
   .ringSystemImg {
-    width: 396px;
+    width:90%;
   }
 
   .textImage {
@@ -1042,9 +1041,10 @@ li {
   }
 
   .video, .videoCassini {
-    width:384px;
-    height:216px;
-      
+    display: block;
+    width:90%;
+    height: 90%;
+        
   }
 }
 
