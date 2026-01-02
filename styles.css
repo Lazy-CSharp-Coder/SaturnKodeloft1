@@ -17,6 +17,8 @@
   --primaryFontFamily:"Story Script";
   --linkColor:lightblue;
   --borderColorMenu:white;
+  --addedHamItemsColor : rgb(234, 212, 190);   
+
 }
 
 * {
@@ -109,7 +111,14 @@ audio {
 
 .darkLightListItem {
   display: none;
+  color : var(--addedHamItemsColor);
 }
+
+.laguageListItemMobile {
+  color : var(--addedHamItemsColor);
+
+}
+
 .hamburgerLine {
   display: none;
 }
@@ -248,9 +257,14 @@ a {
     display: none;
   }
 
-  .darkLightListItem {
+  .darkLightListItem, .laguageListItemMobile {
     display: flex;
-    color:rgb(234, 212, 190);
+
+   
+  }
+
+  .languageButton {
+    display: none;
   }
 }
 
@@ -262,6 +276,9 @@ a {
 
   .navListHeader, .navListRingene, .navListMaanene, .navListRomferdene, .subMenuDiv {
     display: flex;
+  }
+  .laguageListItemMobile {
+    display: none;
   }
   
 }

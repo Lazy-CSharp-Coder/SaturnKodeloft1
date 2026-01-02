@@ -6,8 +6,13 @@ let subMenuIsMissing = false;
 let toTopButtonVisible = false;
 const topButtonYLimit = 300;
 let isNorwegian = true;
+let hasHamLanguageBeenAdded = false;
+const mobileLanguageListElementId = "mobileLanguageId"
+let viewPort = window.innerWidth;
 
-
+console.log("Viewport is now : " + viewPort);
+let mobileMode = viewPort <= 426 ? true : false;
+let tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -32,6 +37,13 @@ let  currentMain = document.getElementById("mainNorwegian");
 const currentPage = window.location.pathname;
 console.log(translateButton);
 
+function updateViewportInfo()
+{
+  viewPort = window.innerWidth;
+  console.log("Viewport is now : " + viewPort);
+  mobileMode = viewPort <= 426 ? true : false;
+  tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
+}
 
 const chosenLanguage = localStorage.getItem("selectedLanguage");
 if(chosenLanguage != null) 
@@ -47,8 +59,6 @@ const chosenTheme = localStorage.getItem("selectedTheme")
 if(chosenTheme) if(chosenTheme === "lightMode") darkLightModeToggle();
                 else localStorage.setItem("selectedTheme", "darkMode");
 
-
-
 function hamburgerToggle() 
 {
   console.log("Hi from hamburgerToggle");
@@ -60,6 +70,25 @@ function hamburgerToggle()
   {
     navListElement.classList.remove("hidden");
     navListElement.classList.add("show");
+
+    // legge inn nytt element...translate to english
+    if(hasHamLanguageBeenAdded === false)
+    {
+      const translateListElement = document.createElement("li");
+      translateListElement.id = mobileLanguageListElementId;
+      if(isNorwegian) translateListElement.textContent = "Switch to English";
+      else translateListElement.textContent = "Bytt til Norsk";
+      translateListElement.classList.add("laguageListItemMobile")
+      navListElement.appendChild(translateListElement);
+      hasHamLanguageBeenAdded = true;
+      
+      translateListElement.addEventListener("click", ()=>
+      {
+          switchLanguage();
+          isNorwegian ? translateListElement.textContent = "Switch to English" : "Bytt til Norsk";
+
+      });
+    }
 
     console.log("showing ham menu");
     hamMenuShowing = true;
@@ -77,7 +106,8 @@ function hamburgerToggle()
 
 function subMenuToggle()
 {
-  const subListElement = document.getElementById("subMenu");
+  const subMenuId = isNorwegian ? "subMenu" : "subMenuEng";
+  const subListElement = document.getElementById(subMenuId);
   console.log(subListElement);
 
   if(subMenuShowing == false)
@@ -99,8 +129,6 @@ function subMenuToggle()
     subMenuShowing = false;
   }
 } 
-
-
 
 
 function darkLightModeToggle() 
@@ -130,8 +158,9 @@ function darkLightModeToggle()
      darkMode = true;
 
    }
-}
+   setDarkLightModeMobileText();
 
+}
 // event listener for mousemove
 
 let prevScrollPos = window.scrollY;
@@ -258,6 +287,7 @@ allSections.forEach((section) =>
 
 translateButton.addEventListener("click", () =>
 {
+  updateViewportInfo();
    switchLanguage();
   //   isNorwegian = !isNorwegian;
 
@@ -323,7 +353,7 @@ function switchLanguage()
       refArray[i].textContent = languageSelected[i];
   }
 
-  if(currentPage != "/index.html") 
+  if(currentPage != "/index.html" || currentPage == "") 
   {
       const mainNorwegian = document.querySelector("#mainNorwegian");
       const mainEnglish = document.querySelector("#mainEnglish");
@@ -350,6 +380,40 @@ function switchLanguage()
     darkMode = true;
     darkLightModeToggle();
   }
-   
+
+
+    // legge inn nytt element...translate to english
+    if(hasHamLanguageBeenAdded && mobileMode)
+    {
+      const translateListElement = document.getElementById(mobileLanguageListElementId);
+      console.log(translateListElement);
+      if(translateListElement)
+      {
+        if(isNorwegian) translateListElement.textContent = "Switch to English";
+        else translateListElement.textContent = "Bytt til Norsk";
+      }
+      if(subMenuShowing)
+      {
+       
+        const subMenuId = isNorwegian ? "subMenu" : "subMenuEng";
+        const subListElement = document.getElementById(subMenuId);
+        console.log(subListElement);
+
+        subListElement.classList.remove("showSubMenu");
+        subListElement.classList.add("hidden"); 
+        subMenuShowing = false;
+        subMenuToggle();
+    }
+
+    setDarkLightModeMobileText();
+  }
+}
+
+function setDarkLightModeMobileText()
+{
+  const darkLightMenuItem = document.getElementById("darklighthamburger");
+  darkLightMenuItem.textContent = isNorwegian ? darkMode ? "Lys modus" : "Mørk modus" : darkMode ? "Light mode": "Dark mode";
 
 }
+
+setDarkLightModeMobileText();
