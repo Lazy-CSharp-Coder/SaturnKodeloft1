@@ -175,6 +175,7 @@ function darkLightModeToggle()
   if(darkMode)
   {
     currentMain.classList.add("lightMode");
+   
     // imgElements.classList.add("ligthModeImages");
     darkMode = false;
     imageElement.src = darkModeUrl;
@@ -390,7 +391,7 @@ function switchLanguage()
       refArray[i].textContent = languageSelected[i];
   }
 
-  if(currentPage != "/index.html" || currentPage == "") 
+  if(currentPage != "/index.html") 
   {
       const mainNorwegian = document.querySelector("#mainNorwegian");
       const mainEnglish = document.querySelector("#mainEnglish");
