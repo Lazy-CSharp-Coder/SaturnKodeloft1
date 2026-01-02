@@ -159,49 +159,34 @@ left:20px;
   mask-composite: intersect; 
 }
 
-.questionMarkImg, .questionMarkImg2 {
-    animation-name: fadeInOut;
-    animation-duration: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+.questionMarkImg {
+  height: 50px;
+     position :absolute; 
+    top: 0%;
+    left : 0%;
+    /* opacity: 0.4; */
+    transition: all 0.4s ease;
 
-}
-.questionMarkImg2 {
-    animation-delay: 1.5s;
-    display: none;
+    /* --webkit-filter: hue-rotate(0deg); */
+    animation-name: fadeInOut;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+
 }
 
 @keyframes fadeInOut
 {
-    0% { opacity: 0;}
-    50% { opacity: 1;}
-    100% { opacity: 0;}
-}
-
-.questionMarkImg {
-    height: 50px;
-     position :absolute; 
-    top: 0%;
-    left : 0%;
-    opacity: 0.4;
-    transition: all 0.4s ease;
- 
-}
-
-.questionMarkImg2 {
-    height: 50px;
-     position :absolute; 
-    top: 0%;
-    right : 0%;
-    opacity: 0.4;
-    transition: all 0.4s ease;
- 
+  0% { -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); }
+  100% { -webkit-filter: hue-rotate(360deg); filter: hue-rotate(360deg); }
 }
 
 
-.questionMarkImg:hover, .questionMarkImg2:hover {
+.questionMarkImg:hover {
     /* opacity : 1; */
-    scale: 1.4;
+  transform: scale(1.4);
 }
 
 .anchorVoyager

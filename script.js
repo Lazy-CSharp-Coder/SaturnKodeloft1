@@ -168,7 +168,7 @@ function darkLightModeToggle()
 
    }
    setDarkLightModeMobileText();
-   animateOutHeaderMenu();
+   if(mobileMode) animateOutHeaderMenu();
 
 }
 // event listener for mousemove

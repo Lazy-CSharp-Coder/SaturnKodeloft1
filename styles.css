@@ -1049,7 +1049,7 @@ li {
     
     transition-property:color;
     transition-timing-function: ease-in-out;
-    transition-delay:0;
+    transition-delay:0s;
     transition-duration:0.4s; 
  }
 
