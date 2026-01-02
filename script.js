@@ -246,7 +246,7 @@ function animateSubMenu ()
   }
   // går tilbake hvis det ikkke finnes en undermeny
   
-  if(currentPage == "/om.html" || currentPage == "/index.html")  return;
+  if(pageTitle == "Home" || pageTite == "About")  return;
 
   // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
   
@@ -323,33 +323,7 @@ translateButton.addEventListener("click", () =>
 {
   updateViewportInfo();
    switchLanguage();
-  //   isNorwegian = !isNorwegian;
-
-  //   languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
-
-  //   if(isNorwegian)
-  //     { localStorage.setItem("selectedLanguage", "norwegian");
-  //        translateButton.textContent = "Tranlate to English";
-  //       }
-  //   else {
-  //     localStorage.setItem("selectedLanguage", "english");
-  //     translateButton.textContent = "Oversett til Norsk";
-  //   }
-
-  //   for(let i = 0; i < 6; ++i)
-  //   {
-  //      refArray[i].textContent = languageSelected[i];
-  //   }
-    
-  // if(currentPage === "/ringene.html")
-  // {
-  //   const ringLanguageSelected = isNorwegian ? ringsMenuNorsk : ringsMenuEng;
-  //   ringsMenuArray.forEach((item, index) =>
-  //   { 
-  //     item.textContent = ringLanguageSelected[index];
-      
-  //   })
-  // } else  if(currentPage === "/maanene.html") moonsGeneral.textContent = isNorwegian ? moonsNorsk : moonsEng;
+ 
  
 });
 
