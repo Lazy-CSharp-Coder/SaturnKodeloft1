@@ -154,7 +154,7 @@ left:20px;
 
 .logoRomferdImg
 {
-  
+
   mask-image: linear-gradient(to top, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to left, transparent 0%, black 5%, black 85%, transparent 100%),
@@ -240,6 +240,10 @@ left:20px;
     
 
   }
+
+ .logoRomferdImg {
+     width: 18vw; 
+ }
 
   .subMenuDivExp {
     font-size: 100px;

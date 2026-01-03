@@ -388,8 +388,8 @@ function switchLanguage()
     currentMain = mainNorwegian;
     
   }
-
- 
+  darkMode = !darkMode;
+  darkLightModeToggle();
 
     // legge inn nytt element...translate to english
     if(mobileMode)
@@ -413,12 +413,12 @@ function switchLanguage()
         subListElement.classList.add("hidden"); 
         subMenuShowing = false;
         subMenuToggle();
-      
+       
       }
 
-    
+
     }
-  if(mobileMode) setDarkLightModeMobileText();
+
 }
 
 function setDarkLightModeMobileText()
