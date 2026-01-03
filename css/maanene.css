@@ -112,7 +112,7 @@
   }
   
   .moonImg {
-    width:341px;
+    width:95%;
     margin:0;
     margin-bottom: 30px;
   }
@@ -133,14 +133,14 @@
 
   
   .enceladusImg1, .enceladusImg2 {
-    width:341px;
+    width:95%;
     margin-top: 0;
     
   }
 
   .enceladusImg1 {
     margin-bottom: 30px;
-    width: 40%;
+    /* width: 40%; */
   }
   .enceladusDiv {
     
