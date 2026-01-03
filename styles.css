@@ -942,7 +942,7 @@ li {
 
 
   .subMenuText {
-    font-size: 2.2em;
+    font-size: 7.8vw;
   }
 
   .logoTextDiv {
@@ -960,7 +960,7 @@ li {
     display:flex;
     color:var(--secondaryMenuColor);
     font-family: var(--primaryFontFamily);
-    font-size:32px;
+    font-size:7vw;
     width:auto;
     margin:0px;
     padding: 0px;
@@ -1009,7 +1009,7 @@ li {
 
   .moleculeImgText {
     padding:0;
-    width: 100%;
+    
   }
 
   .textQuestionDiv {
