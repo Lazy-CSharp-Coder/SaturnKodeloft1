@@ -192,7 +192,7 @@ function darkLightModeToggle()
 
    }
    if(mobileMode) setDarkLightModeMobileText();
-   if(mobileMode) animateOutHeaderMenu();
+   if(mobileMode && hamMenuShowing) animateOutHeaderMenu();
 
 }
 // event listener for mousemove
@@ -401,7 +401,7 @@ function switchLanguage()
         if(isNorwegian) translateListElement.textContent = "Switch to English";
         else translateListElement.textContent = "Bytt til Norsk";
       }
-        animateOutHeaderMenu();
+      if(hamMenuShowing) animateOutHeaderMenu();
       if(subMenuShowing)
       {
        
