@@ -159,6 +159,11 @@ function subMenuToggle()
   {
     subListElement.classList.remove("hidden");
     subListElement.classList.add("showSubMenu");
+    if(pageTitle == "Expeditions")
+    {
+      console.log("chaningin position expeditions");
+      subListElement.style.right = "21%";
+    }
     subMenuShowing = true;
   }
   else 
