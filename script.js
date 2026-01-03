@@ -11,8 +11,8 @@ const mobileLanguageListElementId = "mobileLanguageId"
 let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
-let mobileMode = viewPort <= 426 ? true : false;
-let tabletMode = viewPort > 427 && viewPort < 1024 ? true : false;
+let mobileMode = viewPort <= 500 ? true : false;
+let tabletMode = viewPort > 501 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -72,7 +72,10 @@ const chosenLanguage = localStorage.getItem("selectedLanguage");
 if(chosenLanguage != null) 
 if(chosenLanguage == "english")
 {
-    switchLanguage();
+    
+     switchLanguage();
+   
+    
 } else localStorage.setItem("selectedLanguage", "norwegian");
 
 
@@ -120,9 +123,19 @@ function hamburgerToggle()
       
       translateListElement.addEventListener("click", ()=>
       {
+        if(subMenuShowing)
+        { 
+          console.log("Sub menu showing is : " + subMenuShowing);
+          const subListElement = document.getElementById(isNorwegian ? "subMenu" : "subMenuEng");
+          subListElement.classList.remove("showSubMenu");
+          subListElement.classList.add("hidden");
+          subMenuShowing = false;
           switchLanguage();
+          subMenuToggle();
+          
+        } else switchLanguage();
           isNorwegian ? translateListElement.textContent = "Switch to English" : "Bytt til Norsk";
-
+    
       });
     }
 
@@ -151,15 +164,19 @@ function subMenuToggle()
   else 
   {
     subListElement.classList.remove("showSubMenu");
-    subListElement.classList.add("hideSubMenu");
-    subListElement.addEventListener("animationend", () => { 
+     
+        subListElement.classList.add("hideSubMenu");
+        subListElement.addEventListener("animationend", () => { 
 
-        subListElement.classList.add("hidden"); 
-        subListElement.classList.remove("hideSubMenu"); 
-        console.log('Animation slutt!');  }, {once: true});
-    
-    subMenuShowing = false;
-  }
+          subListElement.classList.add("hidden"); 
+          subListElement.classList.remove("hideSubMenu"); 
+          console.log('Animation slutt!');  }, {once: true});
+          subMenuShowing = false;
+        
+         subListElement.classList.add("hidden");
+    }
+ 
+   
 } 
 
 
@@ -322,7 +339,7 @@ allSections.forEach((section) =>
 translateButton.addEventListener("click", () =>
 {
   updateViewportInfo();
-   switchLanguage();
+   switchLanguage(true);
  
  
 });
@@ -388,8 +405,8 @@ function switchLanguage()
     currentMain = mainNorwegian;
     
   }
-
- 
+  darkMode = !darkMode;
+  darkLightModeToggle();
 
     // legge inn nytt element...translate to english
     if(mobileMode)
@@ -402,23 +419,23 @@ function switchLanguage()
         else translateListElement.textContent = "Bytt til Norsk";
       }
       if(hamMenuShowing) animateOutHeaderMenu();
-      if(subMenuShowing)
-      {
+      // if(subMenuShowing)
+      // {
        
-        const subMenuId = isNorwegian ? "subMenu" : "subMenuEng";
-        const subListElement = document.getElementById(subMenuId);
-        console.log(subListElement);
+      //   const subMenuId = isNorwegian ? "subMenEng" : "subMenu";
+      //   const subListElement = document.getElementById(subMenuId);
+      //   console.log(subListElement);
 
-        subListElement.classList.remove("showSubMenu");
-        subListElement.classList.add("hidden"); 
-        subMenuShowing = false;
-        subMenuToggle();
-      
-      }
+      //   subListElement.classList.remove("showSubMenu");
+      //   subListElement.classList.add("hidden"); 
+      //   subMenuShowing = false;
+      //   subMenuToggle();
+       
+      // }
 
-    
+
     }
-  if(mobileMode) setDarkLightModeMobileText();
+
 }
 
 function setDarkLightModeMobileText()

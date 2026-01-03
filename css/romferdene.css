@@ -154,7 +154,7 @@ left:20px;
 
 .logoRomferdImg
 {
-  
+
   mask-image: linear-gradient(to top, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to left, transparent 0%, black 5%, black 85%, transparent 100%),
@@ -173,14 +173,18 @@ left:20px;
     transition: all 0.4s ease;
 
     /* --webkit-filter: hue-rotate(0deg); */
-    animation-name: fadeInOut;
+    /* animation-name: fadeInOut;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-delay: 0s;
-    animation-fill-mode: forwards;
-
+     animation-fill-mode: forwards; */
+   
 }
+/* 
+.lighMode {
+  .questionMarkImg { filter:invert() ;}
+} */
 
 @keyframes fadeInOut
 {
@@ -218,7 +222,7 @@ left:20px;
 }
 
 
-@media (max-width:426px) {
+@media (max-width: 426px) {
 
   .navListRomferdene {
     list-style-type: none;
@@ -234,9 +238,16 @@ left:20px;
     justify-content: space-between;
     /* gap: 47px; */
     align-items: center;
+    width: 100%;
+    padding:0;
+    margin-left: 5%;
     
 
   }
+
+ .logoRomferdImg {
+     width: 18vw; 
+ }
 
   .subMenuDivExp {
     font-size: 100px;
@@ -247,7 +258,7 @@ left:20px;
  }
 
  .subMenuTextExp {
-  font-size: 30px;
+  font-size: 7vw;
  }
 
 
