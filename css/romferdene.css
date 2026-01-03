@@ -173,14 +173,18 @@ left:20px;
     transition: all 0.4s ease;
 
     /* --webkit-filter: hue-rotate(0deg); */
-    animation-name: fadeInOut;
+    /* animation-name: fadeInOut;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-delay: 0s;
-    animation-fill-mode: forwards;
-
+     animation-fill-mode: forwards; */
+   
 }
+/* 
+.lighMode {
+  .questionMarkImg { filter:invert() ;}
+} */
 
 @keyframes fadeInOut
 {
