@@ -241,7 +241,7 @@ a {
 
 /* HEADER styling mobile L or less */
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
 
   header { height: 94px;} 
 
@@ -282,7 +282,7 @@ a {
   }
 }
 
-@media (min-width: 427px)  {
+@media (min-width: 501px)  {
   
   .hamburgerIcon {
     display:none;
@@ -413,7 +413,7 @@ li {
   display: none;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 64px;
     margin-bottom: 27px;
@@ -629,7 +629,7 @@ li {
   100% { opacity: 0 }
 }
 
-@media (max-width:426px) {
+@media (max-width:500px) {
 
   h2 {
     font-size:48px;
@@ -912,7 +912,7 @@ li {
   width: 80vw;
 }
 
-@media (max-width:426px) {
+@media (max-width:500px) {
 
   /* p og h2 satt i forrige media query */
   
@@ -1048,7 +1048,7 @@ li {
   }
 }
 
-@media (min-width:427px)
+@media (min-width: 501px)
 {
   .slideInMenuItems {
     animation-name: slideInRight;
@@ -1195,7 +1195,8 @@ footer {
   padding-right:36px;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 500px
+) {
 
   .logoKodeloftetImg {
     display: none;

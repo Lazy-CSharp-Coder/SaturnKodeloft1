@@ -218,7 +218,8 @@ left:20px;
 }
 
 
-@media (max-width:426px) {
+@media (max-width: 500px
+) {
 
   .navListRomferdene {
     list-style-type: none;
@@ -311,3 +312,4 @@ left:20px;
   }
   
 
+}
