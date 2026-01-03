@@ -163,7 +163,7 @@ function subMenuToggle()
     {
       console.log("chaningin position expeditions");
       subListElement.style.right = "21%";
-    }
+    } else if(pageTitle == "Rings") subListElement.style.right = "29%";
     subMenuShowing = true;
   }
   else 
