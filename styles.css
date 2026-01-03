@@ -629,7 +629,7 @@ li {
   100% { opacity: 0 }
 }
 
-@media (max-width:426px) {
+@media (max-width: 426px) {
 
   h2 {
     font-size:48px;
@@ -781,14 +781,9 @@ li {
 
   align-items: center;
   gap:47px;
-  padding-left:28px;
+  margin-left: 1.8rem
 }
 
-.logoRingeneImg{
-  width:88px;
-  height: 63px;
- 
-}
 
 .subMenuAnchor {
   color:var(--secondaryMenuColor);
@@ -880,7 +875,7 @@ li {
   justify-content: center;
   position:absolute;
   top:4.8rem;
-  left:12.8rem;
+  right:27%;
   background-color: black;
   /* border: 1px solid #dcdcdc; */
   border: 1px solid var(--borderMobileMenuColor);
@@ -912,12 +907,12 @@ li {
   width: 80vw;
 }
 
-@media (max-width:426px) {
+@media (max-width: 426px) {
 
   /* p og h2 satt i forrige media query */
   
   h3 {
-    font-size: 36px; 
+    font-size: 2.2em; 
   }
 
   .navListRingene
@@ -931,24 +926,33 @@ li {
       padding-bottom:12px;
       z-index: 6;
   }
+  
+.logoRingsImg{
+  width:18vw;
+  
+ 
+}
 
   .subMenuDiv {
     display: flex;
     justify-content: space-between;
     top:94px;
+    width:100%;
+    
   }
 
 
   .subMenuText {
-    font-size: 35px;
+    font-size: 7.8vw;
   }
 
   .logoTextDiv {
     display: flex;
     justify-content:space-between;
-    /* width: 100%; */
+    width: 100%;
     align-items: center;
-    /* gap: 0; */
+    gap: 0;
+    margin-left: 5%;
     /* margin-right: 10vw; */
     /* gap:3rem; */
     /* padding-left: 1.1rem; */
@@ -958,7 +962,7 @@ li {
     display:flex;
     color:var(--secondaryMenuColor);
     font-family: var(--primaryFontFamily);
-    font-size:32px;
+    font-size:7vw;
     width:auto;
     margin:0px;
     padding: 0px;
@@ -971,7 +975,7 @@ li {
   }
   
   .logoRingeneImg {
-    width:85px;
+    width:10px;
     height:61px;
   }
 
@@ -979,7 +983,10 @@ li {
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
+    width: 100%;
     gap:0px;
+    padding:0;
+    margin-right: 10%;
   }
 
   .komposisjonSection {
@@ -1004,6 +1011,7 @@ li {
 
   .moleculeImgText {
     padding:0;
+    
   }
 
   .textQuestionDiv {
@@ -1018,7 +1026,7 @@ li {
   }
 
   .textImage {
-    font-size: 6px;
+    font-size: 0.3em;
   }
 
   .moleculeImg {
@@ -1027,7 +1035,8 @@ li {
 
   }
   .questionText {
-    font-size: 36px;
+    font-size: 2.2em;
+
 
   }
   
@@ -1048,7 +1057,7 @@ li {
   }
 }
 
-@media (min-width:427px)
+@media (min-width: 427px)
 {
   .slideInMenuItems {
     animation-name: slideInRight;
@@ -1195,7 +1204,8 @@ footer {
   padding-right:36px;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 426px
+) {
 
   .logoKodeloftetImg {
     display: none;
