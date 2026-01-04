@@ -667,7 +667,7 @@ li {
   .omImgMobile { 
     display:flex;
     width:136px;
-    height:121px;
+    height:121px; 
   }
   .imageAndStatsDiv {
     gap:18px;
