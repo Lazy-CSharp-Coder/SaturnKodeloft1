@@ -362,6 +362,60 @@ li {
   /* width: 60%; */
   height: 100%;
 }
+/* Velg språk klasser */
+
+.selectionDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  
+  padding : 30px 110px;
+  border : 1px solid white;
+
+}
+.inputLanguage {
+  font-size: 15px;
+
+}
+
+
+.languageForm {
+  display: block;
+  margin-left: 20px;
+  
+  
+  
+}
+
+.languageSelectionText {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.inputLanguage {
+  padding-right:  50px;
+  
+}
+
+.languageSelectionButton {
+  background-color: #7088C6;
+  padding: 20px 140px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom : 15px;
+  border-radius: 3px;
+  color : rgb(233, 224, 224);
+   border: 1px solid black;
+}
+
+.languageSelectionButton:hover{
+  border: 1px solid white;
+}
 
 /* Hero page klasser  */
 
