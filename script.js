@@ -68,16 +68,48 @@ function updateViewportInfo()
   tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
 }
 
+
+// her skal de skje 
+
+
 const chosenLanguage = localStorage.getItem("selectedLanguage");
 if(chosenLanguage != null) 
 if(chosenLanguage == "english")
 {
-    
+  
+     const radio = document.getElementById("englishRadio");
+     if(radio) radio.checked = true;
      switchLanguage();
    
     
 } else localStorage.setItem("selectedLanguage", "norwegian");
 
+
+const languageSelectorButton = document.getElementById("languageSelectionButton");
+languageSelectorButton.addEventListener("click", () => 
+{
+  console.log("had been clicked")
+   const selectionDiv = document.getElementById("selectionDiv");
+   console.log(selectionDiv);
+   selectionDiv.classList.remove("flex");
+   selectionDiv.classList.add("hidden");
+  
+   const header = document.querySelector("header");
+   header.classList.remove("disable");
+   header.classList.add("fadeInAnim");
+   const footer = document.querySelector("footer");
+   footer.classList.remove("disable");
+   footer.classList.add("fadeInAnim");
+
+    const home = document.getElementById("mainNorwegian");
+    home.classList.remove("disable");
+
+     const radio = document.getElementById("englishRadio");
+     if(radio.cheked && isNorwegian) switchLanguage();
+     
+}, {once: true});
+
+console.log("Språk er" + languageSelected);
 
 // her finner jeg ut om brukeren har skiftet til lightMode
 

@@ -16,7 +16,7 @@
 
 <body class="flex">
 
-  <header class="flex">
+  <header class="flex disable">
     <div class="languageDiv">
       <img onclick="darkLightModeToggle()" id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"
         alt="fant ikke icon" />
@@ -51,19 +51,20 @@
       <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
     </nav>
   </header>
-  <main id="mainNorwegian" class="mainClass mainClassHero">
-    <div class="selectionDiv">
+    <div id="selectionDiv" class="selectionDiv flex">
       <p class="languageSelectionText">Velg språk / Select language</p>
     <form class="languageForm">
-              <input  type="radio" id="norwegian" name="language" value="norsk" checked>
+              <input id="norwegianRadio"  type="radio" id="norwegian" name="language" value="norsk" checked>
         <label class="inputLanguage" for="norwegian">Norsk</label>
-        <input type="radio" id="english" name="language" value="english">
+        <input id="englishRadio" type="radio" id="english" name="language" value="english">
       
         <label class="inputLanguage" for="english">English</label>
       </form>
-      <button class="languageSelectionButton">Fortsett</button>
+      <button id="languageSelectionButton" class="languageSelectionButton">Fortsett</button>
     </div>
-    <section id="home" class="flex sectionHome hidden">
+  <main id="mainNorwegian" class="mainClass mainClassHero disable">
+   
+    <section id="home" class="flex sectionHome">
       <audio autoplay controls>
         <source src="/Audio/quotevoice3_2sec.mp3" type="audio/mp3">
       </audio>
@@ -83,7 +84,7 @@
 
   </main>
 
-  <footer class="flex">
+  <footer class="flex disable">
     <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo" />
     <div class="divNASA">
       <p class="textNASA">All pictures taken from NASA </p>

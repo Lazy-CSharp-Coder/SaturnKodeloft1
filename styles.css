@@ -365,7 +365,7 @@ li {
 /* Velg språk klasser */
 
 .selectionDiv {
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -384,10 +384,16 @@ li {
 .languageForm {
   display: block;
   margin-left: 20px;
-  
-  
-  
+ 
 }
+
+.disable 
+{
+  opacity: 0.5;
+  visibility: hidden;
+}
+
+
 
 .languageSelectionText {
   font-size: 1.2em;
@@ -1177,6 +1183,17 @@ li {
   animation-fill-mode:forwards;
   animation-duration: 0.5s;
   animation-delay: 0;
+}
+
+.fadeInAnim {
+  animation: fadeIn 0.8s ease-in-out 0 1 normal forwards;
+
+}
+
+@keyframes fadeInAnim{
+   0% { opacity: 0;}
+   100% { opacity: 1;}
+
 }
 
 @keyframes slideInRight {
