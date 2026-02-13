@@ -69,7 +69,10 @@ function updateViewportInfo()
 }
 
 const chosenLanguage = localStorage.getItem("selectedLanguage");
-if(chosenLanguage != null) 
+if(!chosenLanguage) 
+{
+    
+}
 if(chosenLanguage == "english")
 {
     

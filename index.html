@@ -52,9 +52,20 @@
     </nav>
   </header>
   <main id="mainNorwegian" class="mainClass mainClassHero">
-
+</header>
+    <div id="selectionDiv" class="selectionDiv flex hidden">
+      <p class="languageSelectionText">Velg språk / Select language</p>
+    <form class="languageForm">
+              <input id="norwegianRadio"  type="radio" id="norwegian" name="language" value="norsk" checked>
+        <label class="inputLanguage" for="norwegian">Norsk</label>
+        <input id="englishRadio" type="radio" id="english" name="language" value="english">
+      
+        <label class="inputLanguage" for="english">English</label>
+      </form>
+      <button id="languageSelectionButton" class="languageSelectionButton">Fortsett</button>
+    </div>
     <section id="home" class="flex sectionHome">
-      <audio autoplay controls>
+      <audio controls>
         <source src="/Audio/quotevoice3_2sec.mp3" type="audio/mp3">
       </audio>
       <!-- Hero / Main / Home -->
