@@ -80,7 +80,7 @@ if(!chosenLanguage)
          languageButton.addEventListener("clicked", () =>
         {
             const englishRadio = document.querySelector("#englishRadio");
-            if(englishRadio)
+            if(englishRadio.checked == true) switchLanguage();
         });
       }
     }
