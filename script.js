@@ -68,15 +68,50 @@ function updateViewportInfo()
   tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
 }
 
-const chosenLanguage = localStorage.getItem("selectedLanguage");
-if(chosenLanguage != null) 
-if(chosenLanguage == "english")
+// const chosenLanguage = localStorage.getItem("selectedLanguage");
+chosenLanguage = undefined;
+if(!chosenLanguage) 
 {
+    const selectionDiv = document.querySelector("#selectionDiv");
+    if(selectionDiv)
+    {
+      const home = document.querySelector("#home");
+      const header = document.querySelector("header");
+      const footer = document.querySelector("footer");
+      header.classList.add("hidden");
+      footer.classList.add("hidden");
+      home.classList.add("hidden");
+
+      selectionDiv.classList.remove("hidden");
+       
+      const languageSelectionButton = document.querySelector("#languageSelectionButton");
+      if(languageSelectionButton)
+      {
+         languageSelectionButton.addEventListener("click", () =>
+        {
+            const englishRadio = document.querySelector("#englishRadio");
+            selectionDiv.classList.add("hidden");
+             header.classList.remove("hidden");
+              footer.classList.remove("hidden");
+              home.classList.remove("hidden");
+            if(englishRadio.checked == true) switchLanguage();
+             
+           
+        });
+      }
+    }
+    localStorage.setItem("selectedLanguage", isNorwegian ? "norwegian": "english");
     
-     switchLanguage();
+}
+
+// }
+// if(chosenLanguage == "english")
+// {
+    
+//      switchLanguage();
    
     
-} else localStorage.setItem("selectedLanguage", "norwegian");
+// } else localStorage.setItem("selectedLanguage", "norwegian");
 
 
 // her finner jeg ut om brukeren har skiftet til lightMode
@@ -219,6 +254,12 @@ function darkLightModeToggle()
 }
 // event listener for mousemove
 
+// event listeners for wheel og scroll
+
+window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
+window.addEventListener("scroll" ,animateSubMenu);
+
+
 let prevScrollPos = window.scrollY;
 
 function animateSubMenu () 
@@ -268,7 +309,7 @@ function animateSubMenu ()
   }
   // går tilbake hvis det ikkke finnes en undermeny
   
-  if(pageTitle == "Home" || pageTite == "About")  return;
+  if(pageTitle == "Home" || pageTitle == "About")  return;
 
   // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
   
@@ -292,11 +333,6 @@ function animateSubMenu ()
   prevScrollPos = currentScrollPos;
 
 }
-
-// event listeners for wheel og scroll
-
-window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
-window.addEventListener("scroll" ,animateSubMenu);
 
 
 
