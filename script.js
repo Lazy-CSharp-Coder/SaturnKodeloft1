@@ -71,7 +71,19 @@ function updateViewportInfo()
 const chosenLanguage = localStorage.getItem("selectedLanguage");
 if(!chosenLanguage) 
 {
-    
+    const selectionDiv = document.querySelector("#selectionDiv");
+    if(selectionDiv)
+    {
+      const lanugugeButton = document.querySelector("#languageButton");
+      if(lanugugeButton)
+      {
+         languageButton.addEventListener("clicked", () =>
+        {
+            const englishRadio = document.querySelector("#englishRadio");
+            if(englishRadio)
+        });
+      }
+    }
 }
 if(chosenLanguage == "english")
 {
