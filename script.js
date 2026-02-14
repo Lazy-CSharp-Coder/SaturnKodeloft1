@@ -68,12 +68,18 @@ function updateViewportInfo()
   tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
 }
 
-const chosenLanguage = localStorage.getItem("selectedLanguage");
+// const chosenLanguage = localStorage.getItem("selectedLanguage");
+chosenLanguage = undefined;
 if(!chosenLanguage) 
 {
     const selectionDiv = document.querySelector("#selectionDiv");
     if(selectionDiv)
     {
+      const mainNorwegian = document.querySelector("#mainNorwegian");
+      mainNorwegian.classList.add("hidden");
+
+       selectionDiv.classList.remove("hidden");
+       
       const lanugugeButton = document.querySelector("#languageButton");
       if(lanugugeButton)
       {
@@ -81,9 +87,11 @@ if(!chosenLanguage)
         {
             const englishRadio = document.querySelector("#englishRadio");
             if(englishRadio.checked == true) switchLanguage();
+           
         });
       }
     }
+
 }
 if(chosenLanguage == "english")
 {
