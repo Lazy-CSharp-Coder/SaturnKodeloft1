@@ -91,6 +91,9 @@ if(!chosenLanguage)
         });
       }
     }
+    localStorage.setItem("selectedLanguage", isNorwegian ? "norwegian": "english");
+    
+}
 
 // }
 // if(chosenLanguage == "english")
