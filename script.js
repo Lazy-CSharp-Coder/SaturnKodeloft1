@@ -254,6 +254,12 @@ function darkLightModeToggle()
 }
 // event listener for mousemove
 
+// event listeners for wheel og scroll
+
+window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
+window.addEventListener("scroll" ,animateSubMenu);
+
+
 let prevScrollPos = window.scrollY;
 
 function animateSubMenu () 
@@ -303,7 +309,7 @@ function animateSubMenu ()
   }
   // går tilbake hvis det ikkke finnes en undermeny
   
-  if(pageTitle == "Home" || pageTite == "About")  return;
+  if(pageTitle == "Home" || pageTitle == "About")  return;
 
   // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
   
@@ -327,11 +333,6 @@ function animateSubMenu ()
   prevScrollPos = currentScrollPos;
 
 }
-
-// event listeners for wheel og scroll
-
-window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
-window.addEventListener("scroll" ,animateSubMenu);
 
 
 
