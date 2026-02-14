@@ -92,14 +92,14 @@ if(!chosenLanguage)
       }
     }
 
-}
-if(chosenLanguage == "english")
-{
+// }
+// if(chosenLanguage == "english")
+// {
     
-     switchLanguage();
+//      switchLanguage();
    
     
-} else localStorage.setItem("selectedLanguage", "norwegian");
+// } else localStorage.setItem("selectedLanguage", "norwegian");
 
 
 // her finner jeg ut om brukeren har skiftet til lightMode
