@@ -75,18 +75,27 @@ if(!chosenLanguage)
     const selectionDiv = document.querySelector("#selectionDiv");
     if(selectionDiv)
     {
-      const mainNorwegian = document.querySelector("#mainNorwegian");
-      mainNorwegian.classList.add("hidden");
+      const home = document.querySelector("#home");
+      const header = document.querySelector("header");
+      const footer = document.querySelector("footer");
+      header.classList.add("hidden");
+      footer.classList.add("hidden");
+      home.classList.add("hidden");
 
-       selectionDiv.classList.remove("hidden");
+      selectionDiv.classList.remove("hidden");
        
-      const lanugugeButton = document.querySelector("#languageButton");
-      if(lanugugeButton)
+      const languageSelectionButton = document.querySelector("#languageSelectionButton");
+      if(languageSelectionButton)
       {
-         languageButton.addEventListener("clicked", () =>
+         languageSelectionButton.addEventListener("click", () =>
         {
             const englishRadio = document.querySelector("#englishRadio");
-            // if(englishRadio.checked == true) switchLanguage();
+            selectionDiv.classList.add("hidden");
+             header.classList.remove("hidden");
+              footer.classList.remove("hidden");
+              home.classList.remove("hidden");
+            if(englishRadio.checked == true) switchLanguage();
+             
            
         });
       }

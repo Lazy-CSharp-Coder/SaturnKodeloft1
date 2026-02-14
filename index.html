@@ -6,7 +6,7 @@
   <title>Home</title>
   <link href="Images/code.png" rel="icon" type="image/png" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- External files -->
   <link rel="stylesheet" href="styles.css" />
@@ -16,7 +16,7 @@
 
 <body class="flex">
 
-  <header class="flex">
+  <header class="flex fadeInAnim">
     <div class="languageDiv">
       <img onclick="darkLightModeToggle()" id="darkLightIcon" class="darkLightIcon" src="Images/sunblazinglogo.png"
         alt="fant ikke icon" />
@@ -51,22 +51,22 @@
       <img class="logoSaturnImg" src="Images/logoheader.png" alt="fant ikke logo" />
     </nav>
   </header>
- 
+
+  <main id="mainNorwegian" class="mainClassHero flex">
 
     <div id="selectionDiv" class="selectionDiv flex hidden">
       <p class="languageSelectionText">Velg språk / Select language</p>
-    <form class="languageForm">
-              <input id="norwegianRadio"  type="radio" id="norwegian" name="language" value="norsk" checked>
+      <form class="languageForm">
+        <input id="norwegianRadio" type="radio" id="norwegian" name="language" value="norsk" checked>
         <label class="inputLanguage" for="norwegian">Norsk</label>
         <input id="englishRadio" type="radio" id="english" name="language" value="english">
-      
+
         <label class="inputLanguage" for="english">English</label>
       </form>
       <button id="languageSelectionButton" class="languageSelectionButton">Fortsett</button>
     </div>
-     <main id="mainNorwegian" class="mainClass mainClassHero hidden">
     <section id="home" class="flex sectionHome">
-      <audio controls>
+      <audio class="audioHero" controls>
         <source src="/Audio/quotevoice3_2sec.mp3" type="audio/mp3">
       </audio>
       <!-- Hero / Main / Home -->
@@ -85,7 +85,7 @@
 
   </main>
 
-  <footer class="flex">
+  <footer class="flex fadeInAnim">
     <img class="logoKodeloftetImg" src="Images/kodeloftalpha_hvit.png" alt="fant ikke logo" />
     <div class="divNASA">
       <p class="textNASA">All pictures taken from NASA </p>
