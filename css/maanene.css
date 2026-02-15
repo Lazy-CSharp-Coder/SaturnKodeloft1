@@ -87,6 +87,15 @@
   border-radius : 5px;
 
 }
+
+.titanImg {
+  width: 85vw;
+}
+
+.titanCoreImg {
+  width: 80vw;
+}
+
 @media (min-width: 1024px)and (max-width: 1439px) 
 {
 
