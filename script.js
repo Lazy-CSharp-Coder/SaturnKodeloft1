@@ -232,84 +232,86 @@ function darkLightModeToggle() {
   if (mobileMode && hamMenuShowing) animateOutHeaderMenu();
 
 }
-// event listener for mousemove
+// event listeners for wheel og scroll
+
+window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
+window.addEventListener("scroll" ,animateSubMenu);
+
 
 let prevScrollPos = window.scrollY;
 
-function animateSubMenu() {
+function animateSubMenu () 
+{
   const currentScrollPos = window.scrollY;
   const chosenSub = isNorwegian ? "subMenuDivNorwegian" : "subMenuDivEnglish";
   const subMenu = document.getElementById(chosenSub);
 
-  const toTopButton = document.getElementById("toTop");
+    const toTopButton = document.getElementById("toTop");
 
 
 
   // rutine for å få frem to top button når man har scrollet langt nok ned
-
-  if (currentScrollPos > topButtonYLimit && toTopButtonVisible == false) {
+  
+  if(currentScrollPos > topButtonYLimit && toTopButtonVisible == false)
+  {
     toTopButton.classList.remove("removeToTopButton");
     toTopButton.classList.remove("hidden");
     toTopButton.classList.add("showToTopButton");
     toTopButtonVisible = true;
   }
-  else {
-    if (currentScrollPos < topButtonYLimit && toTopButtonVisible == true) {
-      toTopButton.classList.remove("showToTopButton");
+  else
+  { 
+    if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
+    {
+      toTopButton.classList.remove("showToTopButton"); 
       toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
-      toTopButton.addEventListener("animationend", () => { toTopButton.classList.add("hidden"); }, { once: true });
+      toTopButton.addEventListener("animationend", () =>  { toTopButton.classList.add("hidden");}, {once: true} );
       toTopButtonVisible = false;
     }
   }
-
+  
+  
   // skjekker hvis det er mobil - da skal meny ikke fjernes ved scroll down
 
-  if (window.innerWidth < 427) {
-    if (subMenuIsMissing) {
+  if(window.innerWidth < 427)
+  {
+    if(subMenuIsMissing)
+    {
+      subMenu.classList.remove("slideOutSubMenu");
+      subMenu.classList.remove("hidden");
+      subMenu.classList.add("slideInMenuTop");
+      mouseWheelMoved = false;
+      subMenuIsMissing = false; 
+    }
+    return;
+  }
+  // går tilbake hvis det ikkke finnes en undermeny
+  
+  if(pageTitle == "Home" || pageTitle == "About")  return;
+
+  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
+  
+  if(prevScrollPos > currentScrollPos && mouseWheelMoved)
+  {
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
       subMenu.classList.add("slideInMenuTop");
       mouseWheelMoved = false;
       subMenuIsMissing = false;
-    }
-    return;
   }
-  // går tilbake hvis det ikkke finnes en undermeny
-
-  if (pageTitle == "Home" || pageTitle == "About") return;
-
-  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
-
-  if (prevScrollPos > currentScrollPos) {
-  
-  
-    subMenu.classList.remove("slideOutSubMenu");
-    subMenu.classList.remove("hidden");
-    subMenu.classList.add("slideInMenuTop");
-    mouseWheelMoved = false;
-    subMenuIsMissing = false;
-  }
-  else if (mouseWheelMoved) {
+  else if(mouseWheelMoved && prevScrollPos < currentScrollPos)
+  {
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
-    subMenu.addEventListener("animationend", () => {
-      subMenu.classList.add("hidden");
-      subMenuIsMissing = true;
-    }, { once: true });
+    subMenu.addEventListener("animationend",  () => { subMenu.classList.add("hidden");
+    subMenuIsMissing = true; }, { once: true});
     mouseWheelMoved = false;
-
-
-  }
+  
+  }  
   prevScrollPos = currentScrollPos;
 
 }
-
-// event listeners for wheel og scroll
-
-window.addEventListener("wheel", () => { mouseWheelMoved = true; });
-window.addEventListener("scroll", animateSubMenu);
-
 
 
 // intersection observer - skal animere inn månene først når de kommer til syne
