@@ -78,6 +78,8 @@ audio {
    
 }
 
+
+
 .darkLightIcon {
   margin-left:28px;
   height: 64px;
@@ -167,6 +169,7 @@ a {
   padding-left:0;
   gap:41px;
   list-style-type: none;
+  transition: all 0.4s ease;
   
   
 }
@@ -242,6 +245,54 @@ a {
 }
 
 /* HEADER styling mobile L or less */
+
+@media (min-width: 1024px) and (max-width: 1439px)
+{
+   .headerNav{
+    font-size: 10px;
+    /* background-color:red; */
+   }
+
+   .navListHeader {
+    font-size: 22px;
+    gap: 35px;
+   }
+
+   .logoSaturnImg {
+    height: 45px;
+   }
+
+   .darkLightIcon {
+    height: 48px;
+   }
+
+   .languageButton {
+    font-size: 18px;
+   }
+
+   .heroText {
+    width: 30%;;
+   }
+
+   .logoKodeloftetImg {
+    
+      height: 10px;
+      width: auto;
+      padding-left: 0;
+     }
+
+     footer {
+       font-size: 8px;
+     }
+
+     .textNASA, .textMyName, .textWSCreated {
+      font-size: 10px;
+     }
+
+     .
+   
+}
+
 
 @media (max-width: 426px) {
 
@@ -1245,8 +1296,8 @@ footer {
 } 
 
 .logoKodeloftetImg {
-  width:155px;
-  padding-left: 28px;
+height: 50px;
+ padding-left: 28px;
 
 }
 .textNASA, .textWSCreated, .textMyName {
@@ -1262,7 +1313,7 @@ footer {
 
 .textMyName {
    color: #EE7700;
-   
+ 
  
 }
 
