@@ -87,7 +87,15 @@
   border-radius : 5px;
 
 }
+@media (min-width: 1024px) and (max-width: 1439px){
 
+  .navListMaanene {
+    font-size: 22px;
+  }
+  .subMenuText {
+    font-size: 22px;
+  }
+}
 
 @media (max-width: 426px) {
   
