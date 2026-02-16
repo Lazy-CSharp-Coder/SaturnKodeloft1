@@ -56,7 +56,7 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   border: 1px solid var(--borderColorMenu);
   z-index: 10;
@@ -836,7 +836,7 @@ li {
 
   border: 1px solid var(--borderColorMenu);
   height: fit-content;
-  position: sticky;
+  position: fixed;
   top: 106px;
   background-color: black;
   z-index: 8;

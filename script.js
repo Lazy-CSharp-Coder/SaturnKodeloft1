@@ -323,7 +323,7 @@ function animateSubMenu()
   {
     subMenu.classList.remove("slideOutSubMenu");
     subMenu.classList.remove("hidden");
-    subMenu.classList.add("slideInMenuTop");
+      subMenu.classList.add("slideInMenuTop");
     mouseWheelMoved = false;
     subMenuIsMissing = false;
   }
