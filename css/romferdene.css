@@ -327,3 +327,97 @@ left:20px;
   }
   
 }
+
+
+@media (min-width:768px) and (max-width:1023px) {
+
+  .navListRomferdene {
+    list-style-type: none;
+      gap:3px;
+      font-size: 19px;
+      padding-left:12px;
+      padding-right:12px;
+      padding-top:12px;
+      padding-bottom:12px;
+  }
+  .logoTextDivRomferd {
+  
+    justify-content: space-between;
+    /* gap: 47px; */
+    align-items: center;
+    width: 100%;
+    padding:0;
+    margin-left: 5%;
+    
+
+  }
+
+ .logoRomferdImg {
+     height: 5vh; 
+ }
+
+
+
+
+  .pioneerImg, .voyager1Img, .voyager2Img {
+    width: 90%;
+  }
+
+  .cassiniLaunchImg {
+    width:50vw;
+  }
+
+  .cassiniLaunchText {
+    width:80%;
+  }
+  .cassiniLaunchImgTextDiv {
+    flex-direction: column;
+    gap:31px;
+    margin: 0;
+    width:100%;
+
+
+  }
+  .mobileSetting {
+    display: flex;
+  }
+  
+  .cassiniTitanImg {
+    /* width: 420px; */
+    display: none;
+  }
+  .cassiniTitanImg2 {
+
+    display: block;
+    width: 95%;
+  }
+
+  .cassiniTitanImgTextDiv {
+    padding: 0;
+  }
+  
+  .grandFinaleImg {
+    width: 95%;
+  }
+  .grandFinaleHeadingText {
+    font-size: 2.5rem;
+
+  }
+  
+  .grandFinaleImgTextDiv {
+    padding-bottom:0px;
+
+  }
+  
+  .moreInfoButton {
+    width: 344px;
+    font-size:12px;
+
+  }
+  
+  .questionVoyagerDiv {
+    margin-top: 10px;
+    width: 80%;
+  }
+  
+}

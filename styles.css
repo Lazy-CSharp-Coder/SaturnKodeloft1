@@ -1491,7 +1491,7 @@ footer {
     margin-top: 0px;
   }
 
-  .subMenuDiv {
+  .subMenuDiv, .subMenuDivExp {
     top:auto;
     padding: 10px 0px;
 
@@ -1677,7 +1677,7 @@ footer {
   }
   .logoTextDivRomferd {
     width: 100%;
-    margin-left: 0%;;
+    margin-left: 3%;
   }
 
   .subMenuBurger {
