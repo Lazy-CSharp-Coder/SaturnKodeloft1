@@ -1543,11 +1543,14 @@ audio {
   }
   .omImgMobile {
     display: flex;
-    width: 136px;
-    height: 121px;
+    width: 28vw;
+    height: auto;
+
   }
+
+
   .imageAndStatsDiv {
-    gap: 18px;
+    gap: 68px;
     padding-bottom: 19px;
   }
   .textFactCategorys,
@@ -1559,13 +1562,18 @@ audio {
   }
 
   .minMaxFactDiv {
-    flex-direction: column;
-    gap: 0px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .tabletSetting {
+    display: none;
   }
 
   .textFactsSaturnDistance {
     margin: 0;
     padding: 0;
+    font-size: 0.8rem;
   }
 
   .solarSystemImg,
