@@ -320,7 +320,7 @@ h2 {
 
 h3 {
   font-family: var(--primaryFontFamily);
-  font-size: 5em;
+  font-size: 4em;
   color: var(--secondaryTextColor);
 }
 
@@ -961,11 +961,11 @@ nav {
 }
 
 .ringSystemImg {
-  width: 50vw;
+  width: 80%;
 }
 
 .cassiniShadowImg {
-  width: 80vw;
+  width: 80%;
 }
 
 @media (max-width: 426px) {
@@ -1280,6 +1280,13 @@ footer {
   align-items: center;
   gap: 15px;
   padding-right: 36px;
+}
+
+@media (min-width: 1920px)
+{
+  h3 {
+    font-size: 4.5em;
+  }
 }
 
 @media (max-width: 426px) {
