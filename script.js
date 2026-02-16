@@ -102,6 +102,10 @@ if (!chosenLanguage)
   }
   localStorage.setItem("selectedLanguage", isNorwegian ? "norwegian" : "english");
 
+} else
+  {
+
+
 }
 
 // }
@@ -321,7 +325,7 @@ function animateSubMenu()
     mouseWheelMoved = false;
     subMenuIsMissing = false;
   }
-  else if (mouseWheelMoved && prevScrollPos < currentScrollPos)
+  else if (prevScrollPos < currentScrollPos)
   {
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
@@ -329,8 +333,9 @@ function animateSubMenu()
     {
 
       subMenu.classList.add("hidden");
-      subMenuIsMissing = true;
+     
     }, { once: true });
+     subMenuIsMissing = true;
     mouseWheelMoved = false;
 
   }
