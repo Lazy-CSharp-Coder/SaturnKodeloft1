@@ -79,17 +79,20 @@
 }
 
 .cassiniLaunchImg {
-  width:20vw;
+width: 50%;
 }
 
 .cassiniLaunchText {
-  width: 20vw;
+
 }
 
 .cassiniLaunchImgTextDiv {
+ flex-direction: column;
   gap:50px;
-  margin-bottom:104px;
+
   align-items: center;
+  justify-content: center;
+  width: 60vw;
 }
 
 .cassiniTitanImg {
