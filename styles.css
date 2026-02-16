@@ -32,6 +32,10 @@
 }
 
 /* BODY */
+html {
+  overflow-x: hidden;
+}
+
 
 body {
   height: 100%;
