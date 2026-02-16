@@ -1,0 +1,285 @@
+@media (min-width:427px) and (max-width:1023px)
+{
+     h1 {
+    font-size: 64px;
+    margin-bottom: 27px;
+    margin-top: 0px;
+  }
+
+  .heroText {
+    padding-top: 58px;
+  }
+  .heroImg {
+    width: 325px;
+    height: 290px;
+    margin: 0;
+  }
+
+  .quoteJK {
+    font-size: 24px;
+    width: 342px;
+    padding-top: 63px;
+  }
+
+  .quoteCrediting {
+    font-size: 10px;
+    padding-top: 3px;
+  }
+
+  .mobileSetting {
+    display: block;
+  }
+
+  .desktopSetting {
+    display: none;
+  }
+
+  section {
+    align-items: center;
+  }
+
+   h2 {
+    font-size: 48px;
+    margin-top: 17px;
+    margin-bottom: 28px;
+  }
+
+  p {
+    font-size: 10px;
+    width: 80%;
+  }
+
+  .toTop {
+    width: 42px;
+    padding: 5px;
+  }
+
+  .quotePP {
+    font-size: 12px;
+    width: 50vw;
+  }
+  .headingAndQuoteDiv {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .imageAndQuoteDiv {
+    gap: 20px;
+  }
+
+  .omImg {
+    display: none;
+  }
+  .omImgMobile {
+    display: flex;
+    width: 136px;
+    height: 121px;
+  }
+  .imageAndStatsDiv {
+    gap: 18px;
+    padding-bottom: 19px;
+  }
+  .textFactCategorys,
+  .textFactsSaturn {
+    flex-direction: column;
+    font-family: var(--primaryTextFontFamily);
+    font-size: 2.5vw;
+    width: auto;
+  }
+
+  .minMaxFactDiv {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .textFactsSaturnDistance {
+    margin: 0;
+    padding: 0;
+  }
+
+  .solarSystemImg,
+  .saturnCoreImg {
+    width: 409px;
+  }
+
+  .quoteCarolyn {
+    width: 341px;
+  }
+
+  .solarSystemImg,
+  .saturnCoreImg {
+    margin-top: 37px;
+    margin-bottom: 37px;
+  }
+ h3 {
+    font-size: 2.2em;
+  }
+
+  .navListRingene {
+    list-style-type: none;
+    gap: 3px;
+    font-size: 19px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    z-index: 6;
+  }
+
+  .logoRingsImg {
+    width: 18vw;
+  }
+
+  .subMenuDiv {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .subMenuText {
+    font-size: 7.8vw;
+  }
+
+  .logoTextDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 0;
+    margin-left: 5%;
+    /* margin-right: 10vw; */
+    /* gap:3rem; */
+    /* padding-left: 1.1rem; */
+  }
+
+  .subMenuBurger {
+    display: flex;
+    color: var(--secondaryMenuColor);
+    font-family: var(--primaryFontFamily);
+    font-size: 7vw;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .slideInMenuBurger {
+    animation-name: slideInTop;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+  }
+
+  .logoRingeneImg {
+    width: 10px;
+    height: 61px;
+  }
+
+  .subMenuTextAndBurgerDiv {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 0px;
+    padding: 0;
+    margin-right: 10%;
+  }
+
+  .komposisjonSection {
+    scroll-margin-top: 200px;
+  }
+
+  .dannelseSection {
+    scroll-margin-top: 145px;
+  }
+
+  .cassiniShadowImgText,
+  .ringsImgText {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 22px;
+    padding-top: 22px;
+  }
+
+  .cassiniShadowImg {
+    padding-top: 0;
+    width: 90%;
+  }
+
+  .moleculeImgText {
+    padding: 0;
+  }
+
+  .textQuestionDiv {
+    padding-top: 20px;
+    width: 420px;
+    height: 94px;
+  }
+
+  .ringSystemImg {
+    width: 90%;
+  }
+
+  .textImage {
+    font-size: 0.3em;
+  }
+
+  .moleculeImg {
+    width: 194px;
+    height: 129px;
+  }
+  .questionText {
+    font-size: 2.2em;
+  }
+
+  .questionImage {
+    width: 59px;
+  }
+
+  .videoText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .video,
+  .videoCassini {
+    display: block;
+    width: 90%;
+    height: 90%;
+  }
+    header {
+    height: 94px;
+  }
+
+  .headerNav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .hamburgerIcon {
+    display: flex;
+  }
+
+  .hamburgerLine {
+    display: flex;
+    border-color: var(--borderMobileMenuColor);
+    width: 110px;
+    /* border: 1px solid white; */
+  }
+
+  .darkLightIcon {
+    display: none;
+  }
+
+  .darkLightListItem,
+  .laguageListItemMobile {
+    display: flex;
+  }
+
+  .languageButton {
+    display: none;
+  }
+
+}
