@@ -1492,8 +1492,9 @@ footer {
   }
 
   .subMenuDiv, .subMenuDivExp {
-    top:auto;
+    top:75px;
     padding: 10px 0px;
+    position: sticky;
 
     
   }
@@ -1659,7 +1660,7 @@ footer {
     padding: 0 0;
     margin: 0;
   }
-  .show {
+  .show, .hideHeaderMenu {
     top: 3rem;
     left: 2%;
   }
