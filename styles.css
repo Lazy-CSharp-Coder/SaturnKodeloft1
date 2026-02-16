@@ -1507,16 +1507,17 @@ audio {
 
   section {
     align-items: center;
+    gap: 20px;
   }
 
    h2 {
     font-size: 48px;
-    margin-top: 17px;
+    margin-top: 50px;
     margin-bottom: 28px;
   }
 
   p {
-    font-size: 10px;
+    font-size: 0.8rem;
     width: 80%;
   }
 
@@ -1526,8 +1527,9 @@ audio {
   }
 
   .quotePP {
-    font-size: 12px;
-    width: 50vw;
+    font-size: 1rem;
+    gap:15px;
+    width: 50%;
   }
   .headingAndQuoteDiv {
     gap: 0;
@@ -1535,7 +1537,10 @@ audio {
   }
 
   .imageAndQuoteDiv {
-    gap: 20px;
+
+  
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .omImg {
@@ -1548,9 +1553,10 @@ audio {
 
   }
 
-
+  
   .imageAndStatsDiv {
     gap: 68px;
+
     padding-bottom: 19px;
   }
   .textFactCategorys,
@@ -1576,11 +1582,9 @@ audio {
     font-size: 0.8rem;
   }
 
-  .solarSystemImg,
-  .saturnCoreImg {
-    width: 409px;
+  .saturnCoreImg, .solarSystemImg {
+    width:85vw;
   }
-
   .quoteCarolyn {
     width: 341px;
   }
