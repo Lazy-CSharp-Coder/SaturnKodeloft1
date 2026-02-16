@@ -310,7 +310,7 @@ h2 {
 
 h3 {
   font-family: var(--primaryFontFamily);
-  font-size:64px;
+  font-size:5em;;
   color:var(--secondaryTextColor);
 }
 
@@ -806,13 +806,17 @@ li {
   width:100%;
   
   border: 1px solid var(--borderColorMenu);
-
+  height:fit-content;
   position:sticky;
   top:106px;
   background-color: black;
   z-index: 8;
 
 
+}
+nav {
+  padding: 0;
+  margin: 0;
 }
 
 .logoTextDiv {
@@ -878,6 +882,11 @@ li {
   align-items:center;
   justify-content: center;
   position:absolute;
+}
+
+.ringeneNav {
+  background-color:transparent;
+
 }
 
 .questionText {
@@ -1134,7 +1143,7 @@ li {
 
 @keyframes animationSlideOutMenu {
   0% { transform: translateY(0);}
-  100% {transform: translateY(-100px); }
+  100% {transform: translateY(-110px); }
 }
 
 
@@ -1180,7 +1189,7 @@ li {
 }
 
 @keyframes slideOutMenuTop {
-  0% { transform:translateY(0);}
+  0% { transform:translateY(0px);}
   20% { transform:translateY(10px);}
   100% {transform:translateY(-500px);}
 }
@@ -1360,6 +1369,14 @@ height: 50px;
       height: auto;
         top:80px;
       
+     }
+
+     h3 {
+      font-size: 3em;
+     }
+
+     p {
+        font-size: 0.8em;
      }
     
 }

@@ -306,6 +306,7 @@ function animateSubMenu ()
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend",  () => {
       
+      // subMenu.classList.remove("flex");
       subMenu.classList.add("hidden");
     subMenuIsMissing = true; }, { once: true});
     mouseWheelMoved = false;
