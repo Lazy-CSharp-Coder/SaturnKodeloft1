@@ -11,8 +11,8 @@ const mobileLanguageListElementId = "mobileLanguageId"
 let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
-let mobileMode = viewPort <= 500 ? true : false;
-let tabletMode = viewPort > 501 && viewPort < 1024 ? true : false;
+let mobileMode = viewPort <= 426 ? true : false;
+let tabletMode = viewPort > 767 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -46,10 +46,12 @@ const cassiniLaunchImgArray =
   ];
 
 
-function swapCassiniLaunch() {
+function swapCassiniLaunch()
+{
   const lowerLimit = 1800;
   const cassiniLaunchImg = document.getElementById("cassiniLaunchImg");
-  if (viewPort > lowerLimit) {
+  if (viewPort > lowerLimit)
+  {
 
     cassiniLaunchImg.src = cassiniLaunchImgArray[2];
   }
@@ -58,7 +60,8 @@ function swapCassiniLaunch() {
 
 // swapCassiniLaunch();
 
-function updateViewportInfo() {
+function updateViewportInfo()
+{
   viewPort = window.innerWidth;
   console.log("Viewport is now : " + viewPort);
   mobileMode = viewPort <= 426 ? true : false;
@@ -67,9 +70,11 @@ function updateViewportInfo() {
 
 const chosenLanguage = localStorage.getItem("selectedLanguage");
 // chosenLanguage = undefined;
-if (!chosenLanguage) {
+if (!chosenLanguage)
+{
   const selectionDiv = document.querySelector("#selectionDiv");
-  if (selectionDiv) {
+  if (selectionDiv)
+  {
     const home = document.querySelector("#home");
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
@@ -80,8 +85,10 @@ if (!chosenLanguage) {
     selectionDiv.classList.remove("hidden");
 
     const languageSelectionButton = document.querySelector("#languageSelectionButton");
-    if (languageSelectionButton) {
-      languageSelectionButton.addEventListener("click", () => {
+    if (languageSelectionButton)
+    {
+      languageSelectionButton.addEventListener("click", () =>
+      {
         const englishRadio = document.querySelector("#englishRadio");
         selectionDiv.classList.add("hidden");
         header.classList.remove("hidden");
@@ -114,7 +121,8 @@ if (chosenTheme) if (chosenTheme === "lightMode") darkLightModeToggle();
 else localStorage.setItem("selectedTheme", "darkMode");
 
 
-function animateOutHeaderMenu() {
+function animateOutHeaderMenu()
+{
   const navListElement = document.getElementById("headerMenu");
   console.log(navListElement);
   navListElement.classList.remove("show");
@@ -125,18 +133,21 @@ function animateOutHeaderMenu() {
 
 }
 
-function hamburgerToggle() {
+function hamburgerToggle()
+{
   console.log("Hi from hamburgerToggle");
 
   const navListElement = document.getElementById("headerMenu");
   console.log(navListElement);
 
-  if (hamMenuShowing == false) {
+  if (hamMenuShowing == false)
+  {
     navListElement.classList.remove("hidden");
     navListElement.classList.add("show");
 
     // legge inn nytt element...translate to english
-    if (hasHamLanguageBeenAdded === false) {
+    if (hasHamLanguageBeenAdded === false)
+    {
       const translateListElement = document.createElement("li");
       translateListElement.id = mobileLanguageListElementId;
       if (isNorwegian) translateListElement.textContent = "Switch to English";
@@ -145,8 +156,10 @@ function hamburgerToggle() {
       navListElement.appendChild(translateListElement);
       hasHamLanguageBeenAdded = true;
 
-      translateListElement.addEventListener("click", () => {
-        if (subMenuShowing) {
+      translateListElement.addEventListener("click", () =>
+      {
+        if (subMenuShowing)
+        {
           console.log("Sub menu showing is : " + subMenuShowing);
           const subListElement = document.getElementById(isNorwegian ? "subMenu" : "subMenuEng");
           subListElement.classList.remove("showSubMenu");
@@ -165,30 +178,36 @@ function hamburgerToggle() {
     hamMenuShowing = true;
 
   }
-  else {
+  else
+  {
     animateOutHeaderMenu();
   }
 }
 
-function subMenuToggle() {
+function subMenuToggle()
+{
   const subMenuId = isNorwegian ? "subMenu" : "subMenuEng";
   const subListElement = document.getElementById(subMenuId);
   console.log(subListElement);
 
-  if (subMenuShowing == false) {
+  if (subMenuShowing == false)
+  {
     subListElement.classList.remove("hidden");
     subListElement.classList.add("showSubMenu");
-    if (pageTitle == "Expeditions") {
+    if (pageTitle == "Expeditions")
+    {
       console.log("chaningin position expeditions");
       subListElement.style.right = "21%";
     } else if (pageTitle == "Rings") subListElement.style.right = "29%";
     subMenuShowing = true;
   }
-  else {
+  else
+  {
     subListElement.classList.remove("showSubMenu");
 
     subListElement.classList.add("hideSubMenu");
-    subListElement.addEventListener("animationend", () => {
+    subListElement.addEventListener("animationend", () =>
+    {
 
       subListElement.classList.add("hidden");
       subListElement.classList.remove("hideSubMenu");
@@ -203,14 +222,16 @@ function subMenuToggle() {
 }
 
 
-function darkLightModeToggle() {
+function darkLightModeToggle()
+{
   console.log("hi from darkLight mode");
 
 
   const imageElement = document.querySelector("#darkLightIcon");
 
   // const imgElements = document.querySelector(".imgClass");
-  if (darkMode) {
+  if (darkMode)
+  {
     currentMain.classList.add("lightMode");
 
     // imgElements.classList.add("ligthModeImages");
@@ -220,7 +241,8 @@ function darkLightModeToggle() {
     // console.log(imageElement);
     localStorage.setItem("selectedTheme", "lightMode");
   }
-  else {
+  else
+  {
     currentMain.classList.remove("lightMode");
     imageElement.src = lightModeUrl;
 
@@ -234,25 +256,25 @@ function darkLightModeToggle() {
 }
 // event listeners for wheel og scroll
 
-window.addEventListener("wheel", () => { mouseWheelMoved = true; } );
-window.addEventListener("scroll" ,animateSubMenu);
+window.addEventListener("wheel", () => { mouseWheelMoved = true; });
+window.addEventListener("scroll", animateSubMenu);
 
 
 let prevScrollPos = window.scrollY;
 
-function animateSubMenu () 
+function animateSubMenu() 
 {
   const currentScrollPos = window.scrollY;
   const chosenSub = isNorwegian ? "subMenuDivNorwegian" : "subMenuDivEnglish";
   const subMenu = document.getElementById(chosenSub);
 
-    const toTopButton = document.getElementById("toTop");
+  const toTopButton = document.getElementById("toTop");
 
 
 
   // rutine for å få frem to top button når man har scrollet langt nok ned
-  
-  if(currentScrollPos > topButtonYLimit && toTopButtonVisible == false)
+
+  if (currentScrollPos > topButtonYLimit && toTopButtonVisible == false)
   {
     toTopButton.classList.remove("removeToTopButton");
     toTopButton.classList.remove("hidden");
@@ -260,58 +282,65 @@ function animateSubMenu ()
     toTopButtonVisible = true;
   }
   else
-  { 
-    if(currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
+  {
+    if (currentScrollPos < topButtonYLimit && toTopButtonVisible == true)
     {
-      toTopButton.classList.remove("showToTopButton"); 
+      toTopButton.classList.remove("showToTopButton");
       toTopButton.classList.remove("hidden");
       toTopButton.classList.add("removeToTopButton");
-      toTopButton.addEventListener("animationend", () =>  { toTopButton.classList.add("hidden");}, {once: true} );
+      toTopButton.addEventListener("animationend", () => { toTopButton.classList.add("hidden"); }, { once: true });
       toTopButtonVisible = false;
     }
   }
-  
-  
+
+
   // skjekker hvis det er mobil - da skal meny ikke fjernes ved scroll down
 
-  if(window.innerWidth < 427)
+  if (window.innerWidth < 427)
   {
-    if(subMenuIsMissing)
+    if (subMenuIsMissing)
     {
-      subMenu.classList.remove("slideOutSubMenu");
-      subMenu.classList.remove("hidden");
-      subMenu.classList.add("slideInMenuTop");
-      mouseWheelMoved = false;
-      subMenuIsMissing = false; 
-    }
-    return;
-  }
-  // går tilbake hvis det ikkke finnes en undermeny
-  
-  if(pageTitle == "Home" || pageTitle == "About")  return;
-
-  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
-  
-  if(prevScrollPos > currentScrollPos && mouseWheelMoved)
-  {
       subMenu.classList.remove("slideOutSubMenu");
       subMenu.classList.remove("hidden");
       subMenu.classList.add("slideInMenuTop");
       mouseWheelMoved = false;
       subMenuIsMissing = false;
+    }
+    return;
   }
-  else if(mouseWheelMoved && prevScrollPos < currentScrollPos)
+  // går tilbake hvis det ikkke finnes en undermeny
+
+  if (pageTitle == "Home" || pageTitle == "About") return;
+
+  if (tabletMode) 
+  {
+    console.log("tablet mode detected"); return;
+  }
+
+  // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
+
+  if (prevScrollPos > currentScrollPos && mouseWheelMoved)
+  {
+    subMenu.classList.remove("slideOutSubMenu");
+    subMenu.classList.remove("hidden");
+    subMenu.classList.add("slideInMenuTop");
+    mouseWheelMoved = false;
+    subMenuIsMissing = false;
+  }
+  else if (mouseWheelMoved && prevScrollPos < currentScrollPos)
   {
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
-    subMenu.addEventListener("animationend",  () => {
-      
+    subMenu.addEventListener("animationend", () =>
+    {
+
       // subMenu.classList.remove("flex");
       subMenu.classList.add("hidden");
-    subMenuIsMissing = true; }, { once: true});
+      subMenuIsMissing = true;
+    }, { once: true });
     mouseWheelMoved = false;
-  
-  }  
+
+  }
   prevScrollPos = currentScrollPos;
 
 }
@@ -327,11 +356,14 @@ const observerOptions =
 }
 
 
-function observerCallback(entries, observer) {
+function observerCallback(entries, observer)
+{
   if (pageTitle == "Home") return;
   console.log(entries);
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
+  entries.forEach((entry) =>
+  {
+    if (entry.isIntersecting)
+    {
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
@@ -340,7 +372,8 @@ function observerCallback(entries, observer) {
 
       console.log("element is visible", entry.target.id);
     }
-    else {
+    else
+    {
       console.log("element not visbile", entry.target.id);
     }
   });
@@ -350,11 +383,13 @@ function observerCallback(entries, observer) {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 const allSections = document.querySelectorAll("section");
-allSections.forEach((section) => {
+allSections.forEach((section) =>
+{
   observer.observe(section);
 });
 
-translateButton.addEventListener("click", () => {
+translateButton.addEventListener("click", () =>
+{
   updateViewportInfo();
   switchLanguage(true);
 
@@ -362,7 +397,8 @@ translateButton.addEventListener("click", () => {
 });
 
 
-function switchLanguage() {
+function switchLanguage()
+{
   isNorwegian = !isNorwegian;
   const languageSelected = isNorwegian ? mainMenuNorsk : mainMenuEng;
   const toTopRef = document.getElementById("toTopRef");
@@ -370,7 +406,8 @@ function switchLanguage() {
   // sett i local storage hva språk som er valgt
   const textWSCreated = document.getElementById("textWSCreated");
 
-  if (isNorwegian) {
+  if (isNorwegian)
+  {
     localStorage.setItem("selectedLanguage", "norwegian");
     translateButton.textContent = "Tranlate to English";
     if (currentPage === "/ringene.html") toTopRef.href = "#beskrivelse";
@@ -380,7 +417,8 @@ function switchLanguage() {
 
     textWSCreated.textContent = "Web side laget av";
   }
-  else {
+  else
+  {
     localStorage.setItem("selectedLanguage", "english");
     translateButton.textContent = "Oversett til Norsk";
     if (currentPage === "/ringene.html") toTopRef.href = "#beskrivelseEng";
@@ -390,7 +428,8 @@ function switchLanguage() {
     textWSCreated.textContent = "Web page created by";
   }
 
-  for (let i = 0; i < 6; ++i) {
+  for (let i = 0; i < 6; ++i)
+  {
     refArray[i].textContent = languageSelected[i];
   }
 
@@ -400,7 +439,8 @@ function switchLanguage() {
   const mainEnglish = document.querySelector(mainEnglishId);
 
 
-  if (!isNorwegian) {
+  if (!isNorwegian)
+  {
 
     mainNorwegian.classList.add("hidden");
     mainEnglish.classList.remove("hidden");
@@ -410,7 +450,8 @@ function switchLanguage() {
 
 
   }
-  else {
+  else
+  {
     mainEnglish.classList.add("hidden");
     mainNorwegian.classList.remove("hidden");
     currentMain = mainNorwegian;
@@ -420,10 +461,12 @@ function switchLanguage() {
   darkLightModeToggle();
 
   // legge inn nytt element...translate to english
-  if (mobileMode) {
+  if (mobileMode)
+  {
     const translateListElement = document.getElementById(mobileLanguageListElementId);
     console.log(translateListElement);
-    if (translateListElement) {
+    if (translateListElement)
+    {
       if (isNorwegian) translateListElement.textContent = "Switch to English";
       else translateListElement.textContent = "Bytt til Norsk";
     }
@@ -447,7 +490,8 @@ function switchLanguage() {
 
 }
 
-function setDarkLightModeMobileText() {
+function setDarkLightModeMobileText()
+{
   const darkLightMenuItem = document.getElementById("darklighthamburger");
   darkLightMenuItem.textContent = isNorwegian ? darkMode ? "Lys modus" : "Mørk modus" : darkMode ? "Light mode" : "Dark mode";
 

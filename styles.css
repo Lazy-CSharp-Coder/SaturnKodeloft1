@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Story+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Italianno&family=Story+Script&display=swap");
 
+
 :root {
   --primaryBackgroundColor: black;
   --primaryTextColor: white;
@@ -162,11 +163,13 @@ audio {
 a {
   color: var(--primaryMenuColor);
   text-decoration: none;
+
 }
 
 .navListHeader {
   display: flex;
   flex-direction: row;
+  
   font-family: var(--primaryFontFamily);
   color: white;
   font-size: 32px;
@@ -550,6 +553,7 @@ li {
 .omSection {
   flex-direction: column;
   align-items: center;
+  
   scroll-margin-top: 200px;
 }
 
@@ -627,7 +631,7 @@ li {
 
 .solarSystemImg,
 .saturnCoreImg {
-  width: 50vw;
+  width: 60vw;
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -1457,4 +1461,371 @@ footer {
   .maaneText {
     width: 41vw;
   }
+}
+
+@media (min-width:768px) and (max-width:1023px)
+{
+  .darkLightListItem, .languageListItemMobile {
+    font-size: 1.6rem;
+  
+  }
+
+  .hamburgerLine {
+    
+  }
+
+  .headerMenuColor {
+    font-size: 1.6rem;
+  }
+  .navListHeader {
+    align-items: start;
+    
+    
+  }
+
+   .mainClassHero  {
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+   }
+     h1 {
+    font-size: 4.8em;
+    margin-bottom: 27px;
+    margin-top: 0px;
+  }
+
+  .subMenuDiv, .subMenuDivExp {
+    top:75px;
+    padding: 10px 0px;
+    position: sticky;
+
+    
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
+
+  .heroText {
+    padding-top: 58px;
+  }
+  .heroImg {
+    width: 43vw;
+    height:auto;
+    margin: 20px 0px;
+  }
+
+  
+  .quoteJK {
+    font-size: 24px;
+    width: 60vw;
+    padding-top: 63px;
+  }
+
+  .quoteCrediting {
+    font-size: 10px;
+    padding-top: 3px;
+    width: max-content;
+  }
+
+  .mobileSetting {
+    display: block;
+  }
+
+  .desktopSetting {
+    display: none;
+  }
+
+  section {
+    align-items: center;
+    gap: 20px;
+  }
+
+   h2 {
+    font-size: 48px;
+    margin-top: 50px;
+    margin-bottom: 28px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    width: 80%;
+  }
+
+  .toTop {
+    width: 42px;
+    padding: 5px;
+  }
+
+  .quotePP {
+    font-size: 1rem;
+    gap:15px;
+    width: 50%;
+  }
+  .headingAndQuoteDiv {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .imageAndQuoteDiv {
+
+  
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .omImg {
+    display: none;
+  }
+  .omImgMobile {
+    display: flex;
+    width: 28vw;
+    height: auto;
+
+  }
+
+
+  
+  .imageAndStatsDiv {
+    gap: 68px;
+
+    padding-bottom: 19px;
+  }
+  .textFactCategorys,
+  .textFactsSaturn {
+    flex-direction: column;
+    font-family: var(--primaryTextFontFamily);
+    font-size:0.8rem;
+    width: max-content;
+  }
+
+  .minMaxFactDiv {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .tabletSetting {
+    display: none;
+  }
+
+  .textFactsSaturnDistance {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
+  .saturnCoreImg, .solarSystemImg {
+    width:85vw;
+  }
+  .quoteCarolyn {
+    width: 341px;
+  }
+
+  .solarSystemImg,
+  .saturnCoreImg {
+    margin-top: 37px;
+    margin-bottom: 37px;
+  }
+ h3 {
+    font-size: 2.2em;
+  }
+
+  .navListRingene {
+    list-style-type: none;
+    gap: 3px;
+    font-size: 1rem;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    z-index: 6;
+  }
+
+  .logoRingsImg {
+    width: 8vw;
+  }
+
+  .subMenuDiv {
+    display: flex;
+    justify-content: space-between;
+    
+  
+    width: 100%;
+  }
+
+  .subMenuText, .subMenuTextExp {
+    font-size: 1.8em;
+  }
+
+
+
+  .subMenuTextExp {
+    padding: 0 0;
+    margin: 0;
+  }
+  .show, .hideHeaderMenu {
+    top: 3rem;
+    left: 2%;
+  }
+
+  .logoTextDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 0;
+    margin-left: 3%;
+    /* margin-right: 10vw; */
+    /* gap:3rem; */
+    /* padding-left: 1.1rem; */
+  }
+  .logoTextDivRomferd {
+    width: 100%;
+    margin-left: 3%;
+  }
+
+  .subMenuBurger {
+    display: flex;
+    color: var(--secondaryMenuColor);
+    font-family: var(--primaryFontFamily);
+    font-size: 1.8rem;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .mainClass {
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+  }
+
+  .slideInMenuBurger {
+    animation-name: slideInTop;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+  }
+
+  .logoRingeneImg {
+    width: 10px;
+    height: 61px;
+  }
+
+  .subMenuTextAndBurgerDiv {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+    margin: 0px 60px;
+    width: 100%;
+    padding: 0;
+   
+  }
+
+  .komposisjonSection {
+    scroll-margin-top: 200px;
+  }
+
+  .dannelseSection {
+    scroll-margin-top: 145px;
+  }
+
+  .cassiniShadowImgText,
+  .ringsImgText {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 22px;
+    padding-top: 22px;
+  }
+
+  .cassiniShadowImg {
+    padding-top: 0;
+    width: 90%;
+  }
+
+  .moleculeImgText {
+    padding: 0;
+  }
+
+  .textQuestionDiv {
+    padding-top: 20px;
+    width: 420px;
+    height: 94px;
+  }
+
+  .ringSystemImg {
+    width: 90%;
+  }
+
+  .textImage {
+    font-size: 0.3em;
+  }
+
+  .moleculeImg {
+    width: 194px;
+    height: 129px;
+  }
+  .questionText {
+    font-size: 2.2em;
+  }
+
+  .questionImage {
+    width: 59px;
+  }
+
+  .videoText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .video,
+  .videoCassini {
+    display: block;
+    width: 90%;
+    height: 90%;
+  }
+    header {
+    height: auto;
+    padding: 10px 0px;
+  }
+
+  .headerNav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .hamburgerIcon {
+    display: flex;
+    height: 55px;
+  }
+
+  .logoSaturnImg {
+    height: 48px;
+  }
+
+  .hamburgerLine {
+    display: flex;
+    border-color: var(--borderMobileMenuColor);
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+
+  .darkLightIcon {
+    display: none;
+  }
+
+  .darkLightListItem,
+  .laguageListItemMobile {
+    display: flex;
+  }
+
+  .languageButton {
+    display: none;
+  }
+
 }
