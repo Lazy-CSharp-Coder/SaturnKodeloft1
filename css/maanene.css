@@ -53,6 +53,8 @@
 
 .enceladusSection {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .moonDiv {
@@ -66,6 +68,7 @@
 .enceladusDiv {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding-bottom:110px;
   gap:7vw;
 }
@@ -86,6 +89,14 @@
   margin-bottom: 40px;
   border-radius : 5px;
 
+}
+
+.titanImg {
+  width: 85vw;
+}
+
+.titanCoreImg {
+  width: 80vw;
 }
 
 
@@ -153,11 +164,11 @@
   }
   
   .titanImg {
-    width:405px;
+    width:95vw;
   }
   
   .titanCoreImg {
-    width:391px;
+    width:92vw;
   }
  
 }
