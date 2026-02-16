@@ -11,7 +11,7 @@ const mobileLanguageListElementId = "mobileLanguageId"
 let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
-let mobileMode = viewPort <= 500 ? true : false;
+let mobileMode = viewPort <= 426 ? true : false;
 let tabletMode = viewPort > 501 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
@@ -368,8 +368,6 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-
-
 
       console.log("element is visible", entry.target.id);
     }
