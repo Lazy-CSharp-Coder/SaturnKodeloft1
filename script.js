@@ -256,8 +256,7 @@ function darkLightModeToggle()
 }
 // event listeners for wheel og scroll
 
-window.addEventListener("wheel", () => { mouseWheelMoved = true; });
-window.addEventListener("scroll", animateSubMenu);
+
 
 
 let prevScrollPos = window.scrollY;
@@ -338,6 +337,9 @@ function animateSubMenu()
   prevScrollPos = currentScrollPos;
 
 }
+
+window.addEventListener("wheel", () => { mouseWheelMoved = true; });
+window.addEventListener("scroll", animateSubMenu);
 
 
 // intersection observer - skal animere inn månene først når de kommer til syne
