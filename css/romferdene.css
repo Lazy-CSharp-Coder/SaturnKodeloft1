@@ -68,7 +68,7 @@
 }
 
 .pioneerImg, .voyager1Img, .voyager2Img {
-    width : 48vw;
+    width :50vw;
     mask-image: linear-gradient(to top, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to bottom, transparent 0%, black 5%, black 85%, transparent 100%),
               linear-gradient(to left, transparent 0%, black 5%, black 85%, transparent 100%),
@@ -79,17 +79,20 @@
 }
 
 .cassiniLaunchImg {
-  width:20vw;
+width: 50%;
 }
 
 .cassiniLaunchText {
-  width: 20vw;
+
 }
 
 .cassiniLaunchImgTextDiv {
+ flex-direction: column;
   gap:50px;
-  margin-bottom:104px;
+
   align-items: center;
+  justify-content: center;
+  width: 60vw;
 }
 
 .cassiniTitanImg {
@@ -107,12 +110,12 @@
 
 .grandFinaleHeadingText {
   font-family: var(--primaryFontFamily);
-  font-size: 48px;
+  font-size: 4em;
   text-align: center;
 }
 
 .grandFinaleImg {
-    width: 58vw;
+    width: 88%;
     margin-top: 25px;
 }
 .videoCassini {
