@@ -1693,7 +1693,7 @@ footer {
   .mainClass {
     margin: 0;
     padding: 0;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .slideInMenuBurger {
