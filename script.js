@@ -12,7 +12,7 @@ let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
 let mobileMode = viewPort <= 426 ? true : false;
-let tabletMode = viewPort > 501 && viewPort < 1024 ? true : false;
+let tabletMode = viewPort > 767 && viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -101,10 +101,6 @@ if (!chosenLanguage)
     }
   }
   localStorage.setItem("selectedLanguage", isNorwegian ? "norwegian" : "english");
-
-} else
-  {
-
 
 }
 
@@ -260,7 +256,8 @@ function darkLightModeToggle()
 }
 // event listeners for wheel og scroll
 
-
+window.addEventListener("wheel", () => { mouseWheelMoved = true; });
+window.addEventListener("scroll", animateSubMenu);
 
 
 let prevScrollPos = window.scrollY;
@@ -315,6 +312,11 @@ function animateSubMenu()
 
   if (pageTitle == "Home" || pageTitle == "About") return;
 
+  if (tabletMode) 
+  {
+    console.log("tablet mode detected"); return;
+  }
+
   // rutine for å legge til og fjerne undermeny til ringene.html, maanene.html og romferdene.html hvis man scroller opp/ned
 
   if (prevScrollPos > currentScrollPos && mouseWheelMoved)
@@ -325,26 +327,23 @@ function animateSubMenu()
     mouseWheelMoved = false;
     subMenuIsMissing = false;
   }
-  else if (prevScrollPos < currentScrollPos)
+  else if (mouseWheelMoved && prevScrollPos < currentScrollPos)
   {
     subMenu.classList.remove("slideInMenuTop");
     subMenu.classList.add("slideOutSubMenu");
     subMenu.addEventListener("animationend", () =>
     {
 
+      // subMenu.classList.remove("flex");
       subMenu.classList.add("hidden");
-     
+      subMenuIsMissing = true;
     }, { once: true });
-     subMenuIsMissing = true;
     mouseWheelMoved = false;
 
   }
   prevScrollPos = currentScrollPos;
 
 }
-
-window.addEventListener("wheel", () => { mouseWheelMoved = true; });
-window.addEventListener("scroll", animateSubMenu);
 
 
 // intersection observer - skal animere inn månene først når de kommer til syne
@@ -368,6 +367,8 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
+
+
 
       console.log("element is visible", entry.target.id);
     }

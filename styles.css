@@ -159,11 +159,13 @@ audio {
 a {
   color: var(--primaryMenuColor);
   text-decoration: none;
+
 }
 
 .navListHeader {
   display: flex;
   flex-direction: row;
+  
   font-family: var(--primaryFontFamily);
   color: white;
   font-size: 32px;
@@ -625,12 +627,10 @@ li {
 
 .solarSystemImg,
 .saturnCoreImg {
-  width: 70vw;
+  width: 60vw;
   margin-top: 60px;
   margin-bottom: 60px;
 }
-
-.sat
 
 .toTop {
   position: fixed;
@@ -1461,6 +1461,23 @@ footer {
 
 @media (min-width:768px) and (max-width:1023px)
 {
+  .darkLightListItem, .languageListItemMobile {
+    font-size: 1.6rem;
+  
+  }
+
+  .hamburgerLine {
+    
+  }
+
+  .headerMenuColor {
+    font-size: 1.6rem;
+  }
+  .navListHeader {
+    align-items: start;
+    
+    
+  }
 
    .mainClassHero  {
     margin: 0;
@@ -1476,6 +1493,9 @@ footer {
 
   .subMenuDiv {
     top:auto;
+    padding: 10px 0px;
+
+    
   }
 
   li {
@@ -1492,10 +1512,6 @@ footer {
   }
 
   
-audio {
-  position: fixed;
-  
-}
   .quoteJK {
     font-size: 24px;
     width: 60vw;
@@ -1564,6 +1580,7 @@ audio {
 
   }
 
+
   
   .imageAndStatsDiv {
     gap: 68px;
@@ -1612,7 +1629,7 @@ audio {
   .navListRingene {
     list-style-type: none;
     gap: 3px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 12px;
@@ -1627,14 +1644,21 @@ audio {
   .subMenuDiv {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0px;
+    
+  
     width: 100%;
   }
 
-  .subMenuText {
-    font-size: 2rem;
+  .subMenuText, .subMenuTextExp {
+    font-size: 1.8em;
   }
 
+
+
+  .subMenuTextExp {
+    padding: 0 0;
+    margin: 0;
+  }
   .show {
     top: 3rem;
     left: 2%;
@@ -1646,17 +1670,21 @@ audio {
     width: 100%;
     align-items: center;
     gap: 0;
-    margin-left: 5%;
+    margin-left: 3%;
     /* margin-right: 10vw; */
     /* gap:3rem; */
     /* padding-left: 1.1rem; */
+  }
+  .logoTextDivRomferd {
+    width: 100%;
+    margin-left: 0%;;
   }
 
   .subMenuBurger {
     display: flex;
     color: var(--secondaryMenuColor);
     font-family: var(--primaryFontFamily);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     width: auto;
     margin: 0px;
     padding: 0px;
@@ -1681,12 +1709,13 @@ audio {
 
   .subMenuTextAndBurgerDiv {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 80px;
     align-items: center;
+    margin: 0px 60px;
     width: 100%;
     padding: 0;
-    margin-right: 40%;;
+   
   }
 
   .komposisjonSection {
@@ -1777,7 +1806,7 @@ audio {
   .hamburgerLine {
     display: flex;
     border-color: var(--borderMobileMenuColor);
-    width: 110px;
+    width: 100%;
     /* border: 1px solid white; */
   }
 

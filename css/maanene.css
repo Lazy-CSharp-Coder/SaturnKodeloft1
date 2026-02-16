@@ -175,3 +175,79 @@
   }
  
 }
+
+
+
+@media (min-width:768px) and  (max-width: 1023px) {
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .genereltListItem {
+     padding: 0;
+  }
+ 
+  .navListMaanene {
+    list-style-type: none;
+    gap:3px;  
+    font-size: 19px;
+    padding:12px 12px 12px 12px;
+  }
+
+  .logoMaaneImg {
+    height: 5vh;
+    
+  }
+  
+  .moonImg {
+    width:85%;
+    margin:0;
+    margin-bottom: 30px;
+  }
+.moonDiv {
+  display: flex;
+  width: 100%;
+
+}
+  .genereltSection {
+    padding-bottom:50px;
+  }
+
+  .moonSection {
+
+    flex-direction: column;
+ 
+    padding-bottom: 51px;
+  }
+
+  
+  .enceladusImg1, .enceladusImg2 {
+    width:95%;
+    margin-top: 0;
+    
+  }
+
+  .enceladusImg1 {
+    margin-bottom: 30px;
+    /* width: 40%; */
+  }
+  .enceladusDiv {
+    
+    flex-direction: column;
+
+    margin-top: 0;
+    padding-bottom: 30px;
+    gap:30px;
+
+  }
+  
+  .titanImg {
+    width:95vw;
+  }
+  
+  .titanCoreImg {
+    width:92vw;
+  }
+ 
+}
