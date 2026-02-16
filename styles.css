@@ -547,6 +547,7 @@ li {
 .omSection {
   flex-direction: column;
   align-items: center;
+  
   scroll-margin-top: 200px;
 }
 
@@ -624,10 +625,12 @@ li {
 
 .solarSystemImg,
 .saturnCoreImg {
-  width: 50vw;
+  width: 70vw;
   margin-top: 60px;
   margin-bottom: 60px;
 }
+
+.sat
 
 .toTop {
   position: fixed;
@@ -1471,6 +1474,14 @@ footer {
     margin-top: 0px;
   }
 
+  .subMenuDiv {
+    top:auto;
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
+
   .heroText {
     padding-top: 58px;
   }
@@ -1601,7 +1612,7 @@ audio {
   .navListRingene {
     list-style-type: none;
     gap: 3px;
-    font-size: 19px;
+    font-size: 1.5rem;
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 12px;
@@ -1610,18 +1621,23 @@ audio {
   }
 
   .logoRingsImg {
-    width: 18vw;
+    width: 8vw;
   }
 
   .subMenuDiv {
     display: flex;
     justify-content: space-between;
-
+    padding: 15px 0px;
     width: 100%;
   }
 
   .subMenuText {
-    font-size: 7.8vw;
+    font-size: 2rem;
+  }
+
+  .show {
+    top: 3rem;
+    left: 2%;
   }
 
   .logoTextDiv {
@@ -1640,10 +1656,16 @@ audio {
     display: flex;
     color: var(--secondaryMenuColor);
     font-family: var(--primaryFontFamily);
-    font-size: 7vw;
+    font-size: 1.5rem;
     width: auto;
     margin: 0px;
     padding: 0px;
+  }
+
+  .mainClass {
+    margin: 0;
+    padding: 0;
+    background-color: red;
   }
 
   .slideInMenuBurger {
@@ -1658,13 +1680,13 @@ audio {
   }
 
   .subMenuTextAndBurgerDiv {
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
     align-items: center;
     width: 100%;
-    gap: 0px;
     padding: 0;
-    margin-right: 10%;
+    margin-right: 40%;;
   }
 
   .komposisjonSection {
@@ -1730,19 +1752,26 @@ audio {
     height: 90%;
   }
     header {
-    height: 94px;
+    height: auto;
+    padding: 10px 0px;
   }
 
   .headerNav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  
     padding-right: 20px;
     padding-left: 20px;
   }
 
   .hamburgerIcon {
     display: flex;
+    height: 55px;
+  }
+
+  .logoSaturnImg {
+    height: 48px;
   }
 
   .hamburgerLine {
