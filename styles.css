@@ -1463,7 +1463,7 @@ footer {
   }
 }
 
-@media only screen and (min-width:767px) and (max-width:1023px) and (orientation: portrait)
+@media only screen and (min-width:427px) and (max-width:1023px) and (orientation: portrait)
 {
   .darkLightListItem, .languageListItemMobile {
     font-size: 1.6rem;
