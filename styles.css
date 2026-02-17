@@ -1482,8 +1482,8 @@ footer {
     align-items: start;
   }
 
-  section {
-    margin-top: 70px;
+  .mainClassOm {
+    margin-top: 55px;
   }
 
   .mainClassHero {
@@ -1709,6 +1709,7 @@ footer {
   }
 
   .mainClass {
+    margin-top: 150px;;
   }
 
   .slideInMenuBurger {
