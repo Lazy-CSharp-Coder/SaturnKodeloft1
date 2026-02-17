@@ -1635,7 +1635,7 @@ footer {
   justify-content: center;
   position: absolute;
   top: 40px;
-  right: 12.1%;
+  right: 10px;
   
    background-color: black;
   /* border: 1px solid #dcdcdc; */
@@ -1673,7 +1673,7 @@ footer {
   .logoTextDiv,
   .logoTextDivRomferd {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     width: 100%;
     align-items: center;
     gap: 40px;
@@ -1711,11 +1711,11 @@ footer {
 
   .subMenuTextAndBurgerDiv {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 0px;
     align-items: center;
     margin: 0px 0px;
-    margin-right: 50px;
+    margin-right: 70px;
     width: 100%;
     padding: 0;
   }
