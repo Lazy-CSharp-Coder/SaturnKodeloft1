@@ -342,22 +342,19 @@ left:20px;
   }
   .logoTextDivRomferd {
   
-    justify-content: space-between;
-    /* gap: 47px; */
+        /* gap: 47px; */
     align-items: center;
     width: 100%;
     padding:0;
     margin-left: 5%;
-    
+    gap:0;
+  
 
   }
 
  .logoRomferdImg {
      height: 5vh; 
  }
-
-
-
 
   .pioneerImg, .voyager1Img, .voyager2Img {
     width: 90%;

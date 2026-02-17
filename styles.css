@@ -58,8 +58,9 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
+  left:0;
   border: 1px solid var(--borderColorMenu);
-  z-index: 10;
+  z-index: 100;
 }
 
 audio {
@@ -296,6 +297,8 @@ main {
   align-items: center;
   background-color: var(--primaryBackgroundColor);
   transition: all 0.5s ease;
+  margin-top: 104px;
+
 }
 
 .mainClassHero {
@@ -1463,8 +1466,9 @@ footer {
   }
 }
 
-@media  (min-width:427px) and (max-width:1023px)
+@media  (min-width:426px) and (max-width:1023px)
 {
+
   .darkLightListItem, .languageListItemMobile {
     font-size: 1.6rem;
   
@@ -1483,22 +1487,25 @@ footer {
     
   }
 
+  section {
+    margin-top: 70px;
+  }
+  
    .mainClassHero  {
-    margin: 0;
-    padding: 0;
+
     justify-content: flex-start;
     align-items: center;
    }
      h1 {
     font-size: 4.8em;
     margin-bottom: 27px;
-    margin-top: 0px;
+
   }
 
   .subMenuDiv, .subMenuDivExp {
-    top:75px;
+    top:76px;
     padding: 10px 0px;
-    position: sticky;
+    position: fixed;
 
     
   }
@@ -1696,9 +1703,7 @@ footer {
   }
 
   .mainClass {
-    margin: 0;
-    padding: 0;
-    /* background-color: red; */
+   
   }
 
   .slideInMenuBurger {
@@ -1715,9 +1720,10 @@ footer {
   .subMenuTextAndBurgerDiv {
     flex-direction: row;
     justify-content: space-between;
-    gap: 80px;
+    gap: 0px;
     align-items: center;
-    margin: 0px 60px;
+    margin: 0px 0px;
+    margin-right: 50px;
     width: 100%;
     padding: 0;
    
@@ -1826,6 +1832,14 @@ footer {
 
   .languageButton {
     display: none;
+  }
+
+}
+
+
+@media (max-width:625px){
+  .subMenuText {
+    color: red;
   }
 
 }
