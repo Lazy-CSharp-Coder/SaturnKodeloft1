@@ -1463,7 +1463,7 @@ footer {
   }
 }
 
-@media (min-width:768px) and (max-width:1023px)
+@media (min-width:768px) and (max-width:1023px) and (orientation: portrait)
 {
   .darkLightListItem, .languageListItemMobile {
     font-size: 1.6rem;
