@@ -38,14 +38,17 @@ let currentMain = document.getElementById("mainNorwegian");
 const currentPage = window.location.pathname;
 console.log(translateButton);
 
-const html = document.querySelector("html");
 
-if (html)
+function setScrollBehavior(optionStr)
 {
-  html.style.scrollBehavior = "instant";
-  console.log("setting scroll behavior to instant");
-}
+  const html = document.querySelector("html");
 
+  if (html)
+  {
+    html.style.scrollBehavior = optionStr;
+    console.log("setting scroll behavior to " + optionStr);
+  }
+}
 const cassiniLaunchImgArray =
   [
     "Images/launchcassini.jpg",
@@ -53,6 +56,7 @@ const cassiniLaunchImgArray =
     "Images/launchcassini3.jpg"
   ];
 
+setScrollBehavior("auto");
 
 function swapCassiniLaunch()
 {
@@ -221,9 +225,9 @@ function subMenuToggle()
       subMenuShowing = false;
       console.log('Animation slutt!');
     }, { once: true });
-   
 
-  
+
+
   }
 
 
@@ -375,20 +379,8 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-      if (index === array.length - 1)
-      {
-        const html = document.querySelector("html");
-
-        if (html)
-        {
-          html.style.scrollBehavior = "smooth";
-          console.log("setting scroll behavior to smooth");
-        }
-      }
-
-
-
-
+      if (index === array.length-1) setScrollBehavior("smooth");
+      
       console.log("element is visible", entry.target.id);
     }
     else
