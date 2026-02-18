@@ -1136,6 +1136,7 @@ footer {
   .headingAndQuoteDiv {
     gap: 0;
     flex-direction: column;
+    
   }
 
   .imageAndQuoteDiv {
@@ -1408,9 +1409,9 @@ footer {
 @media (max-width: 580px) {
   
    .textFactCategorys,
-  .textFactsSaturn {
+  .textFactsSaturn, .textFactsSaturnDistance {
     
-    font-size: 0.7rem;
+    font-size: 0.7em;
     width: max-content;
   }
 
@@ -1423,11 +1424,38 @@ footer {
   {
     display: block;
   }
+
+ 
 }
 
-@media (max-width: 580px)
+@media (max-width: 620px)
 {
-  
+   h2 {
+    font-size: 4em;
+   }
+  .imageAndQuoteDiv {
+   flex-direction: column;
+   gap: 50px;
+}
+
+
+.headingAndQuoteDiv {
+  padding-bottom: 20px;
+}
+.omImgMobile {
+  display: block;
+  width: 60vw;
+}
+
+.quotePP {
+  width: 70vw;
+}
+
+.omImg {
+  display: none;
+}
+
+
 }
 
 @media (max-width: 500px)
@@ -1435,6 +1463,10 @@ footer {
   .subMenuTextAndBurgerDiv {
     flex-direction: column;
     
+  }
+
+  .textFactCategorys, .textFactsSaturn,  .textFactsSaturnDistance {
+    font-size: 0.5em;
   }
 
   .navListRingene, .navListMaanene  {
@@ -1445,7 +1477,7 @@ footer {
   {
     right: 22%;
   }
-
+ 
 }
 
 @media (max-width: 700px)
