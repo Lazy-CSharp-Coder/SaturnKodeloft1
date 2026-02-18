@@ -1489,6 +1489,7 @@ footer {
   .mainClassHero {
     justify-content: flex-start;
     align-items: center;
+    margin-top: 55px;
   }
   h1 {
     font-size: 4.8em;
@@ -1828,6 +1829,6 @@ footer {
 
 @media (max-width: 625px) {
   .subMenuText {
-    color: red;
+    /* color: red; */
   }
 }
