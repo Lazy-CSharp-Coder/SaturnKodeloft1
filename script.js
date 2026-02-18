@@ -56,7 +56,17 @@ const cassiniLaunchImgArray =
     "Images/launchcassini3.jpg"
   ];
 
-setScrollBehavior("auto");
+setScrollBehavior("instant");
+// sette opp eventlistener for click header
+
+const headerMenu = document.querySelector("#headerMenu");
+if(headerMenu)
+{
+  headerMenu.addEventListener("click", () => 
+  {
+    setScrollBehavior("instant");
+  });
+}
 
 function swapCassiniLaunch()
 {
@@ -444,12 +454,28 @@ function switchLanguage()
   {
 
     refArray[i].textContent = languageSelected[i];
-       refArray[i].classList.add("fadeInMenuItems");
-      refArray[i].addEventListener("animationend", () => { refArray[i].classList.remove("fadeInMenuItems") }, { once: true });
-  
 
   }
+  if (!tabletMode && !mobileMode)
+  {
+    const headerMenu = document.querySelector("#headerMenu");
+    const listItems = headerMenu.querySelectorAll("li");
+    console.log(listItems);
 
+    const animSelected = "rotateInAnim";
+
+    const delayInc = 10;
+    listItems.forEach((item, index) =>
+    {
+      item.classList.remove(animSelected);
+      setTimeout(() =>
+      {
+        item.classList.add(animSelected);
+
+      }, index * delayInc);
+
+    });
+  }
 
   const mainNorwegian = document.querySelector("#mainNorwegian");
   const mainEnglishId = pageTitle == "Home" ? "#mainNorwegian" : "#mainEnglish";
