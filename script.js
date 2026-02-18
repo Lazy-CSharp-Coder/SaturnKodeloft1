@@ -308,7 +308,7 @@ function animateSubMenu()
 
   // skjekker hvis det er mobil - da skal meny ikke fjernes ved scroll down
 
-  if (window.innerWidth < 427)
+  if (window.innerWidth < tabletMode)
   {
     if (subMenuIsMissing)
     {
@@ -472,7 +472,7 @@ function switchLanguage()
   darkLightModeToggle();
 
   // legge inn nytt element...translate to english
-  if (mobileMode)
+  if (mobileMode || tabletMode)
   {
     const translateListElement = document.getElementById(mobileLanguageListElementId);
     console.log(translateListElement);
