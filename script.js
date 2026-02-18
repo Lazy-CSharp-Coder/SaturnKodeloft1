@@ -12,7 +12,7 @@ let viewPort = window.innerWidth;
 
 console.log("Viewport is now : " + viewPort);
 let mobileMode = viewPort <= 426 ? true : false;
-let tabletMode = viewPort > 767 && viewPort < 1024 ? true : false;
+let tabletMode = viewPort < 1024 ? true : false;
 
 const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
@@ -135,6 +135,7 @@ else localStorage.setItem("selectedTheme", "darkMode");
 
 function animateOutHeaderMenu()
 {
+  console.log("animate out header menu was called. ")
   const navListElement = document.getElementById("headerMenu");
   console.log(navListElement);
   navListElement.classList.remove("show");
