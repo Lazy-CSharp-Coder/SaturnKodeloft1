@@ -1407,7 +1407,12 @@ footer {
 
 @media (max-width: 580px) {
   
-
+   .textFactCategorys,
+  .textFactsSaturn {
+    
+    font-size: 0.7rem;
+    width: max-content;
+  }
 
   .minMaxFactDiv {
     flex-direction: column;
@@ -1420,14 +1425,38 @@ footer {
   }
 }
 
-@media (max-width: 550px)
+@media (max-width: 580px)
 {
-     .textFactCategorys,
-  .textFactsSaturn {
+  
+}
+
+@media (max-width: 500px)
+{
+  .subMenuTextAndBurgerDiv {
+    flex-direction: column;
     
-    font-size: 0.7rem;
-    width: max-content;
   }
+
+  .navListRingene, .navListMaanene  {
+    right: 30%;
+
+  }
+  .navListRomferdene
+  {
+    right: 22%;
+  }
+
+}
+
+@media (max-width: 700px)
+{
+   .logoKodeloftetImg , .myInfoDiv {
+    display: none;
+   }
+
+   .textNASA {
+    padding-left: 36px;
+   }
 }
 
 
