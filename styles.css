@@ -7,7 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Story+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Italianno&family=Story+Script&display=swap");
 
-
 :root {
   --primaryBackgroundColor: black;
   --primaryTextColor: white;
@@ -37,7 +36,6 @@ html {
   overflow-x: hidden;
 }
 
-
 body {
   height: 100%;
   margin: 0;
@@ -58,8 +56,9 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   border: 1px solid var(--borderColorMenu);
-  z-index: 10;
+  z-index: 100;
 }
 
 audio {
@@ -163,13 +162,12 @@ audio {
 a {
   color: var(--primaryMenuColor);
   text-decoration: none;
-
 }
 
 .navListHeader {
   display: flex;
   flex-direction: row;
-  
+
   font-family: var(--primaryFontFamily);
   color: white;
   font-size: 32px;
@@ -296,6 +294,7 @@ main {
   align-items: center;
   background-color: var(--primaryBackgroundColor);
   transition: all 0.5s ease;
+  margin-top: 204px;
 }
 
 .mainClassHero {
@@ -553,8 +552,13 @@ li {
 .omSection {
   flex-direction: column;
   align-items: center;
-  
+
   scroll-margin-top: 200px;
+
+}
+
+.mainClassOm {
+  margin-top: 104px;
 }
 
 .omImg {
@@ -952,7 +956,7 @@ nav {
   border: 1px solid var(--borderMobileMenuColor);
 }
 
-.showSubMenu {
+.showSubMenuAnim {
   animation-name: slideInMenuTop;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
@@ -960,7 +964,7 @@ nav {
   animation-delay: 0;
 }
 
-.hideSubMenu {
+.hideSubMenuAnim {
   animation-name: slideOutMenuTop;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -1048,7 +1052,7 @@ nav {
     align-items: center;
     width: 100%;
     gap: 0px;
-    padding: 0;
+    /* padding: 0; */
     margin-right: 10%;
   }
 
@@ -1290,8 +1294,7 @@ footer {
   padding-right: 36px;
 }
 
-@media (min-width: 1920px)
-{
+@media (min-width: 1920px) {
   h3 {
     font-size: 4.5em;
   }
@@ -1378,11 +1381,11 @@ footer {
   }
 
   h1 {
-    font-size: 4em; 
+    font-size: 4em;
   }
 
   h2 {
-    font-size: 4em;;
+    font-size: 4em;
   }
 
   .heroImg {
@@ -1455,7 +1458,7 @@ footer {
   }
 
   .questionVoyagerDiv {
-    width: 59vw;;
+    width: 59vw;
   }
 
   .maaneText {
@@ -1463,15 +1466,13 @@ footer {
   }
 }
 
-@media only screen and (min-width:767px) and (max-width:1023px) and (orientation: portrait)
-{
-  .darkLightListItem, .languageListItemMobile {
+@media (min-width: 427px) and (max-width: 1023px) {
+  .darkLightListItem,
+  .languageListItemMobile {
     font-size: 1.6rem;
-  
   }
 
   .hamburgerLine {
-    
   }
 
   .headerMenuColor {
@@ -1479,28 +1480,20 @@ footer {
   }
   .navListHeader {
     align-items: start;
-    
-    
   }
 
-   .mainClassHero  {
-    margin: 0;
-    padding: 0;
+  .mainClassOm {
+    margin-top: 55px;
+  }
+
+  .mainClassHero {
     justify-content: flex-start;
     align-items: center;
-   }
-     h1 {
+    margin-top: 55px;
+  }
+  h1 {
     font-size: 4.8em;
     margin-bottom: 27px;
-    margin-top: 0px;
-  }
-
-  .subMenuDiv, .subMenuDivExp {
-    top:75px;
-    padding: 10px 0px;
-    position: sticky;
-
-    
   }
 
   li {
@@ -1512,11 +1505,10 @@ footer {
   }
   .heroImg {
     width: 43vw;
-    height:auto;
+    height: auto;
     margin: 20px 0px;
   }
 
-  
   .quoteJK {
     font-size: 24px;
     width: 60vw;
@@ -1542,7 +1534,7 @@ footer {
     gap: 20px;
   }
 
-   h2 {
+  h2 {
     font-size: 48px;
     margin-top: 50px;
     margin-bottom: 28px;
@@ -1560,7 +1552,7 @@ footer {
 
   .quotePP {
     font-size: 1rem;
-    gap:15px;
+    gap: 15px;
     width: 50%;
   }
   .headingAndQuoteDiv {
@@ -1569,8 +1561,6 @@ footer {
   }
 
   .imageAndQuoteDiv {
-
-  
     align-items: center;
     justify-content: space-evenly;
   }
@@ -1582,11 +1572,8 @@ footer {
     display: flex;
     width: 28vw;
     height: auto;
-
   }
 
-
-  
   .imageAndStatsDiv {
     gap: 68px;
 
@@ -1596,7 +1583,7 @@ footer {
   .textFactsSaturn {
     flex-direction: column;
     font-family: var(--primaryTextFontFamily);
-    font-size:0.8rem;
+    font-size: 0.8rem;
     width: max-content;
   }
 
@@ -1615,8 +1602,9 @@ footer {
     font-size: 0.8rem;
   }
 
-  .saturnCoreImg, .solarSystemImg {
-    width:85vw;
+  .saturnCoreImg,
+  .solarSystemImg {
+    width: 85vw;
   }
   .quoteCarolyn {
     width: 341px;
@@ -1627,62 +1615,74 @@ footer {
     margin-top: 37px;
     margin-bottom: 37px;
   }
- h3 {
+  h3 {
     font-size: 2.2em;
-  }
-
-  .navListRingene {
-    list-style-type: none;
-    gap: 3px;
-    font-size: 1rem;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    z-index: 6;
   }
 
   .logoRingsImg {
     width: 8vw;
   }
 
-  .subMenuDiv {
-    display: flex;
-    justify-content: space-between;
-    
   
-    width: 100%;
+.navListRingene,
+  .navListMaanene, 
+  .navListRomferdene {
+
+   list-style-type: none;
+   gap:3px;  
+
+
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  
+   background-color: black;
+  /* border: 1px solid #dcdcdc; */
+  border: 1px solid var(--borderMobileMenuColor);
+    
+    
+    padding:12px 12px 22px 22px;
   }
 
-  .subMenuText, .subMenuTextExp {
+  .subMenuDiv,
+  .subMenuDivExp {
+    width: 100%;
+    top: 76px;
+    height: 74px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+  }
+
+  .subMenuText,
+  .subMenuTextExp {
     font-size: 1.8em;
   }
-
-
 
   .subMenuTextExp {
     padding: 0 0;
     margin: 0;
   }
-  .show, .hideHeaderMenu {
+  .show,
+  .hideHeaderMenu {
     top: 3rem;
     left: 2%;
   }
 
-  .logoTextDiv {
+  .logoTextDiv,
+  .logoTextDivRomferd {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     width: 100%;
     align-items: center;
-    gap: 0;
-    margin-left: 3%;
+    gap: 40px;
+    margin-left:25px;
+    padding: 0;
     /* margin-right: 10vw; */
     /* gap:3rem; */
     /* padding-left: 1.1rem; */
-  }
-  .logoTextDivRomferd {
-    width: 100%;
-    margin-left: 3%;
   }
 
   .subMenuBurger {
@@ -1696,9 +1696,7 @@ footer {
   }
 
   .mainClass {
-    margin: 0;
-    padding: 0;
-    /* background-color: red; */
+    margin-top: 150px;;
   }
 
   .slideInMenuBurger {
@@ -1715,12 +1713,12 @@ footer {
   .subMenuTextAndBurgerDiv {
     flex-direction: row;
     justify-content: space-between;
-    gap: 80px;
+    gap: 0px;
     align-items: center;
-    margin: 0px 60px;
+    margin: 0px 0px;
+    margin-right: 70px;
     width: 100%;
     padding: 0;
-   
   }
 
   .komposisjonSection {
@@ -1785,7 +1783,7 @@ footer {
     width: 90%;
     height: 90%;
   }
-    header {
+  header {
     height: auto;
     padding: 10px 0px;
   }
@@ -1794,7 +1792,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-  
+
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -1827,5 +1825,10 @@ footer {
   .languageButton {
     display: none;
   }
+}
 
+@media (max-width: 625px) {
+  .subMenuText {
+    /* color: red; */
+  }
 }

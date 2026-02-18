@@ -38,6 +38,17 @@ let currentMain = document.getElementById("mainNorwegian");
 const currentPage = window.location.pathname;
 console.log(translateButton);
 
+
+function setScrollBehavior(optionStr)
+{
+  const html = document.querySelector("html");
+
+  if (html)
+  {
+    html.style.scrollBehavior = optionStr;
+    console.log("setting scroll behavior to " + optionStr);
+  }
+}
 const cassiniLaunchImgArray =
   [
     "Images/launchcassini.jpg",
@@ -45,6 +56,7 @@ const cassiniLaunchImgArray =
     "Images/launchcassini3.jpg"
   ];
 
+setScrollBehavior("auto");
 
 function swapCassiniLaunch()
 {
@@ -162,7 +174,7 @@ function hamburgerToggle()
         {
           console.log("Sub menu showing is : " + subMenuShowing);
           const subListElement = document.getElementById(isNorwegian ? "subMenu" : "subMenuEng");
-          subListElement.classList.remove("showSubMenu");
+          subListElement.classList.remove("showSubMenuAnim");
           subListElement.classList.add("hidden");
           subMenuShowing = false;
           switchLanguage();
@@ -193,29 +205,29 @@ function subMenuToggle()
   if (subMenuShowing == false)
   {
     subListElement.classList.remove("hidden");
-    subListElement.classList.add("showSubMenu");
-    if (pageTitle == "Expeditions")
-    {
-      console.log("chaningin position expeditions");
-      subListElement.style.right = "21%";
-    } else if (pageTitle == "Rings") subListElement.style.right = "29%";
+    subListElement.classList.add("showSubMenuAnim");
+    // if (pageTitle == "Expeditions")
+    // {
+    //   console.log("chaningin position expeditions");
+    //   subListElement.style.right = "21%";
+    // } else if (pageTitle == "Rings") subListElement.style.right = "29%";
     subMenuShowing = true;
   }
   else
   {
-    subListElement.classList.remove("showSubMenu");
+    subListElement.classList.remove("showSubMenuAnim");
 
-    subListElement.classList.add("hideSubMenu");
+    subListElement.classList.add("hideSubMenuAnim");
     subListElement.addEventListener("animationend", () =>
     {
-
+      subListElement.classList.remove("hideSubMenuAnim");
       subListElement.classList.add("hidden");
-      subListElement.classList.remove("hideSubMenu");
+      subMenuShowing = false;
       console.log('Animation slutt!');
     }, { once: true });
-    subMenuShowing = false;
 
-    subListElement.classList.add("hidden");
+
+
   }
 
 
@@ -250,8 +262,8 @@ function darkLightModeToggle()
     darkMode = true;
 
   }
-  if (mobileMode) setDarkLightModeMobileText();
-  if (mobileMode && hamMenuShowing) animateOutHeaderMenu();
+  if (mobileMode || tabletMode) setDarkLightModeMobileText();
+  if ((mobileMode || tabletMode) && hamMenuShowing) animateOutHeaderMenu();
 
 }
 // event listeners for wheel og scroll
@@ -323,7 +335,7 @@ function animateSubMenu()
   {
     subMenu.classList.remove("slideOutSubMenu");
     subMenu.classList.remove("hidden");
-      subMenu.classList.add("slideInMenuTop");
+    subMenu.classList.add("slideInMenuTop");
     mouseWheelMoved = false;
     subMenuIsMissing = false;
   }
@@ -360,16 +372,15 @@ function observerCallback(entries, observer)
 {
   if (pageTitle == "Home") return;
   console.log(entries);
-  entries.forEach((entry) =>
+  entries.forEach((entry, index, array) =>
   {
     if (entry.isIntersecting)
     {
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-
-
-
+      if (index === array.length-1) setScrollBehavior("smooth");
+      
       console.log("element is visible", entry.target.id);
     }
     else
