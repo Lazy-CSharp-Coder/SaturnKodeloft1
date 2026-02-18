@@ -380,8 +380,8 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-      if (index === array.length-1) setScrollBehavior("smooth");
-      
+      if (index === array.length - 1) setScrollBehavior("smooth");
+
       console.log("element is visible", entry.target.id);
     }
     else
@@ -442,7 +442,12 @@ function switchLanguage()
 
   for (let i = 0; i < 6; ++i)
   {
+
     refArray[i].textContent = languageSelected[i];
+       refArray[i].classList.add("fadeInMenuItems");
+      refArray[i].addEventListener("animationend", () => { refArray[i].classList.remove("fadeInMenuItems") }, { once: true });
+  
+
   }
 
 

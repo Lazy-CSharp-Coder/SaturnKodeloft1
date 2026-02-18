@@ -162,6 +162,7 @@ audio {
 a {
   color: var(--primaryMenuColor);
   text-decoration: none;
+ 
 }
 
 .navListHeader {
@@ -340,7 +341,11 @@ p {
 
 li {
   padding: 0;
+
 }
+
+
+
 .sectionHome {
   flex-direction: row;
   align-items: center;
@@ -468,11 +473,20 @@ li {
 .fadeInQuote,
 .fadeInCredit,
 .fadeInFacts,
-.fadeInQuotePP {
+.fadeInQuotePP
+ {
   animation-name: fadeInAnimation;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
+
+.fadeInMenuItems {
+  animation-name: scaleInXY;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 
 .fadeInImage {
   animation-duration: 2.5s;
@@ -881,7 +895,7 @@ video {
 
 .subMenuColor,
 .headerMenuColor {
-  transition-property: color;
+  transition-property:color;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-duration: 0.4s;
@@ -1462,7 +1476,14 @@ footer {
 {
   .subMenuTextAndBurgerDiv {
     flex-direction: column;
+    margin : 0;
     
+
+    
+  }
+
+  .logoTextDiv, .logoTextDivRomferd {
+    gap:0;
   }
 
   .textFactCategorys, .textFactsSaturn,  .textFactsSaturnDistance {
@@ -1477,7 +1498,14 @@ footer {
   {
     right: 22%;
   }
- 
+  .subMenuTextExp, .subMenuText {
+    font-size:1.5em;
+
+  }
+
+  .subMenuBurger {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 700px)
@@ -1490,5 +1518,6 @@ footer {
     padding-left: 36px;
    }
 }
+
 
 
