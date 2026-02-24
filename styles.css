@@ -1448,7 +1448,9 @@ footer {
   {
     display: block;
   }
-
+  .subMenuAnchor {
+    font-size: 0.7em;
+  }
  
 }
 
@@ -1488,7 +1490,6 @@ footer {
     flex-direction: column;
     margin : 0;
     
-
     
   }
 
@@ -1502,6 +1503,7 @@ footer {
 
   .navListRingene, .navListMaanene  {
     right: 30%;
+  
 
   }
   .navListRomferdene
