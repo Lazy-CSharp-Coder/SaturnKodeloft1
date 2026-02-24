@@ -56,7 +56,17 @@ const cassiniLaunchImgArray =
     "Images/launchcassini3.jpg"
   ];
 
-setScrollBehavior("auto");
+setScrollBehavior("instant");
+// sette opp eventlistener for click header
+
+const headerMenu = document.querySelector("#headerMenu");
+if(headerMenu)
+{
+  headerMenu.addEventListener("click", () => 
+  {
+    setScrollBehavior("instant");
+  });
+}
 
 function swapCassiniLaunch()
 {
@@ -380,8 +390,8 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-      if (index === array.length-1) setScrollBehavior("smooth");
-      
+      if (index === array.length - 1) setScrollBehavior("smooth");
+
       console.log("element is visible", entry.target.id);
     }
     else
@@ -442,9 +452,30 @@ function switchLanguage()
 
   for (let i = 0; i < 6; ++i)
   {
-    refArray[i].textContent = languageSelected[i];
-  }
 
+    refArray[i].textContent = languageSelected[i];
+
+  }
+  if (!tabletMode && !mobileMode)
+  {
+    const headerMenu = document.querySelector("#headerMenu");
+    const listItems = headerMenu.querySelectorAll("li");
+    console.log(listItems);
+
+    const animSelected = "rotateInAnim";
+
+    const delayInc = 10;
+    listItems.forEach((item, index) =>
+    {
+      item.classList.remove(animSelected);
+      setTimeout(() =>
+      {
+        item.classList.add(animSelected);
+
+      }, index * delayInc);
+
+    });
+  }
 
   const mainNorwegian = document.querySelector("#mainNorwegian");
   const mainEnglishId = pageTitle == "Home" ? "#mainNorwegian" : "#mainEnglish";

@@ -1,5 +1,5 @@
 /* GENERAL */
-@import "./css/animations.css";
+/* @import "./css/animations.css"; */
 @import "./css/maanene.css";
 @import "./css/romferdene.css";
 @import url("https://fonts.googleapis.com/css2?family=Story+Script&display=swap");
@@ -162,6 +162,7 @@ audio {
 a {
   color: var(--primaryMenuColor);
   text-decoration: none;
+ 
 }
 
 .navListHeader {
@@ -340,7 +341,11 @@ p {
 
 li {
   padding: 0;
+
 }
+
+
+
 .sectionHome {
   flex-direction: row;
   align-items: center;
@@ -468,11 +473,30 @@ li {
 .fadeInQuote,
 .fadeInCredit,
 .fadeInFacts,
-.fadeInQuotePP {
+.fadeInQuotePP
+ {
   animation-name: fadeInAnimation;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
+
+
+
+ .scaleInAnim {
+  animation-name: scaleInXY;
+  animation-duration:1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+}
+
+@keyframes scaleInXY {
+  0% { transform: scale(0, 0);}
+  5% { transform: scale(0.2, 0.2);}
+  30% { transform: scale(1, 0);}
+  100% {transform : scale(1, 1) ;}
+}
+
 
 .fadeInImage {
   animation-duration: 2.5s;
@@ -881,7 +905,7 @@ video {
 
 .subMenuColor,
 .headerMenuColor {
-  transition-property: color;
+  transition-property:color;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-duration: 0.4s;
@@ -1424,7 +1448,9 @@ footer {
   {
     display: block;
   }
-
+  .subMenuAnchor {
+    font-size: 0.7em;
+  }
  
 }
 
@@ -1462,7 +1488,13 @@ footer {
 {
   .subMenuTextAndBurgerDiv {
     flex-direction: column;
+    margin : 0;
     
+    
+  }
+
+  .logoTextDiv, .logoTextDivRomferd {
+    gap:0;
   }
 
   .textFactCategorys, .textFactsSaturn,  .textFactsSaturnDistance {
@@ -1471,13 +1503,21 @@ footer {
 
   .navListRingene, .navListMaanene  {
     right: 30%;
+  
 
   }
   .navListRomferdene
   {
     right: 22%;
   }
- 
+  .subMenuTextExp, .subMenuText {
+    font-size:1.5em;
+
+  }
+
+  .subMenuBurger {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 700px)
@@ -1491,4 +1531,42 @@ footer {
    }
 }
 
+@media (max-width: 1439px)
+{
+  .navListHeader {
+    font-size: 25px;
+  }
+  /* .subMenuDiv, .subMenuDivExp {
+    top: 70px;
+  } */
 
+}
+
+
+ .rotateInAnim {
+
+    animation-name: rotateYIn;
+    animation-duration: var(--defaultAnimDuration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    /* animation-delay: 2.5s; */
+  
+  }
+  
+  @keyframes rotateYIn {
+    0% { transform: rotateX(-90deg); }
+
+    100% { transform: rotateX(0deg);}
+  }
+  
+.fadeInFromBelowAnim
+{
+  animation: fadeInFromBelow 0.8s ease 0s 1 normal backwards;
+}
+
+
+@keyframes fadeInFromBelow {
+  0% { transform: translateY(30px); opacity: 0;}
+  100% { transform: translateY(0); opacity: 1;}
+}
