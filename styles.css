@@ -1472,7 +1472,7 @@ footer {
   {
     display: block;
   }
-  .subMenuAnchor {
+  .subMenuAnchor, .headerMenuColor, .darkLightListItem, .laguageListItemMobile {
     font-size: 0.7em;
   }
  
