@@ -888,12 +888,36 @@ nav {
   width: 80%;
 }
 
-@media (min-width: 1024px) {
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+.subMenuDiv, .subMenuDivExp {
+  top: 80px;
+}
+
   .slideInMenuItems {
     animation-name: slideInRight;
     animation-duration: 1.5s;
     animation-delay: 1s;
   }
+
+  .subMenuColor {
+    font-size: 0.8em;
+  }
+
+  .subMenuText, .subMenuTextExp {
+    font-size: 2.0rem;
+  }
+
+  .
+  
+}
+
+@media (max-width: 110px)
+{
+   .subMenuColor {
+    font-size: 0.6em;
+   }
 }
 /* transition klasser */
 
@@ -1448,7 +1472,7 @@ footer {
   {
     display: block;
   }
-  .subMenuAnchor {
+  .subMenuAnchor, .headerMenuColor, .darkLightListItem, .laguageListItemMobile {
     font-size: 0.7em;
   }
  

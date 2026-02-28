@@ -60,7 +60,7 @@ setScrollBehavior("instant");
 // sette opp eventlistener for click header
 
 const headerMenu = document.querySelector("#headerMenu");
-if(headerMenu)
+if (headerMenu)
 {
   headerMenu.addEventListener("click", () => 
   {
@@ -390,7 +390,11 @@ function observerCallback(entries, observer)
       // legg inn fadeInFromBelowAnim
       entry.target.classList.remove("notVisible");
       entry.target.classList.add("fadeInFromBelowAnim");
-      if (index === array.length - 1) setScrollBehavior("smooth");
+      if (index === array.length - 1)
+      {
+        console.log("setting smooth scroll behavior.");
+        setScrollBehavior("smooth");
+      }
 
       console.log("element is visible", entry.target.id);
     }
