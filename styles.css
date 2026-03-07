@@ -48,9 +48,7 @@ body {
 
 /* HEADER */
 header {
-  background-color: var(
-    --headerBackgroundColor
-  ); /* svart her, ikke variabel, skal alltid være svart */
+  background-color: var(--headerBackgroundColor ); /* svart her, ikke variabel, skal alltid være svart */
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -889,7 +887,6 @@ nav {
 }
 
 
-
 @media (min-width: 1024px) and (max-width: 1439px) {
 .subMenuDiv, .subMenuDivExp {
   top: 80px;
@@ -908,8 +905,7 @@ nav {
   .subMenuText, .subMenuTextExp {
     font-size: 2.0rem;
   }
-
-  .
+ 
   
 }
 
