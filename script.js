@@ -466,7 +466,7 @@ function switchLanguage()
     const listItems = headerMenu.querySelectorAll("li");
     console.log(listItems);
 
-    const animSelected = "rotateInAnim";
+    const animSelected = "rotateInAnimx";
 
     const delayInc = 10;
     listItems.forEach((item, index) =>
