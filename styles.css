@@ -808,6 +808,9 @@ nav {
   align-items: center;
   gap: 47px;
   margin-left: 1.8rem;
+    font-family: var(--primaryFontFamily); 
+    font-size: 3.2rem;
+
 }
 
 .subMenuAnchor {
@@ -815,7 +818,7 @@ nav {
 }
 
 .subMenuText {
-  font-size:1.5rem;
+  /* font-size:3.2rem; */
   margin: 0;
   padding: 0;
   width: auto;
@@ -826,6 +829,8 @@ nav {
   list-style-type: none;
   gap: 2.5rem;
   font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  font-weight: 700;
   padding-left: 0;
   padding-right: 178px;
 }
