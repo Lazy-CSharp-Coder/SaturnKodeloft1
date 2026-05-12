@@ -14,7 +14,7 @@ console.log("Viewport is now : " + viewPort);
 let mobileMode = viewPort <= 426 ? true : false;
 let tabletMode = viewPort < 1024 ? true : false;
 
-const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
+const mainMenuEng = ["HOME", "ABOUT", "RING SYSTEM", "MOONS", "EXPEDITIONS", "D/L LIGHTMODE"];
 const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
 const lightModeUrl = "Images/sunblazinglogo.png";
 const darkModeUrl = "Images/moonbluelogo2.png";
