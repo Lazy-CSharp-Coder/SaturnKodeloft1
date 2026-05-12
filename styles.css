@@ -178,9 +178,11 @@ a {
 
   font-family: var(--primaryFontFamily);
   color: white;
-  font-size: 32px;
+  font-size: 2rem;
   padding-left: 0;
-  gap: 41px;
+  gap: 2.5rem;
+  font-weight: normal;
+  letter-spacing:1.5px;
   list-style-type: none;
   transition: all 0.4s ease;
 }
