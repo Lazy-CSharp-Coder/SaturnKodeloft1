@@ -468,22 +468,19 @@ function switchLanguage()
     const listItems = headerMenu.querySelectorAll("li");
     console.log(listItems);
 
-    const animSelected = "fadeInFromBelowAnim";
+    const animSelected = "scaleInAnim";
 
-    const delayInc = 100;
+    const delayInc = 200;
     listItems.forEach((item, index) =>
     {
       item.classList.remove(animSelected);
-      item.classList.remove("fadeOutAnim");
+       setTimeout(() =>
+
+      {  item.classList.add(animSelected); }
 
 
-      setTimeout(() =>
-
-        item.classList.add(animSelected));
-
-
-    }, index * delayInc);
-
+    , index * delayInc);
+  });
 
 
   }

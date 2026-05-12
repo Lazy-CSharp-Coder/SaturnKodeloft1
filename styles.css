@@ -74,8 +74,8 @@ audio {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding-right: 23px;
+  gap:4rem;
+  padding-right: 3rem;
 }
 
 .darkLightIcon {
@@ -183,11 +183,12 @@ a {
   /* font-family: var(--primaryFontFamily); */
   color: white;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   height: 3rem;
   padding-left: 0;
-  gap: 41px;
+  gap: 3.5rem;
   list-style-type: none;
+  letter-spacing: 1.2px;
   transition: all 0.4s ease;
 }
 
@@ -503,7 +504,7 @@ li {
 
 .scaleInAnim {
   animation-name: scaleInXY;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: 0s;
@@ -792,7 +793,7 @@ li {
   border: 1px solid var(--borderColorMenu);
   height: fit-content;
   position: fixed;
-  top: 106px;
+  top: 6rem;
   background-color: black;
   z-index: 8;
 }
@@ -1682,11 +1683,11 @@ footer {
 }
 
 .fadeInFromBelowAnim {
-  animation: fadeInFromBelow 2.2s ease 0s 1 normal forwards;
+  animation: fadeInFromBelow 2.2s ease 0s 1 normal backwards;
 }
 
 .fadeInAnim {
-  animation: fadeIn 1.8s ease-in-out 0s 1 normal forwards;
+  animation: fadeIn 1.2s ease-in-out 0s 1 normal backwards;
 }
 
 .fadeOutAnim {
