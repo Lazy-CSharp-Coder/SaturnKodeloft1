@@ -14,8 +14,8 @@ console.log("Viewport is now : " + viewPort);
 let mobileMode = viewPort <= 426 ? true : false;
 let tabletMode = viewPort < 1024 ? true : false;
 
-const mainMenuEng = ["Home", "About", "Ring system", "Moons", "Expeditions", "D/L Lightmode"];
-const mainMenuNorsk = ["Hjem", "Om", "Ringene", "Månene", "Romferdene", "D/L Lysmodus"];
+const mainMenuEng = ["HOME", "ABOUT", "RING SYSTEM", "MOONS", "EXPEDITIONS", "D/L LIGHTMODE"];
+const mainMenuNorsk = ["HJEM", "OM", "RINGENE", "MÅNENE", "ROMFERDENE", "D/L LYSMODUS"];
 const lightModeUrl = "Images/sunblazinglogo.png";
 const darkModeUrl = "Images/moonbluelogo2.png";
 
@@ -454,9 +454,11 @@ function switchLanguage()
     textWSCreated.textContent = "Web page created by";
   }
 
+
   for (let i = 0; i < 6; ++i)
   {
-
+    // const animInc = 200;
+    // refArray[i].style.animationDelay = `${i * animInc}ms`;
     refArray[i].textContent = languageSelected[i];
 
   }
@@ -466,19 +468,24 @@ function switchLanguage()
     const listItems = headerMenu.querySelectorAll("li");
     console.log(listItems);
 
-    const animSelected = "rotateInAnim";
+    const animSelected = "fadeInFromBelowAnim";
 
-    const delayInc = 10;
+    const delayInc = 100;
     listItems.forEach((item, index) =>
     {
       item.classList.remove(animSelected);
+      item.classList.remove("fadeOutAnim");
+
+
       setTimeout(() =>
-      {
-        item.classList.add(animSelected);
 
-      }, index * delayInc);
+        item.classList.add(animSelected));
 
-    });
+
+    }, index * delayInc);
+
+
+
   }
 
   const mainNorwegian = document.querySelector("#mainNorwegian");
