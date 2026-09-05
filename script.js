@@ -52,14 +52,11 @@ const handleResize = () =>
 
         hamMenuShowing = false;
      }
-    
-
+  
   }
 }
 
 window.addEventListener("resize", handleResize);
-
-
 
 function setScrollBehavior(optionStr)
 {
