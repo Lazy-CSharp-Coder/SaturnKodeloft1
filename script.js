@@ -38,6 +38,28 @@ let currentMain = document.getElementById("mainNorwegian");
 const currentPage = window.location.pathname;
 console.log(translateButton);
 
+const handleResize = () =>
+{
+  updateViewportInfo();
+  if(!tabletMode)
+  {
+     if(hamMenuShowing) 
+     {
+        const navListElement = document.getElementById("headerMenu");
+        console.log(navListElement);
+        navListElement.classList.remove("show");
+        navListElement.classList.add("hidden"); 
+
+        hamMenuShowing = false;
+     }
+    
+
+  }
+}
+
+window.addEventListener("resize", handleResize);
+
+
 
 function setScrollBehavior(optionStr)
 {

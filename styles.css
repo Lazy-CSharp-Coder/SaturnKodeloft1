@@ -281,6 +281,8 @@ a {
     display: none;
   }
 
+
+
   .navListHeader,
   .navListRingene,
   .navListMaanene,
@@ -1156,7 +1158,7 @@ footer {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 63.99em) {
 
   .darkLightListItem,
   .languageListItemMobile {
@@ -1530,33 +1532,6 @@ footer {
   }
 }
 
-@media (max-width: 580px) {
-
-  .textFactCategorys,
-  .textFactsSaturn,
-  .textFactsSaturnDistance {
-
-    font-size: 0.7em;
-    width: max-content;
-  }
-
-  .minMaxFactDiv {
-    flex-direction: column;
-    gap: 0px;
-  }
-
-  .tabletSetting {
-    display: block;
-  }
-
-  .subMenuAnchor,
-  .headerMenuColor,
-  .darkLightListItem,
-  .laguageListItemMobile {
-    font-size: 0.7em;
-  }
-
-}
 
 @media (max-width: 620px) {
   h2 {
@@ -1589,6 +1564,34 @@ footer {
 
 }
 
+
+@media (max-width: 580px) {
+
+  .textFactCategorys,
+  .textFactsSaturn,
+  .textFactsSaturnDistance {
+
+    font-size: 0.7em;
+    width: max-content;
+  }
+
+  .minMaxFactDiv {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .tabletSetting {
+    display: block;
+  }
+
+  .subMenuAnchor,
+  .headerMenuColor,
+  .darkLightListItem,
+  .laguageListItemMobile {
+    font-size: 0.7em;
+  }
+
+}
 @media (max-width: 500px) {
   .subMenuTextAndBurgerDiv {
     flex-direction: column;
