@@ -45,8 +45,12 @@ const handleResize = () =>
   {
      if(hamMenuShowing) 
      {
+        const navListElement = document.getElementById("headerMenu");
+        console.log(navListElement);
         navListElement.classList.remove("show");
         navListElement.classList.add("hidden"); 
+
+        hamMenuShowing = false;
      }
     
 
@@ -54,7 +58,6 @@ const handleResize = () =>
 }
 
 window.addEventListener("resize", handleResize);
-
 
 
 
