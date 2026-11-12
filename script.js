@@ -110,7 +110,7 @@ function updateViewportInfo()
 }
 
 // const chosenLanguage = localStorage.getItem("selectedLanguage");
-// chosenLanguage = undefined;
+const chosenLanguage = undefined;
 if (!chosenLanguage)
 {
   const selectionDiv = document.querySelector("#selectionDiv");
