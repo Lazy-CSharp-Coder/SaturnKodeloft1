@@ -109,7 +109,7 @@ function updateViewportInfo()
   tabletMode = viewPort > 426 && viewPort < 1024 ? true : false;
 }
 
-const chosenLanguage = localStorage.getItem("selectedLanguage");
+// const chosenLanguage = localStorage.getItem("selectedLanguage");
 // chosenLanguage = undefined;
 if (!chosenLanguage)
 {

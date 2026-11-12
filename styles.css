@@ -107,6 +107,14 @@ audio {
   color: #7088c6;
 }
 
+.allowSoundDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:1rem;
+  width: 100%;
+}
+
 .darkLightListItem {
   display: none;
   color: var(--addedHamItemsColor);
